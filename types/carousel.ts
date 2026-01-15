@@ -56,6 +56,7 @@ export interface IntroContent {
   pillText?: string;
   backgroundPattern?: 'gradient' | 'solid' | 'dots' | 'waves';
   stats?: Array<{ label: string; value: string }>;
+  logos?: string[];
   layout?: 'centered' | 'split' | 'header-focus' | 'profile-emphasis';
 }
 
@@ -125,7 +126,7 @@ export interface CarouselProject {
   globalSettings: GlobalSettings;
 }
 
-export type FieldType = 'text' | 'textarea' | 'image' | 'steps' | 'bullets' | 'tools' | 'workflow' | 'color' | 'list';
+export type FieldType = 'text' | 'textarea' | 'image' | 'steps' | 'bullets' | 'tools' | 'workflow' | 'color' | 'list' | 'icon-grid';
 
 export interface FieldConfig {
   key: string;

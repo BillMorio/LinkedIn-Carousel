@@ -4,16 +4,25 @@ import React from 'react';
 import { useCarouselStore } from '../../store/useCarouselStore';
 import { getTheme, ThemeRegistry } from '../../themes';
 import { FieldConfig, IntroContent, ContentSlideContent, CTAContent } from '../../types/carousel';
-import { Square, RectangleVertical, Settings, PenLine, Palette, Smartphone, Image as ImageIcon, Plus, Trash2, Layout } from 'lucide-react';
+import { Square, RectangleVertical, Settings, PenLine, Palette, Smartphone, Image as ImageIcon, Plus, Trash2, Layout, Upload, X } from 'lucide-react';
 
 const PropertiesPanel = () => {
   const { project, activeSlideId, setTheme, updateSlideContent, updateGlobalSettings } = useCarouselStore();
   const [activeTab, setActiveTab] = React.useState<'content' | 'design'>('content');
+  const fileInputRef = React.useRef<HTMLInputElement>(null);
   const theme = getTheme(project.themeId);
   const activeSlide = project.slides.find(s => s.id === activeSlideId) || project.slides[0];
 
   const handleFieldChange = (key: string, value: any) => {
     updateSlideContent(activeSlide.id, { [key]: value } as Partial<IntroContent | ContentSlideContent | CTAContent>);
+  };
+
+  const handleImageUpload = (key: string, file: File) => {
+    const reader = new FileReader();
+    reader.onloadend = () => {
+      handleFieldChange(key, reader.result as string);
+    };
+    reader.readAsDataURL(file);
   };
 
   const renderField = (field: FieldConfig) => {
@@ -45,6 +54,107 @@ const PropertiesPanel = () => {
               rows={3}
               className="w-full bg-zinc-50 border-2 border-zinc-100 rounded-xl px-4 py-2.5 text-sm font-bold focus:border-black focus:outline-none transition-all resize-none"
             />
+          </div>
+        );
+      case 'image':
+        return (
+          <div key={field.key} className="flex flex-col gap-2">
+            <label className="text-[10px] font-black text-zinc-400 uppercase tracking-widest">{field.label}</label>
+            <div className="flex items-center gap-4">
+               {value ? (
+                 <div className="relative group w-20 h-20 shrink-0">
+                    <img src={value} alt="Preview" className="w-full h-full object-cover rounded-xl border-2 border-zinc-100 shadow-sm" />
+                    <button 
+                      onClick={() => handleFieldChange(field.key, '')}
+                      className="absolute -top-2 -right-2 bg-white border shadow-md p-1 rounded-full text-zinc-400 hover:text-red-500 opacity-0 group-hover:opacity-100 transition-opacity"
+                    >
+                      <X size={12} />
+                    </button>
+                 </div>
+               ) : (
+                 <button 
+                   onClick={() => {
+                     const input = document.createElement('input');
+                     input.type = 'file';
+                     input.accept = 'image/*';
+                     input.onchange = (e) => {
+                       const file = (e.target as HTMLInputElement).files?.[0];
+                       if (file) handleImageUpload(field.key, file);
+                     };
+                     input.click();
+                   }}
+                   className="w-20 h-20 shrink-0 flex flex-col items-center justify-center gap-1 border-2 border-dashed border-zinc-200 rounded-xl text-zinc-400 hover:border-black hover:text-black transition-all"
+                 >
+                    <Upload size={16} />
+                    <span className="text-[8px] font-black uppercase">Upload</span>
+                 </button>
+               )}
+               <div className="flex-1">
+                  <p className="text-[10px] font-medium text-zinc-400 leading-tight">Recommended: Square PNG or JPG. Max 2MB.</p>
+                  {value && (
+                    <button 
+                      onClick={() => {
+                        const input = document.createElement('input');
+                        input.type = 'file';
+                        input.accept = 'image/*';
+                        input.onchange = (e) => {
+                          const file = (e.target as HTMLInputElement).files?.[0];
+                          if (file) handleImageUpload(field.key, file);
+                        };
+                        input.click();
+                      }}
+                      className="mt-2 text-[10px] font-bold text-black hover:underline"
+                    >
+                      Change Image
+                    </button>
+                  )}
+               </div>
+            </div>
+          </div>
+        );
+      case 'icon-grid':
+        return (
+          <div key={field.key} className="flex flex-col gap-3">
+             <label className="text-[10px] font-black text-zinc-400 uppercase tracking-widest">{field.label}</label>
+             <div className="flex flex-wrap gap-2">
+                {(value || []).map((icon: string, idx: number) => (
+                  <div key={idx} className="relative group w-12 h-12">
+                     <img src={icon} alt="" className="w-full h-full object-contain rounded-lg border bg-white p-1" />
+                     <button 
+                       onClick={() => {
+                         const newVal = [...value];
+                         newVal.splice(idx, 1);
+                         handleFieldChange(field.key, newVal);
+                       }}
+                       className="absolute -top-1.5 -right-1.5 bg-white border shadow-sm p-0.5 rounded-full text-zinc-400 hover:text-red-500 opacity-0 group-hover:opacity-100 transition-opacity"
+                     >
+                       <X size={10} />
+                     </button>
+                  </div>
+                ))}
+                <button 
+                  onClick={() => {
+                    const input = document.createElement('input');
+                    input.type = 'file';
+                    input.accept = 'image/*';
+                    input.onchange = (e) => {
+                      const file = (e.target as HTMLInputElement).files?.[0];
+                      if (file) {
+                        const reader = new FileReader();
+                        reader.onloadend = () => {
+                          handleFieldChange(field.key, [...(value || []), reader.result as string]);
+                        };
+                        reader.readAsDataURL(file);
+                      }
+                    };
+                    input.click();
+                  }}
+                  className="w-12 h-12 flex items-center justify-center border-2 border-dashed border-zinc-200 rounded-lg text-zinc-300 hover:border-black hover:text-black transition-all"
+                >
+                   <Plus size={16} />
+                </button>
+             </div>
+             <p className="text-[10px] text-zinc-400">Click icons on the canvas to change them directly.</p>
           </div>
         );
       case 'steps':
@@ -205,7 +315,10 @@ const PropertiesPanel = () => {
              </div>
 
              <div className="flex flex-col gap-6">
-                {theme.editorConfig[activeSlide.type as keyof typeof theme.editorConfig].fields.map(renderField)}
+             {(() => {
+                const editorConfig = theme.editorConfig[activeSlide.type.toUpperCase() as keyof typeof theme.editorConfig];
+                return editorConfig.fields.map(renderField);
+             })()}
              </div>
           </section>
         )}
