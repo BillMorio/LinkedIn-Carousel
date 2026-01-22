@@ -16,19 +16,24 @@ const EditorLayout = () => {
   const fileInputRef = React.useRef<HTMLInputElement>(null);
   const theme = getTheme(project.themeId);
 
-  const handleJsonImport = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleJsonImport = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (!file) return;
 
     const reader = new FileReader();
-    reader.onload = (event) => {
+    reader.onload = async (event) => {
       try {
         const json = JSON.parse(event.target?.result as string);
-        const result = importProject(json);
+        // Show loading state while converting images
+        setIsExporting(true);
+        const result = await importProject(json);
+        setIsExporting(false);
+        
         if (!result.success) {
           alert(`Import failed: ${result.error}`);
         }
       } catch (err) {
+        setIsExporting(false);
         alert('Invalid JSON file');
       }
     };
@@ -43,10 +48,26 @@ const EditorLayout = () => {
 
     try {
       setIsExporting(true);
+      console.log('Starting export...', { element: el, width: el.offsetWidth, height: el.offsetHeight });
       const dataUrl = await toPng(el, {
         quality: 1,
         pixelRatio: 2,
         skipAutoScale: true,
+        cacheBust: true,
+        filter: (node) => {
+          // Skip external images to test if CORS is the issue
+          if (node instanceof HTMLImageElement) {
+            const src = node.src || '';
+            // Only allow data URLs and same-origin images
+            if (src.startsWith('data:') || src.startsWith(window.location.origin)) {
+              return true;
+            }
+            // Skip external images
+            console.log('Skipping external image:', src);
+            return false;
+          }
+          return true;
+        },
       });
 
       const link = document.createElement('a');
@@ -55,6 +76,12 @@ const EditorLayout = () => {
       link.click();
     } catch (err) {
       console.error('Export failed:', err);
+      console.error('Error details:', {
+        message: err instanceof Error ? err.message : 'Unknown error',
+        stack: err instanceof Error ? err.stack : undefined,
+        type: typeof err,
+        stringified: JSON.stringify(err)
+      });
       alert('Failed to export slide. Please try again.');
     } finally {
       setIsExporting(false);
@@ -78,6 +105,18 @@ const EditorLayout = () => {
         const dataUrl = await toPng(el, {
           quality: 1,
           pixelRatio: 2,
+          cacheBust: true,
+          filter: (node) => {
+            // Skip external images to prevent CORS issues
+            if (node instanceof HTMLImageElement) {
+              const src = node.src || '';
+              if (src.startsWith('data:') || src.startsWith(window.location.origin)) {
+                return true;
+              }
+              return false;
+            }
+            return true;
+          },
         });
 
         const base64Data = dataUrl.split(',')[1];

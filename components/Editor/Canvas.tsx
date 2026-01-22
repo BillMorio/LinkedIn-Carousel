@@ -117,13 +117,7 @@ const Canvas = () => {
             <div className="w-full h-full bg-white select-none">
               {SlideComponent && (
                 React.createElement(SlideComponent as any, {
-                  content: {
-                    ...activeSlide.content,
-                    onUpdate: (key: string, value: any) => {
-                      const { updateSlideContent } = useCarouselStore.getState();
-                      updateSlideContent(activeSlide.id, { [key]: value } as any);
-                    }
-                  },
+                  content: activeSlide.content,
                   globalSettings: project.globalSettings
                 })
               )}

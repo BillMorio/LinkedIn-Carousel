@@ -2,6 +2,7 @@ import { Theme } from '../types/carousel';
 import * as ExecutionSteps from './execution-steps';
 import * as ToolWorkflow from './tool-workflow';
 import * as SalesStack from './sales-stack';
+import * as Playground from './playground';
 
 export const ThemeRegistry: Record<string, Theme> = {
   'execution-steps': ExecutionSteps.ExecutionStepsTheme,
@@ -158,6 +159,168 @@ export const ThemeRegistry: Record<string, Theme> = {
       primary: '#BA1A1A',
       accent: '#FAD4C0',
       background: '#FFEDE1',
+    },
+  },
+  'playground': {
+    id: 'playground',
+    name: 'Playground',
+    thumbnail: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=100&h=100&fit=crop',
+    description: 'Cinematic, high-tech magazine-style layouts with hero images, glassmorphism, and electric lime accents.',
+    preview: '/previews/playground.png',
+    variants: {
+      INTRO: [
+        {
+          id: 'magazine-cover',
+          name: 'Magazine Cover',
+          purpose: 'High-impact intro with hero image as focal point.',
+          bestUsedFor: 'Cover-style introductions with dramatic hero images and title overlays.',
+          component: Playground.MagazineCoverIntro,
+          editorConfig: {
+            fields: [
+              { key: 'heroImage', type: 'image', label: 'Hero Cover Image', hasStyleControls: true },
+              { key: 'header', type: 'section-controls', label: 'Top Badge Section' },
+              { key: 'badgeText', type: 'text', label: 'Badge Text' },
+              { key: 'profileImage', type: 'image', label: 'Profile Photo', hasStyleControls: true },
+              { key: 'name', type: 'text', label: 'Name', hasStyleControls: true },
+              { key: 'tagline', type: 'text', label: 'Tagline' },
+              { key: 'titleSection', type: 'section-controls', label: 'Title Overlay Section' },
+              { key: 'mainTitle', type: 'text', label: 'Main Title', required: true, hasStyleControls: true },
+              { key: 'subtitle', type: 'text', label: 'Subtitle', hasStyleControls: true },
+            ],
+            defaultContent: {
+              headline: 'Your Magazine Title',
+              mainTitle: 'Your Magazine Title',
+              badgeText: 'PLAYGROUND',
+            },
+          },
+        },
+        {
+          id: 'cinematic-split',
+          name: 'Cinematic Split',
+          purpose: 'Balanced image + text layout.',
+          bestUsedFor: 'Professional intros with equal emphasis on image and content.',
+          component: Playground.CinematicSplitIntro,
+          editorConfig: {
+            fields: [
+              { key: 'heroImage', type: 'image', label: 'Hero Image (Left)', hasStyleControls: true },
+              { key: 'header', type: 'section-controls', label: 'Profile Badge' },
+              { key: 'profileImage', type: 'image', label: 'Profile Photo', hasStyleControls: true },
+              { key: 'name', type: 'text', label: 'Name' },
+              { key: 'titleSection', type: 'section-controls', label: 'Title Section' },
+              { key: 'mainTitle', type: 'text', label: 'Main Title', required: true, hasStyleControls: true },
+              { key: 'subtitle', type: 'text', label: 'Description', hasStyleControls: true },
+            ],
+            defaultContent: {
+              headline: 'Your Story Begins',
+              mainTitle: 'Your Story Begins',
+            },
+          },
+        }
+      ],
+      CONTENT: [
+        {
+          id: 'hero-feature',
+          name: 'Hero Feature',
+          purpose: 'Showcase content with supporting hero image.',
+          bestUsedFor: 'Feature highlights with visual context from a top hero image.',
+          component: Playground.HeroFeatureContent,
+          editorConfig: {
+            fields: [
+              { key: 'heroImage', type: 'image', label: 'Hero Image (Top)', hasStyleControls: true },
+              { key: 'titleSection', type: 'section-controls', label: 'Title Section' },
+              { key: 'mainTitle', type: 'text', label: 'Title', required: true, hasStyleControls: true },
+              { key: 'subtitle', type: 'text', label: 'Subtitle', hasStyleControls: true },
+              { key: 'body', type: 'section-controls', label: 'Content Items' },
+              { key: 'steps', type: 'steps', label: 'Feature Items (max 3)' },
+              { key: 'footerNote', type: 'text', label: 'Footer Left' },
+              { key: 'footerCTA', type: 'text', label: 'Footer Right' },
+            ],
+            defaultContent: {
+              title: 'Feature Title',
+              mainTitle: 'Feature Title',
+              steps: [
+                { title: 'Feature 1', description: 'Description here' },
+              ],
+            },
+          },
+        },
+        {
+          id: 'image-grid',
+          name: 'Image Grid',
+          purpose: 'Multiple images with descriptions.',
+          bestUsedFor: 'Showcasing 2-4 visual items in a grid layout.',
+          component: Playground.ImageGridContent,
+          editorConfig: {
+            fields: [
+              { key: 'titleSection', type: 'section-controls', label: 'Title Section' },
+              { key: 'mainTitle', type: 'text', label: 'Grid Title', required: true, hasStyleControls: true },
+              { key: 'body', type: 'section-controls', label: 'Grid Layout' },
+              { key: 'steps', type: 'steps', label: 'Grid Items (max 4, use icon field for images)' },
+            ],
+            defaultContent: {
+              title: 'Featured Content',
+              mainTitle: 'Featured Content',
+              steps: [
+                { title: 'Item 1', description: 'Description', icon: '' },
+              ],
+            },
+          },
+        }
+      ],
+      CTA: [
+        {
+          id: 'profile-spotlight',
+          name: 'Profile Spotlight',
+          purpose: 'Personal brand CTA with hero image.',
+          bestUsedFor: 'Driving engagement with a dramatic background and centered CTA.',
+          component: Playground.ProfileSpotlightCTA,
+          editorConfig: {
+            fields: [
+              { key: 'heroImage', type: 'image', label: 'Background Hero Image', hasStyleControls: true },
+              { key: 'profileImage', type: 'image', label: 'Profile Photo', hasStyleControls: true },
+              { key: 'header', type: 'section-controls', label: 'Profile Section' },
+              { key: 'name', type: 'text', label: 'Name', required: true, hasStyleControls: true },
+              { key: 'title', type: 'text', label: 'Title/Role', hasStyleControls: true },
+              { key: 'body', type: 'section-controls', label: 'CTA Section' },
+              { key: 'ctaText', type: 'text', label: 'CTA Message', hasStyleControls: true },
+              { key: 'ctaButtonText', type: 'text', label: 'Button Text', hasStyleControls: true },
+            ],
+            defaultContent: {
+              name: 'Your Name',
+              ctaText: 'Let\'s connect and create something amazing',
+              ctaButtonText: 'FOLLOW NOW',
+            },
+          },
+        },
+        {
+          id: 'minimal-tech',
+          name: 'Minimal Tech',
+          purpose: 'Clean, focused CTA.',
+          bestUsedFor: 'Direct call-to-action with minimal distractions.',
+          component: Playground.MinimalTechCTA,
+          editorConfig: {
+            fields: [
+              { key: 'profileImage', type: 'image', label: 'Profile Photo', hasStyleControls: true },
+              { key: 'header', type: 'section-controls', label: 'Profile Section' },
+              { key: 'name', type: 'text', label: 'Name', required: true, hasStyleControls: true },
+              { key: 'title', type: 'text', label: 'Title/Role' },
+              { key: 'ctaText', type: 'text', label: 'CTA Message', hasStyleControls: true },
+              { key: 'ctaButtonText', type: 'text', label: 'Button Text', hasStyleControls: true },
+            ],
+            defaultContent: {
+              name: 'Your Name',
+              title: 'CREATOR / BUILDER',
+              ctaText: 'Join me on this journey',
+              ctaButtonText: 'CONNECT NOW →',
+            },
+          },
+        }
+      ],
+    },
+    defaultColors: {
+      primary: '#BFFF00',
+      accent: '#FFFFFF',
+      background: '#000000',
     },
   },
 };

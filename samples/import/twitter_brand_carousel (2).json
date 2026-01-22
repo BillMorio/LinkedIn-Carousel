@@ -1,0 +1,473 @@
+{
+  "name": "SaaS Product Launch: The Complete Playbook",
+  "themeId": "sales-stack",
+  "slides": [
+    {
+      "type": "INTRO",
+      "variantId": "modern-squircle",
+      "content": {
+        "mainTitle": "SAAS LAUNCH 2025",
+        "subheadline": "Master your",
+        "logos": [
+          "https://cdn.worldvectorlogo.com/logos/producthunt.svg",
+          "https://cdn.worldvectorlogo.com/logos/stripe-4.svg",
+          "https://cdn.worldvectorlogo.com/logos/intercom-1.svg"
+        ],
+        "subtitle": "Go from idea to $10K MRR in 90 days",
+        "name": "Alex Rivera",
+        "tagline": "Serial Founder @ LaunchKit",
+        "profileImage": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
+        "logoText": "ZERO TO LAUNCH",
+        "styles": {
+          "mainTitle": {
+            "fontSize": "7.5rem",
+            "fontWeight": "900",
+            "letterSpacing": "-0.06em",
+            "lineHeight": "0.85"
+          },
+          "subtitle": {
+            "fontSize": "2.8rem",
+            "fontWeight": "800",
+            "color": "#6366F1",
+            "letterSpacing": "-0.03em"
+          },
+          "name": {
+            "fontSize": "1.2rem"
+          },
+          "tagline": {
+            "fontSize": "0.8rem",
+            "opacity": 0.7
+          }
+        },
+        "sectionStyles": {
+          "titleSection": {
+            "marginTop": "10rem"
+          },
+          "subtitleSection": {
+            "marginTop": "2.5rem"
+          },
+          "footer": {
+            "marginTop": "auto",
+            "itemSize": "5rem",
+            "itemGap": "2rem"
+          }
+        },
+        "type": "INTRO"
+      },
+      "aiContext": {
+        "purpose": "High-impact hook for LinkedIn carousels.",
+        "bestUsedFor": "Broad topic introductions with visual branding and tech stack logos.",
+        "recommendedDimensions": {
+          "width": 1080,
+          "height": 1350
+        }
+      },
+      "id": "5f0a52ca-16fe-4652-a123-d987044063b1",
+      "order": 0
+    },
+    {
+      "type": "CONTENT",
+      "variantId": "modern-squircle",
+      "content": {
+        "mainTitle": "Week 1-2: Validation",
+        "subtitle": "Validate before you build anything",
+        "steps": [
+          {
+            "title": "Problem Interviews",
+            "description": "Talk to 30 potential customers. Record everything. Find patterns.",
+            "icon": "https://cdn.worldvectorlogo.com/logos/zoom-communications-1.svg"
+          },
+          {
+            "title": "Landing Page Test",
+            "description": "Build a simple page. Run $200 in ads. Track conversion rate.",
+            "icon": "https://cdn.worldvectorlogo.com/logos/google-ads-1.svg"
+          },
+          {
+            "title": "Waitlist Goal",
+            "description": "Get 100 emails. If you can't, the problem isn't painful enough.",
+            "icon": "https://cdn.worldvectorlogo.com/logos/mailchimp-freddie-icon.svg"
+          }
+        ],
+        "footerNote": "Step 1 of 6",
+        "footerCTA": "launchkit.io/playbook",
+        "styles": {
+          "mainTitle": {
+            "fontSize": "6rem",
+            "letterSpacing": "-0.05em"
+          },
+          "subtitle": {
+            "fontSize": "2rem",
+            "backgroundColor": "#FFFFFF",
+            "borderRadius": "100px"
+          }
+        },
+        "sectionStyles": {
+          "titleSection": {
+            "marginBottom": "3.5rem"
+          },
+          "body": {
+            "gap": "3rem",
+            "marginTop": "4.5rem"
+          }
+        },
+        "type": "CONTENT"
+      },
+      "aiContext": {
+        "purpose": "Showcasing a list of 3-4 tools or steps.",
+        "bestUsedFor": "Tools lists, step-by-step guides, or feature summaries with high visual punch.",
+        "recommendedDimensions": {
+          "width": 1080,
+          "height": 1350
+        }
+      },
+      "id": "04a2522d-e384-45cc-a70f-a2d727a01f45",
+      "order": 1
+    },
+    {
+      "type": "CONTENT",
+      "variantId": "modern-squircle",
+      "content": {
+        "mainTitle": "Week 3-6: Build MVP",
+        "subtitle": "Ship fast, iterate faster",
+        "steps": [
+          {
+            "title": "Core Feature Only",
+            "description": "Build the one thing that solves the core problem. Nothing else.",
+            "icon": "https://cdn.worldvectorlogo.com/logos/react-2.svg"
+          },
+          {
+            "title": "No-Code First",
+            "description": "Use Bubble, Webflow, or Airtable. Code only when necessary.",
+            "icon": "https://cdn.worldvectorlogo.com/logos/webflow-logo.svg"
+          },
+          {
+            "title": "Beta with 10 Users",
+            "description": "Get real people using it daily. Watch them struggle. Fix it.",
+            "icon": "https://cdn.worldvectorlogo.com/logos/hotjar-1.svg"
+          }
+        ],
+        "footerNote": "Step 2 of 6",
+        "footerCTA": "launchkit.io/playbook",
+        "styles": {
+          "mainTitle": {
+            "fontSize": "6.2rem",
+            "letterSpacing": "-0.04em"
+          },
+          "subtitle": {
+            "fontSize": "1.9rem",
+            "backgroundColor": "#FFFFFF",
+            "borderRadius": "100px"
+          }
+        },
+        "sectionStyles": {
+          "titleSection": {
+            "marginBottom": "4rem"
+          },
+          "body": {
+            "gap": "2.8rem",
+            "marginTop": "5rem"
+          }
+        },
+        "type": "CONTENT"
+      },
+      "aiContext": {
+        "purpose": "Showcasing a list of 3-4 tools or steps.",
+        "bestUsedFor": "Tools lists, step-by-step guides, or feature summaries with high visual punch.",
+        "recommendedDimensions": {
+          "width": 1080,
+          "height": 1350
+        }
+      },
+      "id": "slide-003",
+      "order": 2
+    },
+    {
+      "type": "CONTENT",
+      "variantId": "modern-squircle",
+      "content": {
+        "mainTitle": "Week 7-8: Pricing",
+        "subtitle": "Charge more than you think you should",
+        "steps": [
+          {
+            "title": "3-Tier Strategy",
+            "description": "Starter at $29, Pro at $99, Enterprise at $299. Test and adjust.",
+            "icon": "https://cdn.worldvectorlogo.com/logos/stripe-4.svg"
+          },
+          {
+            "title": "Annual Discount",
+            "description": "Offer 2 months free for annual. Cash flow is king early on.",
+            "icon": "https://cdn.worldvectorlogo.com/logos/stripe-4.svg"
+          },
+          {
+            "title": "No Free Forever",
+            "description": "14-day trial with card required. Free users rarely convert.",
+            "icon": "https://cdn.worldvectorlogo.com/logos/stripe-4.svg"
+          }
+        ],
+        "footerNote": "Step 3 of 6",
+        "footerCTA": "launchkit.io/playbook",
+        "styles": {
+          "mainTitle": {
+            "fontSize": "6.8rem",
+            "letterSpacing": "-0.045em"
+          },
+          "subtitle": {
+            "fontSize": "1.7rem",
+            "backgroundColor": "#FFFFFF",
+            "borderRadius": "100px"
+          }
+        },
+        "sectionStyles": {
+          "titleSection": {
+            "marginBottom": "3.8rem"
+          },
+          "body": {
+            "gap": "2.6rem",
+            "marginTop": "4.8rem"
+          }
+        },
+        "type": "CONTENT"
+      },
+      "aiContext": {
+        "purpose": "Showcasing a list of 3-4 tools or steps.",
+        "bestUsedFor": "Tools lists, step-by-step guides, or feature summaries with high visual punch.",
+        "recommendedDimensions": {
+          "width": 1080,
+          "height": 1350
+        }
+      },
+      "id": "slide-004",
+      "order": 3
+    },
+    {
+      "type": "CONTENT",
+      "variantId": "modern-squircle",
+      "content": {
+        "mainTitle": "Week 9-10: Launch",
+        "subtitle": "Go big on Product Hunt and beyond",
+        "steps": [
+          {
+            "title": "Product Hunt Day",
+            "description": "Launch on Tuesday. Prep hunters. Reply to every comment fast.",
+            "icon": "https://cdn.worldvectorlogo.com/logos/producthunt.svg"
+          },
+          {
+            "title": "Community Drops",
+            "description": "Post in 10+ relevant communities. No spam, add real value.",
+            "icon": "https://cdn.worldvectorlogo.com/logos/reddit-icon.svg"
+          },
+          {
+            "title": "Press Outreach",
+            "description": "Email 50 tech journalists. Personalize every single one.",
+            "icon": "https://cdn.worldvectorlogo.com/logos/gmail-icon-2020.svg"
+          }
+        ],
+        "footerNote": "Step 4 of 6",
+        "footerCTA": "launchkit.io/playbook",
+        "styles": {
+          "mainTitle": {
+            "fontSize": "6.4rem",
+            "letterSpacing": "-0.042em"
+          },
+          "subtitle": {
+            "fontSize": "2.1rem",
+            "backgroundColor": "#FFFFFF",
+            "borderRadius": "100px"
+          }
+        },
+        "sectionStyles": {
+          "titleSection": {
+            "marginBottom": "4.2rem"
+          },
+          "body": {
+            "gap": "2.9rem",
+            "marginTop": "4.6rem"
+          }
+        },
+        "type": "CONTENT"
+      },
+      "aiContext": {
+        "purpose": "Showcasing a list of 3-4 tools or steps.",
+        "bestUsedFor": "Tools lists, step-by-step guides, or feature summaries with high visual punch.",
+        "recommendedDimensions": {
+          "width": 1080,
+          "height": 1350
+        }
+      },
+      "id": "slide-005",
+      "order": 4
+    },
+    {
+      "type": "CONTENT",
+      "variantId": "modern-squircle",
+      "content": {
+        "mainTitle": "Week 11-12: Scale",
+        "subtitle": "Turn momentum into sustainable growth",
+        "steps": [
+          {
+            "title": "Content Engine",
+            "description": "Post daily on Twitter/LinkedIn. Share metrics, learnings, wins.",
+            "icon": "https://cdn.worldvectorlogo.com/logos/twitter-6.svg"
+          },
+          {
+            "title": "SEO Foundation",
+            "description": "Write 20 blog posts targeting buyer keywords. Long game pays off.",
+            "icon": "https://cdn.worldvectorlogo.com/logos/google-icon.svg"
+          },
+          {
+            "title": "Referral Program",
+            "description": "Give users 30% off for every referral. Make it stupid easy to share.",
+            "icon": "https://cdn.worldvectorlogo.com/logos/intercom-1.svg"
+          }
+        ],
+        "footerNote": "Step 5 of 6",
+        "footerCTA": "launchkit.io/playbook",
+        "styles": {
+          "mainTitle": {
+            "fontSize": "6.6rem",
+            "letterSpacing": "-0.038em"
+          },
+          "subtitle": {
+            "fontSize": "1.85rem",
+            "backgroundColor": "#FFFFFF",
+            "borderRadius": "100px"
+          }
+        },
+        "sectionStyles": {
+          "titleSection": {
+            "marginBottom": "3.9rem"
+          },
+          "body": {
+            "gap": "2.75rem",
+            "marginTop": "4.7rem"
+          }
+        },
+        "type": "CONTENT"
+      },
+      "aiContext": {
+        "purpose": "Showcasing a list of 3-4 tools or steps.",
+        "bestUsedFor": "Tools lists, step-by-step guides, or feature summaries with high visual punch.",
+        "recommendedDimensions": {
+          "width": 1080,
+          "height": 1350
+        }
+      },
+      "id": "slide-006",
+      "order": 5
+    },
+    {
+      "type": "CONTENT",
+      "variantId": "modern-squircle",
+      "content": {
+        "mainTitle": "The Reality Check",
+        "subtitle": "What nobody tells you about launching",
+        "steps": [
+          {
+            "title": "Week 1 Will Suck",
+            "description": "You'll get maybe 10 signups. That's normal. Keep pushing.",
+            "icon": "https://cdn.worldvectorlogo.com/logos/producthunt.svg"
+          },
+          {
+            "title": "Churn is Feedback",
+            "description": "If people cancel, call them. Ask why. Fix the real problem.",
+            "icon": "https://cdn.worldvectorlogo.com/logos/intercom-1.svg"
+          },
+          {
+            "title": "Patience Wins",
+            "description": "$10K MRR is achievable. But it takes 6-12 months, not 90 days.",
+            "icon": "https://cdn.worldvectorlogo.com/logos/stripe-4.svg"
+          }
+        ],
+        "footerNote": "Step 6 of 6",
+        "footerCTA": "launchkit.io/playbook",
+        "styles": {
+          "mainTitle": {
+            "fontSize": "6.3rem",
+            "letterSpacing": "-0.048em"
+          },
+          "subtitle": {
+            "fontSize": "2.05rem",
+            "backgroundColor": "#FFFFFF",
+            "borderRadius": "100px"
+          }
+        },
+        "sectionStyles": {
+          "titleSection": {
+            "marginBottom": "4.1rem"
+          },
+          "body": {
+            "gap": "2.85rem",
+            "marginTop": "4.9rem"
+          }
+        },
+        "type": "CONTENT"
+      },
+      "aiContext": {
+        "purpose": "Showcasing a list of 3-4 tools or steps.",
+        "bestUsedFor": "Tools lists, step-by-step guides, or feature summaries with high visual punch.",
+        "recommendedDimensions": {
+          "width": 1080,
+          "height": 1350
+        }
+      },
+      "id": "slide-007",
+      "order": 6
+    },
+    {
+      "type": "CTA",
+      "variantId": "modern-squircle",
+      "content": {
+        "name": "Alex Rivera",
+        "title": "Built 3 SaaS Products to $50K+ MRR",
+        "ctaText": "DOWNLOAD THE FULL PLAYBOOK",
+        "bannerText": "READY TO LAUNCH YOUR SAAS?",
+        "logoText": "LAUNCHKIT MASTERCLASS",
+        "profileImage": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
+        "styles": {
+          "name": {
+            "fontSize": "2.8rem",
+            "fontWeight": "900"
+          },
+          "title": {
+            "fontSize": "1.3rem",
+            "color": "#1F2937",
+            "opacity": 0.65
+          },
+          "ctaText": {
+            "fontSize": "2.2rem",
+            "fontWeight": "900",
+            "letterSpacing": "0.04em"
+          }
+        },
+        "sectionStyles": {
+          "body": {
+            "paddingTop": "5.5rem"
+          }
+        },
+        "type": "CTA"
+      },
+      "aiContext": {
+        "purpose": "Classic LinkedIn profile banner style CTA.",
+        "bestUsedFor": "Driving followers and building community credibility.",
+        "recommendedDimensions": {
+          "width": 1080,
+          "height": 1350
+        }
+      },
+      "id": "0f7cff00-c217-46b9-9954-df56b988b85d",
+      "order": 7
+    }
+  ],
+  "globalSettings": {
+    "brandColor": "#6366F1",
+    "accentColor": "#DDD6FE",
+    "fontFamily": "Inter",
+    "backgroundColor": "#FFFFFF",
+    "aspectRatio": "portrait",
+    "dimensions": {
+      "width": 1080,
+      "height": 1350
+    }
+  },
+  "id": "1208b881-c5a7-45da-9b7b-78ca36714327"
+}

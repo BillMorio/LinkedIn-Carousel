@@ -81,6 +81,7 @@ export interface SectionConfig {
 export interface IntroContent {
   type: 'INTRO';
   profileImage?: string;
+  heroImage?: string;
   name?: string;
   tagline?: string;
   companyLogo?: string;
@@ -101,6 +102,7 @@ export interface IntroContent {
 
 export interface ContentSlideContent {
   type: 'CONTENT';
+  heroImage?: string;
   pillText?: string;
   title: string;
   subtitle?: string;
@@ -127,6 +129,7 @@ export interface ContentSlideContent {
 
 export interface CTAContent {
   type: 'CTA';
+  heroImage?: string;
   profileImage?: string;
   name?: string;
   title?: string;
