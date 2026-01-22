@@ -28,7 +28,7 @@ interface CarouselState {
   reorderSlides: (startIndex: number, endIndex: number) => void;
   
   updateProjectName: (name: string) => void;
-  importProject: (projectJson: any) => Promise<{ success: boolean, error?: string }>;
+  importProject: (projectJson: any) => { success: boolean, error?: string };
   exportProject: () => void;
 }
 
@@ -184,7 +184,7 @@ export const useCarouselStore = create<CarouselState>((set) => ({
     project: { ...state.project, name }
   })),
 
-  importProject: async (projectJson: any) => {
+  importProject: (projectJson: any) => {
     try {
       if (!projectJson || typeof projectJson !== 'object') throw new Error('Invalid JSON');
       if (!projectJson.themeId || !Array.isArray(projectJson.slides)) throw new Error('Missing core properties');
@@ -192,11 +192,8 @@ export const useCarouselStore = create<CarouselState>((set) => ({
       const theme = getTheme(projectJson.themeId);
       if (!theme) throw new Error(`Theme ${projectJson.themeId} not found`);
 
-      // Convert all external image URLs to data URLs
-      const { convertImagesInObject } = await import('../lib/imageUtils');
-      const projectWithDataUrls = await convertImagesInObject(projectJson);
-
-      const slides = projectWithDataUrls.slides.map((s: any, idx: number) => {
+      // Keep external URLs as-is - no conversion during import
+      const slides = projectJson.slides.map((s: any, idx: number) => {
         const variants = theme.variants[s.type as SlideType];
         const variant = variants?.find((v: any) => v.id === s.variantId) || variants?.[0];
         
@@ -232,13 +229,13 @@ export const useCarouselStore = create<CarouselState>((set) => ({
       });
 
       const newProject: CarouselProject = {
-        ...projectWithDataUrls,
-        id: projectWithDataUrls.id || crypto.randomUUID(),
-        name: projectWithDataUrls.name || 'Imported Project',
+        ...projectJson,
+        id: projectJson.id || crypto.randomUUID(),
+        name: projectJson.name || 'Imported Project',
         slides,
         globalSettings: {
           ...DEFAULT_GLOBAL_SETTINGS,
-          ...projectWithDataUrls.globalSettings
+          ...projectJson.globalSettings
         }
       };
 

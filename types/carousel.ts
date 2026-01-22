@@ -82,6 +82,7 @@ export interface IntroContent {
   type: 'INTRO';
   profileImage?: string;
   heroImage?: string;
+  imagePlacement?: 'top' | 'right';
   name?: string;
   tagline?: string;
   companyLogo?: string;
@@ -103,6 +104,7 @@ export interface IntroContent {
 export interface ContentSlideContent {
   type: 'CONTENT';
   heroImage?: string;
+  gridLayout?: '2x2' | '3-col' | 'showcase';
   pillText?: string;
   title: string;
   subtitle?: string;
@@ -179,7 +181,7 @@ export interface CarouselProject {
   globalSettings: GlobalSettings;
 }
 
-export type FieldType = 'text' | 'textarea' | 'image' | 'steps' | 'bullets' | 'tools' | 'workflow' | 'color' | 'list' | 'icon-grid' | 'font-controls' | 'image-size' | 'section-controls';
+export type FieldType = 'text' | 'textarea' | 'image' | 'steps' | 'bullets' | 'tools' | 'workflow' | 'color' | 'list' | 'icon-grid' | 'font-controls' | 'image-size' | 'section-controls' | 'select';
 
 export interface FieldConfig {
   key: string;
@@ -189,6 +191,7 @@ export interface FieldConfig {
   required?: boolean;
   helpText?: string;
   hasStyleControls?: boolean;
+  options?: Array<{ value: string; label: string }>;
 }
 
 export interface ThemeVariant {

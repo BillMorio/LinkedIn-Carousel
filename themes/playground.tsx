@@ -19,6 +19,26 @@ const GridPattern = () => (
   />
 );
 
+// Grainy gradient background for intro cards
+const GrainyGradientBg = () => (
+  <>
+    <div 
+      className="absolute inset-0"
+      style={{
+        background: 'radial-gradient(circle at 20% 50%, rgba(6, 78, 59, 0.8) 0%, rgba(0, 0, 0, 0.95) 50%), radial-gradient(circle at 80% 80%, rgba(20, 184, 166, 0.4) 0%, rgba(0, 0, 0, 0.95) 50%), #000000',
+      }}
+    />
+    <div 
+      className="absolute inset-0 opacity-[0.15]"
+      style={{
+        backgroundImage: 'url("data:image/svg+xml,%3Csvg viewBox=\'0 0 400 400\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cfilter id=\'noiseFilter\'%3E%3CfeTurbulence type=\'fractalNoise\' baseFrequency=\'0.9\' numOctaves=\'4\' stitchTiles=\'stitch\'/%3E%3C/filter%3E%3Crect width=\'100%25\' height=\'100%25\' filter=\'url(%23noiseFilter)\'/%3E%3C/svg%3E")',
+        backgroundRepeat: 'repeat',
+        backgroundSize: '200px 200px',
+      }}
+    />
+  </>
+);
+
 // Glass panel component
 const GlassPanel = ({ children, className = "" }: { children: React.ReactNode, className?: string }) => (
   <div className={`backdrop-blur-3xl bg-white/5 border border-white/10 ${className}`}>
@@ -79,21 +99,22 @@ const getSectionStyle = (sectionStyles: any, key: string) => {
 
 export const MagazineCoverIntro = ({ content, globalSettings }: { content: IntroContent, globalSettings: GlobalSettings }) => {
   return (
-    <div className="w-full h-full relative overflow-hidden bg-black">
+    <div className="w-full h-full relative overflow-hidden">
+      {/* Grainy Gradient Background */}
+      <GrainyGradientBg />
+      
       {/* Hero Image with Dark Gradient Overlay */}
       <div className="absolute inset-0">
-        {content.heroImage ? (
+        {content.heroImage && (
           <>
             <img 
               src={content.heroImage} 
               alt="Cover" 
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover opacity-40"
               style={getStyle(content.styles, 'heroImage')}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent" />
           </>
-        ) : (
-          <div className="w-full h-full bg-gradient-to-br from-zinc-900 to-black" />
         )}
       </div>
 
@@ -125,8 +146,11 @@ export const MagazineCoverIntro = ({ content, globalSettings }: { content: Intro
       <div style={getSectionStyle(content.sectionStyles, 'titleSection')} className="absolute bottom-0 left-0 right-0 p-16 z-10">
         <LimeAccent className="w-24 h-1 mb-8" />
         <h1 
-          className="text-[7rem] font-black text-white leading-[0.9] tracking-tighter mb-6"
-          style={getStyle(content.styles, 'mainTitle')}
+          className="text-[7rem] font-black leading-[0.9] tracking-tighter mb-6 bg-clip-text text-transparent"
+          style={{
+            ...getStyle(content.styles, 'mainTitle'),
+            backgroundImage: 'linear-gradient(to bottom, #FFFFFF, rgba(255, 255, 255, 0.4))',
+          }}
         >
           {content.mainTitle || content.headline || 'Your Magazine Title'}
         </h1>
@@ -143,7 +167,8 @@ export const MagazineCoverIntro = ({ content, globalSettings }: { content: Intro
 
 export const CinematicSplitIntro = ({ content, globalSettings }: { content: IntroContent, globalSettings: GlobalSettings }) => {
   return (
-    <div className="w-full h-full relative flex bg-black overflow-hidden">
+    <div className="w-full h-full relative flex overflow-hidden">
+      <GrainyGradientBg />
       <GridPattern />
 
       {/* Left: Hero Image (60%) */}
@@ -181,8 +206,11 @@ export const CinematicSplitIntro = ({ content, globalSettings }: { content: Intr
         <div style={getSectionStyle(content.sectionStyles, 'titleSection')}>
           <TechLabel text="INTRODUCTION" className="mb-6 block" />
           <h1 
-            className="text-6xl font-black text-white leading-tight tracking-tighter mb-8"
-            style={getStyle(content.styles, 'mainTitle')}
+            className="text-6xl font-black leading-tight tracking-tighter mb-8 bg-clip-text text-transparent"
+            style={{
+              ...getStyle(content.styles, 'mainTitle'),
+              backgroundImage: 'linear-gradient(to bottom, #FFFFFF, rgba(255, 255, 255, 0.4))',
+            }}
           >
             {content.mainTitle || content.headline || 'Your Story Begins'}
           </h1>
@@ -198,6 +226,214 @@ export const CinematicSplitIntro = ({ content, globalSettings }: { content: Intr
         <div className="absolute bottom-16 left-16">
           <LimeAccent className="w-16 h-1" />
         </div>
+      </div>
+    </div>
+  );
+};
+
+// Standard Intro - Text only, no images
+export const StandardIntro = ({ content, globalSettings }: { content: IntroContent, globalSettings: GlobalSettings }) => {
+  return (
+    <div className="w-full h-full relative flex items-center justify-center overflow-hidden">
+      <GrainyGradientBg />
+      <GridPattern />
+
+      {/* Top Badge */}
+      <div style={getSectionStyle(content.sectionStyles, 'header')} className="absolute top-12 left-12 z-20">
+        <GlassPanel className="px-6 py-3 rounded-full">
+          <TechLabel text={content.badgeText || 'PLAYGROUND'} />
+        </GlassPanel>
+      </div>
+
+      {/* Centered Content */}
+      <div className="max-w-4xl text-center px-16 relative z-10">
+        <div style={getSectionStyle(content.sectionStyles, 'titleSection')}>
+          <TechLabel text="INTRODUCTION" className="mb-8 block" />
+          <LimeAccent className="w-32 h-1 mx-auto mb-12" />
+          
+          <h1 
+            className="text-[8rem] font-black leading-[0.85] tracking-tighter mb-12 bg-clip-text text-transparent"
+            style={{
+              ...getStyle(content.styles, 'mainTitle'),
+              backgroundImage: 'linear-gradient(to bottom, #FFFFFF, rgba(255, 255, 255, 0.4))',
+            }}
+          >
+            {content.mainTitle || content.headline || 'FUTURE IS NOW'}
+          </h1>
+          
+          <p 
+            className="text-4xl font-bold text-white/50 leading-tight max-w-3xl mx-auto"
+            style={getStyle(content.styles, 'subtitle')}
+          >
+            {content.subtitle || content.subheadline || 'Building tomorrow\'s innovations with cutting-edge technology'}
+          </p>
+        </div>
+      </div>
+
+      {/* Bottom Accent */}
+      <div className="absolute bottom-16 left-1/2 -translate-x-1/2">
+        <LimeAccent className="w-24 h-1" />
+      </div>
+    </div>
+  );
+};
+
+// Headshot Intro - Large circular profile image + headline
+export const HeadshotIntro = ({ content, globalSettings }: { content: IntroContent, globalSettings: GlobalSettings }) => {
+  return (
+    <div className="w-full h-full relative flex items-center justify-center overflow-hidden">
+      <GrainyGradientBg />
+      <GridPattern />
+
+      {/* Top Badge */}
+      <div style={getSectionStyle(content.sectionStyles, 'header')} className="absolute top-12 left-12 z-20">
+        <GlassPanel className="px-6 py-3 rounded-full">
+          <TechLabel text={content.badgeText || 'PLAYGROUND'} />
+        </GlassPanel>
+      </div>
+
+      {/* Centered Content */}
+      <div className="max-w-4xl text-center px-16 relative z-10">
+        {/* Large Circular Profile Image */}
+        {content.profileImage && (
+          <div className="mx-auto mb-16 relative" style={getSectionStyle(content.sectionStyles, 'profileSection')}>
+            <div 
+              className="w-80 h-80 rounded-full overflow-hidden border-8 border-[#BFFF00] shadow-2xl shadow-[#BFFF00]/20 mx-auto"
+              style={getStyle(content.styles, 'profileImage')}
+            >
+              <img src={content.profileImage} alt="Profile" className="w-full h-full object-cover" />
+            </div>
+            <LimeAccent className="absolute -bottom-6 left-1/2 -translate-x-1/2 w-32 h-1" />
+          </div>
+        )}
+
+        {/* Content */}
+        <div style={getSectionStyle(content.sectionStyles, 'titleSection')}>
+          <h1 
+            className="text-7xl font-black leading-tight tracking-tighter mb-8 bg-clip-text text-transparent"
+            style={{
+              ...getStyle(content.styles, 'mainTitle'),
+              backgroundImage: 'linear-gradient(to bottom, #FFFFFF, rgba(255, 255, 255, 0.4))',
+            }}
+          >
+            {content.mainTitle || content.headline || content.name || 'Your Name'}
+          </h1>
+          
+          <p 
+            className="text-3xl font-bold text-white/50 leading-relaxed"
+            style={getStyle(content.styles, 'subtitle')}
+          >
+            {content.subtitle || content.subheadline || content.tagline || 'Your tagline or description'}
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+// Image Intro - Hero image with placement controls (top or right)
+export const ImageIntro = ({ content, globalSettings }: { content: IntroContent, globalSettings: GlobalSettings }) => {
+  const imagePlacement = (content as any).imagePlacement || 'top'; // 'top' or 'right'
+
+  if (imagePlacement === 'right') {
+    // Right-side image layout
+    return (
+      <div className="w-full h-full relative flex overflow-hidden">
+        <GrainyGradientBg />
+        <GridPattern />
+
+        {/* Left: Content (60%) */}
+        <div className="w-[60%] h-full relative flex flex-col justify-center p-16">
+          <div style={getSectionStyle(content.sectionStyles, 'header')} className="mb-12">
+            <GlassPanel className="inline-block px-6 py-3 rounded-full">
+              <TechLabel text={content.badgeText || 'PLAYGROUND'} />
+            </GlassPanel>
+          </div>
+
+          <div style={getSectionStyle(content.sectionStyles, 'titleSection')}>
+            <LimeAccent className="w-24 h-1 mb-8" />
+            <h1 
+              className="text-7xl font-black leading-tight tracking-tighter mb-8 bg-clip-text text-transparent"
+              style={{
+                ...getStyle(content.styles, 'mainTitle'),
+                backgroundImage: 'linear-gradient(to bottom, #FFFFFF, rgba(255, 255, 255, 0.4))',
+              }}
+            >
+              {content.mainTitle || content.headline || 'Your Title'}
+            </h1>
+            <p 
+              className="text-3xl font-bold text-white/50 leading-relaxed max-w-2xl"
+              style={getStyle(content.styles, 'subtitle')}
+            >
+              {content.subtitle || content.subheadline || 'Your message here'}
+            </p>
+          </div>
+        </div>
+
+        {/* Right: Hero Image (40%) */}
+        <div className="w-[40%] h-full relative">
+          {content.heroImage ? (
+            <>
+              <LimeAccent className="absolute left-0 top-0 bottom-0 w-1 z-10" />
+              <img 
+                src={content.heroImage} 
+                alt="Hero" 
+                className="w-full h-full object-cover"
+                style={getStyle(content.styles, 'heroImage')}
+              />
+            </>
+          ) : (
+            <div className="w-full h-full bg-gradient-to-bl from-zinc-800 to-zinc-900" />
+          )}
+        </div>
+      </div>
+    );
+  }
+
+  // Top image layout (default - similar to MagazineCover)
+  return (
+    <div className="w-full h-full relative overflow-hidden">
+      <GrainyGradientBg />
+      
+      <div className="absolute inset-0">
+        {content.heroImage && (
+          <>
+            <img 
+              src={content.heroImage} 
+              alt="Cover" 
+              className="w-full h-full object-cover opacity-40"
+              style={getStyle(content.styles, 'heroImage')}
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent" />
+          </>
+        )}
+      </div>
+
+      <GridPattern />
+
+      <div style={getSectionStyle(content.sectionStyles, 'header')} className="absolute top-12 left-12 z-20">
+        <GlassPanel className="px-6 py-3 rounded-full">
+          <TechLabel text={content.badgeText || 'PLAYGROUND'} />
+        </GlassPanel>
+      </div>
+
+      <div style={getSectionStyle(content.sectionStyles, 'titleSection')} className="absolute bottom-0 left-0 right-0 p-16 z-10">
+        <LimeAccent className="w-24 h-1 mb-8" />
+        <h1 
+          className="text-[7rem] font-black leading-[0.9] tracking-tighter mb-6 bg-clip-text text-transparent"
+          style={{
+            ...getStyle(content.styles, 'mainTitle'),
+            backgroundImage: 'linear-gradient(to bottom, #FFFFFF, rgba(255, 255, 255, 0.4))',
+          }}
+        >
+          {content.mainTitle || content.headline || 'Your Title'}
+        </h1>
+        <p 
+          className="text-3xl font-bold text-white/60 max-w-3xl"
+          style={getStyle(content.styles, 'subtitle')}
+        >
+          {content.subtitle || content.subheadline || 'Your message here'}
+        </p>
       </div>
     </div>
   );
@@ -235,8 +471,11 @@ export const HeroFeatureContent = ({ content, globalSettings }: { content: Conte
         <div style={getSectionStyle(content.sectionStyles, 'titleSection')} className="mb-12">
           <LimeAccent className="w-20 h-1 mb-6" />
           <h1 
-            className="text-6xl font-black text-white tracking-tighter mb-4"
-            style={getStyle(content.styles, 'mainTitle')}
+            className="text-6xl font-black tracking-tighter mb-4 bg-clip-text text-transparent"
+            style={{
+              ...getStyle(content.styles, 'mainTitle'),
+              backgroundImage: 'linear-gradient(to bottom, #FFFFFF, rgba(255, 255, 255, 0.4))',
+            }}
           >
             {content.mainTitle || content.title}
           </h1>
@@ -283,8 +522,11 @@ export const ImageGridContent = ({ content, globalSettings }: { content: Content
       <div style={getSectionStyle(content.sectionStyles, 'titleSection')} className="mb-12">
         <TechLabel text="FEATURED CONTENT" className="mb-4 block" />
         <h1 
-          className="text-6xl font-black text-white tracking-tighter mb-2"
-          style={getStyle(content.styles, 'mainTitle')}
+          className="text-6xl font-black tracking-tighter mb-2 bg-clip-text text-transparent"
+          style={{
+            ...getStyle(content.styles, 'mainTitle'),
+            backgroundImage: 'linear-gradient(to bottom, #FFFFFF, rgba(255, 255, 255, 0.4))',
+          }}
         >
           {content.mainTitle || content.title}
         </h1>
@@ -315,6 +557,208 @@ export const ImageGridContent = ({ content, globalSettings }: { content: Content
               </div>
               <h3 className="text-2xl font-black text-white mb-2">{step.title}</h3>
               <p className="text-sm text-white/60 font-medium">{step.description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+// Text-Only Content - No images, pure text layout
+export const TextOnlyContent = ({ content, globalSettings }: { content: ContentSlideContent, globalSettings: GlobalSettings }) => {
+  return (
+    <div className="w-full h-full relative bg-black p-16 overflow-hidden flex flex-col">
+      <GridPattern />
+
+      {/* Title */}
+      <div style={getSectionStyle(content.sectionStyles, 'titleSection')} className="mb-16">
+        <TechLabel text="CONTENT" className="mb-6 block" />
+        <LimeAccent className="w-24 h-1 mb-8" />
+        <h1 
+          className="text-7xl font-black tracking-tighter mb-6 bg-clip-text text-transparent"
+          style={{
+            ...getStyle(content.styles, 'mainTitle'),
+            backgroundImage: 'linear-gradient(to bottom, #FFFFFF, rgba(255, 255, 255, 0.4))',
+          }}
+        >
+          {content.mainTitle || content.title}
+        </h1>
+        {content.subtitle && (
+          <p className="text-2xl text-white/40 font-medium" style={getStyle(content.styles, 'subtitle')}>
+            {content.subtitle}
+          </p>
+        )}
+      </div>
+
+      {/* Content Items */}
+      <div style={getSectionStyle(content.sectionStyles, 'body')} className="flex-1 flex flex-col gap-8">
+        {(content.steps || []).slice(0, 4).map((step, i) => (
+          <div key={i} className="flex items-start gap-8">
+            {/* Number Badge */}
+            <div className="flex-shrink-0">
+              <div className="w-16 h-16 rounded-full bg-[#BFFF00]/20 border-2 border-[#BFFF00] flex items-center justify-center">
+                <span className="text-[#BFFF00] font-black text-2xl">{i + 1}</span>
+              </div>
+            </div>
+            
+            {/* Content */}
+            <div className="flex-1 pt-2">
+              <h3 className="text-3xl font-black text-white mb-3 leading-tight">{step.title}</h3>
+              <p className="text-xl text-white/50 font-medium leading-relaxed">{step.description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* Footer */}
+      <div className="mt-12 flex justify-between items-center">
+        <TechLabel text={content.footerNote || 'PLAYGROUND'} />
+        <TechLabel text={content.footerCTA || 'CONTINUE'} />
+      </div>
+    </div>
+  );
+};
+
+// Image-Only Content - Showcase of images with minimal text
+export const ImageOnlyContent = ({ content, globalSettings }: { content: ContentSlideContent, globalSettings: GlobalSettings }) => {
+  const gridLayout = (content as any).gridLayout || '2x2'; // '2x2', '3-col', or 'showcase'
+
+  if (gridLayout === 'showcase') {
+    // Single large showcase image
+    return (
+      <div className="w-full h-full relative bg-black overflow-hidden">
+        <GridPattern />
+
+        {/* Large Showcase Image */}
+        <div className="absolute inset-0">
+          {(content.steps?.[0]?.icon || (content as any).heroImage) ? (
+            <>
+              <img 
+                src={content.steps?.[0]?.icon || (content as any).heroImage} 
+                alt="Showcase" 
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/30" />
+            </>
+          ) : (
+            <div className="w-full h-full bg-gradient-to-br from-zinc-900 to-black" />
+          )}
+        </div>
+
+        {/* Top Title */}
+        <div style={getSectionStyle(content.sectionStyles, 'titleSection')} className="absolute top-16 left-16 right-16 z-10">
+          <GlassPanel className="inline-block px-8 py-4 rounded-[2rem]">
+            <h1 
+              className="text-5xl font-black tracking-tighter bg-clip-text text-transparent"
+              style={{
+                ...getStyle(content.styles, 'mainTitle'),
+                backgroundImage: 'linear-gradient(to bottom, #FFFFFF, rgba(255, 255, 255, 0.4))',
+              }}
+            >
+              {content.mainTitle || content.title}
+            </h1>
+          </GlassPanel>
+        </div>
+
+        {/* Bottom Info */}
+        <div className="absolute bottom-16 left-16 right-16 z-10">
+          <LimeAccent className="w-32 h-1 mb-6" />
+          {content.subtitle && (
+            <p className="text-3xl font-bold text-white/80 max-w-3xl" style={getStyle(content.styles, 'subtitle')}>
+              {content.subtitle}
+            </p>
+          )}
+        </div>
+      </div>
+    );
+  }
+
+  if (gridLayout === '3-col') {
+    // 3-column grid
+    return (
+      <div className="w-full h-full relative bg-black p-16 overflow-hidden">
+        <GridPattern />
+
+        {/* Title */}
+        <div style={getSectionStyle(content.sectionStyles, 'titleSection')} className="mb-12">
+          <TechLabel text="GALLERY" className="mb-4 block" />
+          <h1 
+            className="text-6xl font-black tracking-tighter mb-2 bg-clip-text text-transparent"
+            style={{
+              ...getStyle(content.styles, 'mainTitle'),
+              backgroundImage: 'linear-gradient(to bottom, #FFFFFF, rgba(255, 255, 255, 0.4))',
+            }}
+          >
+            {content.mainTitle || content.title}
+          </h1>
+          <LimeAccent className="w-32 h-1" />
+        </div>
+
+        {/* 3-Column Grid */}
+        <div style={getSectionStyle(content.sectionStyles, 'body')} className="grid grid-cols-3 gap-6 h-[calc(100%-200px)]">
+          {(content.steps || []).slice(0, 6).map((step, i) => (
+            <div key={i} className="relative group overflow-hidden rounded-[2rem]">
+              {step.icon ? (
+                <img src={step.icon} alt={step.title} className="w-full h-full object-cover" />
+              ) : (
+                <div className="w-full h-full bg-gradient-to-br from-zinc-800 to-zinc-900" />
+              )}
+              
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-100 group-hover:opacity-90 transition-opacity" />
+              
+              <div className="absolute bottom-0 left-0 right-0 p-6">
+                <LimeAccent className="w-12 h-px mb-3" />
+                <h3 className="text-xl font-black text-white">{step.title}</h3>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    );
+  }
+
+  // Default 2x2 grid (similar to ImageGridContent)
+  return (
+    <div className="w-full h-full relative bg-black p-16 overflow-hidden">
+      <GridPattern />
+
+      <div style={getSectionStyle(content.sectionStyles, 'titleSection')} className="mb-12">
+        <TechLabel text="FEATURED" className="mb-4 block" />
+        <h1 
+          className="text-6xl font-black tracking-tighter mb-2 bg-clip-text text-transparent"
+          style={{
+            ...getStyle(content.styles, 'mainTitle'),
+            backgroundImage: 'linear-gradient(to bottom, #FFFFFF, rgba(255, 255, 255, 0.4))',
+          }}
+        >
+          {content.mainTitle || content.title}
+        </h1>
+        <LimeAccent className="w-32 h-1" />
+      </div>
+
+      <div style={getSectionStyle(content.sectionStyles, 'body')} className="grid grid-cols-2 gap-6 h-[calc(100%-200px)]">
+        {(content.steps || []).slice(0, 4).map((step, i) => (
+          <div key={i} className="relative group overflow-hidden rounded-[2rem]">
+            {step.icon ? (
+              <img src={step.icon} alt={step.title} className="w-full h-full object-cover" />
+            ) : (
+              <div className="w-full h-full bg-gradient-to-br from-zinc-800 to-zinc-900" />
+            )}
+            
+            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent" />
+            
+            <div className="absolute bottom-0 left-0 right-0 p-8">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 rounded-full bg-[#BFFF00]/20 border-2 border-[#BFFF00] flex items-center justify-center">
+                  <span className="text-[#BFFF00] font-black text-lg">{i + 1}</span>
+                </div>
+                <LimeAccent className="flex-1 h-px" />
+              </div>
+              <h3 className="text-3xl font-black text-white mb-2">{step.title}</h3>
+              {step.description && (
+                <p className="text-base text-white/60 font-medium">{step.description}</p>
+              )}
             </div>
           </div>
         ))}

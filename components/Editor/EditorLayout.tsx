@@ -16,24 +16,19 @@ const EditorLayout = () => {
   const fileInputRef = React.useRef<HTMLInputElement>(null);
   const theme = getTheme(project.themeId);
 
-  const handleJsonImport = async (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleJsonImport = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (!file) return;
 
     const reader = new FileReader();
-    reader.onload = async (event) => {
+    reader.onload = (event) => {
       try {
         const json = JSON.parse(event.target?.result as string);
-        // Show loading state while converting images
-        setIsExporting(true);
-        const result = await importProject(json);
-        setIsExporting(false);
-        
+        const result = importProject(json);
         if (!result.success) {
           alert(`Import failed: ${result.error}`);
         }
       } catch (err) {
-        setIsExporting(false);
         alert('Invalid JSON file');
       }
     };
