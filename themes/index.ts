@@ -18,9 +18,13 @@ export const ThemeRegistry: Record<string, Theme> = {
     editorConfig: {
       INTRO: {
         fields: [
-          { key: 'mainTitle', type: 'text', label: 'Main Title', required: true },
-          { key: 'subtitle', type: 'text', label: 'Subtitle' },
-          { key: 'profileImage', type: 'image', label: 'Profile Photo' },
+          { key: 'header', type: 'section-controls', label: 'Header Section' },
+          { key: 'profileImage', type: 'image', label: 'Profile Photo', hasStyleControls: true },
+          { key: 'titleSection', type: 'section-controls', label: 'Title Section' },
+          { key: 'mainTitle', type: 'text', label: 'Main Title', required: true, hasStyleControls: true },
+          { key: 'subtitleSection', type: 'section-controls', label: 'Subtitle Section' },
+          { key: 'subtitle', type: 'text', label: 'Subtitle', hasStyleControls: true },
+          { key: 'footer', type: 'section-controls', label: 'Logo Grid Section' },
           { key: 'logos', type: 'icon-grid', label: 'Tech Stack Logos' },
         ],
         defaultContent: {
@@ -31,8 +35,12 @@ export const ThemeRegistry: Record<string, Theme> = {
       },
       CONTENT: {
         fields: [
-          { key: 'mainTitle', type: 'text', label: 'Slide Title', required: true },
-          { key: 'subtitle', type: 'text', label: 'Pill Note' },
+          { key: 'header', type: 'section-controls', label: 'Header Section' },
+          { key: 'titleSection', type: 'section-controls', label: 'Title Section' },
+          { key: 'mainTitle', type: 'text', label: 'Slide Title', required: true, hasStyleControls: true },
+          { key: 'subtitleSection', type: 'section-controls', label: 'Subtitle Section' },
+          { key: 'subtitle', type: 'text', label: 'Pill Note', hasStyleControls: true },
+          { key: 'body', type: 'section-controls', label: 'Tech Items Section' },
           { key: 'steps', type: 'steps', label: 'Tech Items' },
         ],
         defaultContent: {
@@ -45,9 +53,13 @@ export const ThemeRegistry: Record<string, Theme> = {
       },
       CTA: {
         fields: [
-          { key: 'name', type: 'text', label: 'Name', required: true },
-          { key: 'title', type: 'text', label: 'Title/Role' },
-          { key: 'ctaText', type: 'text', label: 'CTA Text' },
+          { key: 'header', type: 'section-controls', label: 'Profile Header' },
+          { key: 'titleSection', type: 'section-controls', label: 'Name Section' },
+          { key: 'name', type: 'text', label: 'Name', required: true, hasStyleControls: true },
+          { key: 'subtitleSection', type: 'section-controls', label: 'Title Section' },
+          { key: 'title', type: 'text', label: 'Title/Role', hasStyleControls: true },
+          { key: 'body', type: 'section-controls', label: 'CTA Section' },
+          { key: 'ctaText', type: 'text', label: 'CTA Text', hasStyleControls: true },
         ],
         defaultContent: {
           name: 'Michel Lieben',

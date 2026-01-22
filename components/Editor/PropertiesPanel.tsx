@@ -4,11 +4,197 @@ import React from 'react';
 import { useCarouselStore } from '../../store/useCarouselStore';
 import { getTheme, ThemeRegistry } from '../../themes';
 import { FieldConfig, IntroContent, ContentSlideContent, CTAContent } from '../../types/carousel';
-import { Square, RectangleVertical, Settings, PenLine, Palette, Smartphone, Image as ImageIcon, Plus, Trash2, Layout, Upload, X } from 'lucide-react';
+import { Square, RectangleVertical, Settings, PenLine, Palette, Smartphone, Image as ImageIcon, Plus, Trash2, Layout, Upload, X, Settings2, Italic, Type, Maximize2, LayoutPanelLeft } from 'lucide-react';
+import { ElementStyle, SectionStyle } from '../../types/carousel';
+
+const StyleEditor = ({ style, onChange, isImage = false }: { style?: ElementStyle, onChange: (newStyle: ElementStyle) => void, isImage?: boolean }) => {
+  return (
+    <div className="bg-zinc-50 border-2 border-zinc-100 rounded-xl p-4 mt-2 flex flex-col gap-4">
+      {!isImage ? (
+        <>
+          <div className="grid grid-cols-2 gap-4">
+            <div className="flex flex-col gap-1">
+              <span className="text-[9px] font-bold text-zinc-400 uppercase">Font Size</span>
+              <input 
+                type="text" 
+                value={style?.fontSize || ''} 
+                onChange={(e) => onChange({ ...style, fontSize: e.target.value })}
+                placeholder="e.g. 2rem"
+                className="bg-white border rounded-lg px-2 py-1 text-xs outline-none focus:border-black"
+              />
+            </div>
+            <div className="flex flex-col gap-1">
+              <span className="text-[9px] font-bold text-zinc-400 uppercase">Spacing</span>
+              <input 
+                type="text" 
+                value={style?.letterSpacing || ''} 
+                onChange={(e) => onChange({ ...style, letterSpacing: e.target.value })}
+                placeholder="e.g. -0.02em"
+                className="bg-white border rounded-lg px-2 py-1 text-xs outline-none focus:border-black"
+              />
+            </div>
+          </div>
+          <div className="flex items-center gap-2">
+            <button 
+              onClick={() => onChange({ ...style, fontStyle: style?.fontStyle === 'italic' ? 'normal' : 'italic' })}
+              className={`flex-1 py-1.5 border-2 rounded-lg flex items-center justify-center gap-2 text-[10px] font-bold transition-all ${style?.fontStyle === 'italic' ? 'border-black bg-black text-white' : 'border-zinc-200 bg-white text-zinc-400 hover:border-zinc-300'}`}
+            >
+              <Italic size={12} /> Italic
+            </button>
+            <div className="flex-1 flex flex-col gap-1">
+               <span className="text-[9px] font-bold text-zinc-400 uppercase">Weight</span>
+               <select 
+                 value={style?.fontWeight || 'bold'} 
+                 onChange={(e) => onChange({ ...style, fontWeight: e.target.value })}
+                 className="bg-white border rounded-lg px-2 py-1 text-xs outline-none focus:border-black font-bold"
+               >
+                 <option value="normal">Normal</option>
+                 <option value="medium">Medium</option>
+                 <option value="semibold">Semibold</option>
+                 <option value="bold">Bold</option>
+                 <option value="black">Black</option>
+               </select>
+            </div>
+          </div>
+        </>
+      ) : (
+        <div className="grid grid-cols-2 gap-4">
+           <div className="flex flex-col gap-1">
+              <span className="text-[9px] font-bold text-zinc-400 uppercase">Width</span>
+              <input 
+                type="text" 
+                value={style?.width || ''} 
+                onChange={(e) => onChange({ ...style, width: e.target.value })}
+                placeholder="e.g. 100px"
+                className="bg-white border rounded-lg px-2 py-1 text-xs outline-none focus:border-black"
+              />
+            </div>
+            <div className="flex flex-col gap-1">
+              <span className="text-[9px] font-bold text-zinc-400 uppercase">Height</span>
+              <input 
+                type="text" 
+                value={style?.height || ''} 
+                onChange={(e) => onChange({ ...style, height: e.target.value })}
+                placeholder="auto"
+                className="bg-white border rounded-lg px-2 py-1 text-xs outline-none focus:border-black"
+              />
+            </div>
+        </div>
+      )}
+    </div>
+  )
+}
+
+const SectionStyleEditor = ({ style, onChange, isLogoSection = false }: { style?: SectionStyle, onChange: (newStyle: SectionStyle) => void, isLogoSection?: boolean }) => {
+  return (
+    <div className="bg-zinc-50 border-2 border-zinc-100 rounded-xl p-4 mt-2 flex flex-col gap-4">
+      <div className="grid grid-cols-2 gap-4">
+        <div className="flex flex-col gap-1">
+          <span className="text-[9px] font-bold text-zinc-400 uppercase">Top Margin</span>
+          <input 
+            type="text" 
+            value={style?.marginTop || ''} 
+            onChange={(e) => onChange({ ...style, marginTop: e.target.value })}
+            placeholder="e.g. 2rem"
+            className="bg-white border rounded-lg px-2 py-1 text-xs outline-none focus:border-black"
+          />
+        </div>
+        <div className="flex flex-col gap-1">
+          <span className="text-[9px] font-bold text-zinc-400 uppercase">Bottom Margin</span>
+          <input 
+            type="text" 
+            value={style?.marginBottom || ''} 
+            onChange={(e) => onChange({ ...style, marginBottom: e.target.value })}
+            placeholder="e.g. 2rem"
+            className="bg-white border rounded-lg px-2 py-1 text-xs outline-none focus:border-black"
+          />
+        </div>
+      </div>
+      
+      <div className="grid grid-cols-2 gap-4">
+        <div className="flex flex-col gap-1">
+          <span className="text-[9px] font-bold text-zinc-400 uppercase">Padding (X)</span>
+          <input 
+            type="text" 
+            value={style?.paddingLeft || ''} 
+            onChange={(e) => onChange({ ...style, paddingLeft: e.target.value, paddingRight: e.target.value })}
+            placeholder="e.g. 1rem"
+            className="bg-white border rounded-lg px-2 py-1 text-xs outline-none focus:border-black"
+          />
+        </div>
+        <div className="flex flex-col gap-1">
+          <span className="text-[9px] font-bold text-zinc-400 uppercase">Padding (Y)</span>
+          <input 
+            type="text" 
+            value={style?.paddingTop || ''} 
+            onChange={(e) => onChange({ ...style, paddingTop: e.target.value, paddingBottom: e.target.value })}
+            placeholder="e.g. 1rem"
+            className="bg-white border rounded-lg px-2 py-1 text-xs outline-none focus:border-black"
+          />
+        </div>
+      </div>
+
+      {isLogoSection && (
+        <div className="flex flex-col gap-4 pt-2 border-t">
+          <div className="flex flex-col gap-1">
+            <span className="text-[9px] font-bold text-zinc-400 uppercase">Layout Type</span>
+            <div className="grid grid-cols-3 gap-2">
+              {['grid', 'row', 'wrap'].map((l) => (
+                <button
+                  key={l}
+                  onClick={() => onChange({ ...style, layout: l as any })}
+                  className={`py-1.5 border-2 rounded-lg text-[9px] font-black uppercase transition-all ${style?.layout === l ? 'border-black bg-black text-white' : 'border-zinc-200 bg-white text-zinc-400 hover:border-zinc-300'}`}
+                >
+                  {l}
+                </button>
+              ))}
+            </div>
+          </div>
+          <div className="grid grid-cols-2 gap-4">
+            <div className="flex flex-col gap-1">
+              <span className="text-[9px] font-bold text-zinc-400 uppercase">Logo Size</span>
+              <input 
+                type="text" 
+                value={style?.itemSize || ''} 
+                onChange={(e) => onChange({ ...style, itemSize: e.target.value })}
+                placeholder="e.g. 40px"
+                className="bg-white border rounded-lg px-2 py-1 text-xs outline-none focus:border-black"
+              />
+            </div>
+            <div className="flex flex-col gap-1">
+              <span className="text-[9px] font-bold text-zinc-400 uppercase">Logo Gap</span>
+              <input 
+                type="text" 
+                value={style?.itemGap || ''} 
+                onChange={(e) => onChange({ ...style, itemGap: e.target.value })}
+                placeholder="e.g. 1rem"
+                className="bg-white border rounded-lg px-2 py-1 text-xs outline-none focus:border-black"
+              />
+            </div>
+          </div>
+        </div>
+      )}
+
+      <div className="flex flex-col gap-1">
+          <span className="text-[9px] font-bold text-zinc-400 uppercase">Opacity</span>
+          <input 
+            type="range" 
+            min="0" 
+            max="1" 
+            step="0.1"
+            value={style?.opacity ?? 1} 
+            onChange={(e) => onChange({ ...style, opacity: parseFloat(e.target.value) })}
+            className="w-full accent-black"
+          />
+        </div>
+    </div>
+  )
+}
 
 const PropertiesPanel = () => {
   const { project, activeSlideId, setTheme, updateSlideContent, updateGlobalSettings } = useCarouselStore();
   const [activeTab, setActiveTab] = React.useState<'content' | 'design'>('content');
+  const [expandedStyleField, setExpandedStyleField] = React.useState<string | null>(null);
   const fileInputRef = React.useRef<HTMLInputElement>(null);
   const theme = getTheme(project.themeId);
   const activeSlide = project.slides.find(s => s.id === activeSlideId) || project.slides[0];
@@ -25,6 +211,16 @@ const PropertiesPanel = () => {
     reader.readAsDataURL(file);
   };
 
+  const handleStyleChange = (fieldKey: string, style: ElementStyle) => {
+    const currentStyles = (activeSlide.content as any).styles || {};
+    handleFieldChange('styles', { ...currentStyles, [fieldKey]: style });
+  };
+
+  const handleSectionStyleChange = (sectionId: string, style: SectionStyle) => {
+    const currentSectionStyles = (activeSlide.content as any).sectionStyles || {};
+    handleFieldChange('sectionStyles', { ...currentSectionStyles, [sectionId]: style });
+  };
+
   const renderField = (field: FieldConfig) => {
     const content = activeSlide.content as any;
     const value = content[field.key as keyof typeof content];
@@ -33,7 +229,17 @@ const PropertiesPanel = () => {
       case 'text':
         return (
           <div key={field.key} className="flex flex-col gap-2">
-            <label className="text-[10px] font-black text-zinc-400 uppercase tracking-widest">{field.label}</label>
+            <div className="flex items-center justify-between">
+              <label className="text-[10px] font-black text-zinc-400 uppercase tracking-widest">{field.label}</label>
+              {field.hasStyleControls && (
+                <button 
+                  onClick={() => setExpandedStyleField(expandedStyleField === field.key ? null : field.key)}
+                  className={`p-1 rounded-md transition-colors ${expandedStyleField === field.key ? 'bg-black text-white' : 'text-zinc-400 hover:bg-zinc-100'}`}
+                >
+                  <Settings2 size={12} />
+                </button>
+              )}
+            </div>
             <input
               type="text"
               value={value || ''}
@@ -41,6 +247,12 @@ const PropertiesPanel = () => {
               placeholder={field.placeholder}
               className="w-full bg-zinc-50 border-2 border-zinc-100 rounded-xl px-4 py-2.5 text-sm font-bold focus:border-black focus:outline-none transition-all"
             />
+            {expandedStyleField === field.key && (
+              <StyleEditor 
+                style={content.styles?.[field.key]} 
+                onChange={(s) => handleStyleChange(field.key, s)}
+              />
+            )}
           </div>
         );
       case 'textarea':
@@ -59,7 +271,17 @@ const PropertiesPanel = () => {
       case 'image':
         return (
           <div key={field.key} className="flex flex-col gap-2">
-            <label className="text-[10px] font-black text-zinc-400 uppercase tracking-widest">{field.label}</label>
+            <div className="flex items-center justify-between">
+              <label className="text-[10px] font-black text-zinc-400 uppercase tracking-widest">{field.label}</label>
+              {field.hasStyleControls && (
+                <button 
+                  onClick={() => setExpandedStyleField(expandedStyleField === field.key ? null : field.key)}
+                  className={`p-1 rounded-md transition-colors ${expandedStyleField === field.key ? 'bg-black text-white' : 'text-zinc-400 hover:bg-zinc-100'}`}
+                >
+                  <Settings2 size={12} />
+                </button>
+              )}
+            </div>
             <div className="flex items-center gap-4">
                {value ? (
                  <div className="relative group w-20 h-20 shrink-0">
@@ -110,6 +332,37 @@ const PropertiesPanel = () => {
                   )}
                </div>
             </div>
+            {expandedStyleField === field.key && (
+              <StyleEditor 
+                style={content.styles?.[field.key]} 
+                onChange={(s) => handleStyleChange(field.key, s)}
+                isImage
+              />
+            )}
+          </div>
+        );
+      case 'section-controls':
+        return (
+          <div key={field.key} className="flex flex-col gap-2 mt-4 first:mt-0">
+            <div className="flex items-center justify-between bg-zinc-100/50 px-3 py-2 rounded-xl border border-zinc-200">
+              <div className="flex items-center gap-2">
+                <LayoutPanelLeft size={14} className="text-zinc-500" />
+                <span className="text-[10px] font-black text-zinc-900 uppercase tracking-widest">{field.label} Controls</span>
+              </div>
+              <button 
+                onClick={() => setExpandedStyleField(expandedStyleField === field.key ? null : field.key)}
+                className={`p-1 rounded-md transition-colors ${expandedStyleField === field.key ? 'bg-black text-white' : 'text-zinc-400 hover:bg-zinc-200'}`}
+              >
+                <Settings2 size={12} />
+              </button>
+            </div>
+            {expandedStyleField === field.key && (
+              <SectionStyleEditor 
+                style={(activeSlide.content as any).sectionStyles?.[field.key]} 
+                onChange={(s) => handleSectionStyleChange(field.key, s)}
+                isLogoSection={field.key === 'footer'}
+              />
+            )}
           </div>
         );
       case 'icon-grid':
@@ -154,7 +407,6 @@ const PropertiesPanel = () => {
                    <Plus size={16} />
                 </button>
              </div>
-             <p className="text-[10px] text-zinc-400">Click icons on the canvas to change them directly.</p>
           </div>
         );
       case 'steps':

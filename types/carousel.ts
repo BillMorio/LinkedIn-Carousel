@@ -43,6 +43,40 @@ export interface BulletPoint {
   emphasis?: boolean;
 }
 
+export interface ElementStyle {
+  fontSize?: string;
+  fontWeight?: string;
+  fontFamily?: string;
+  lineHeight?: string;
+  letterSpacing?: string;
+  fontStyle?: 'normal' | 'italic';
+  color?: string;
+  width?: string;
+  height?: string;
+  opacity?: number;
+}
+
+export interface SectionStyle {
+  marginTop?: string;
+  marginBottom?: string;
+  paddingTop?: string;
+  paddingBottom?: string;
+  paddingLeft?: string;
+  paddingRight?: string;
+  opacity?: number;
+  backgroundColor?: string;
+  borderRadius?: string;
+  gap?: string;
+  layout?: 'grid' | 'row' | 'stack' | 'wrap';
+  itemGap?: string;
+  itemSize?: string;
+}
+
+export interface SectionConfig {
+  id: string;
+  label: string;
+}
+
 export interface IntroContent {
   type: 'INTRO';
   profileImage?: string;
@@ -51,6 +85,7 @@ export interface IntroContent {
   companyLogo?: string;
   headline: string;
   subheadline?: string;
+  subtitle?: string;
   description?: string;
   badgeText?: string;
   pillText?: string;
@@ -58,6 +93,9 @@ export interface IntroContent {
   stats?: Array<{ label: string; value: string }>;
   logos?: string[];
   layout?: 'centered' | 'split' | 'header-focus' | 'profile-emphasis';
+  mainTitle?: string;
+  styles?: Record<string, ElementStyle>;
+  sectionStyles?: Record<string, SectionStyle>;
 }
 
 export interface ContentSlideContent {
@@ -81,6 +119,9 @@ export interface ContentSlideContent {
   footerNote?: string;
   footerCTA?: string;
   layout?: 'steps' | 'bullets' | 'workflow' | 'paragraph' | 'split' | 'quote';
+  mainTitle?: string;
+  styles?: Record<string, ElementStyle>;
+  sectionStyles?: Record<string, SectionStyle>;
 }
 
 export interface CTAContent {
@@ -107,6 +148,8 @@ export interface CTAContent {
   };
   achievements?: string[];
   layout?: 'profile-centered' | 'split-screen' | 'card-style' | 'minimal';
+  styles?: Record<string, ElementStyle>;
+  sectionStyles?: Record<string, SectionStyle>;
 }
 
 export type SlideContent = IntroContent | ContentSlideContent | CTAContent;
@@ -126,7 +169,7 @@ export interface CarouselProject {
   globalSettings: GlobalSettings;
 }
 
-export type FieldType = 'text' | 'textarea' | 'image' | 'steps' | 'bullets' | 'tools' | 'workflow' | 'color' | 'list' | 'icon-grid';
+export type FieldType = 'text' | 'textarea' | 'image' | 'steps' | 'bullets' | 'tools' | 'workflow' | 'color' | 'list' | 'icon-grid' | 'font-controls' | 'image-size' | 'section-controls';
 
 export interface FieldConfig {
   key: string;
@@ -135,6 +178,7 @@ export interface FieldConfig {
   placeholder?: string;
   required?: boolean;
   helpText?: string;
+  hasStyleControls?: boolean;
 }
 
 export interface Theme {
@@ -142,6 +186,7 @@ export interface Theme {
   name: string;
   description: string;
   preview: string;
+  thumbnail?: string;
   components: {
     INTRO: React.ComponentType<{ content: IntroContent; globalSettings: GlobalSettings }>;
     CONTENT: React.ComponentType<{ content: ContentSlideContent; globalSettings: GlobalSettings }>;
@@ -150,14 +195,17 @@ export interface Theme {
   editorConfig: {
     INTRO: {
       fields: FieldConfig[];
+      sections?: SectionConfig[];
       defaultContent: Partial<IntroContent>;
     };
     CONTENT: {
       fields: FieldConfig[];
+      sections?: SectionConfig[];
       defaultContent: Partial<ContentSlideContent>;
     };
     CTA: {
       fields: FieldConfig[];
+      sections?: SectionConfig[];
       defaultContent: Partial<CTAContent>;
     };
   };
