@@ -144,59 +144,72 @@ export const ExecutionStepsTheme: Theme = {
   description: 'Clean, numbered step-by-step layouts with connected boxes',
   preview: '/previews/execution-steps.png',
   
-  components: {
-    INTRO: ExecutionStepsIntro,
-    CONTENT: ExecutionStepsContent,
-    CTA: ExecutionStepsCTA,
-  },
-  
-  editorConfig: {
-    INTRO: {
-      fields: [
-        { key: 'profileImage', type: 'image', label: 'Profile Photo' },
-        { key: 'headline', type: 'text', label: 'Main Headline', required: true },
-        { key: 'subheadline', type: 'text', label: 'Subheadline' },
-        { key: 'badgeText', type: 'text', label: 'Badge Text' },
-      ],
-      defaultContent: {
-        headline: 'Your Headline Here',
-        subheadline: 'Supporting text goes here',
-        badgeText: 'New Guide',
-      },
-    },
-    
-    CONTENT: {
-      fields: [
-        { key: 'pillText', type: 'text', label: 'Header Label', placeholder: 'Use case 2:' },
-        { key: 'title', type: 'text', label: 'Main Title', required: true },
-        { 
-          key: 'steps', 
-          type: 'steps', 
-          label: 'Execution Steps',
-          helpText: 'Add numbered steps with titles and descriptions'
-        },
-      ],
-      defaultContent: {
-        title: 'Your process title',
-        steps: [
-          { title: 'First step', description: 'Description here' },
+  variants: {
+    INTRO: [{
+      id: 'default',
+      name: 'Default',
+      purpose: 'Clean, step-by-step introduction for guides.',
+      bestUsedFor: 'Starting a tutorial or process walkthrough with a clear headline.',
+      component: ExecutionStepsIntro,
+      editorConfig: {
+        fields: [
+          { key: 'profileImage', type: 'image', label: 'Profile Photo' },
+          { key: 'headline', type: 'text', label: 'Main Headline', required: true },
+          { key: 'subheadline', type: 'text', label: 'Subheadline' },
+          { key: 'badgeText', type: 'text', label: 'Badge Text' },
         ],
+        defaultContent: {
+          headline: 'Your Headline Here',
+          subheadline: 'Supporting text goes here',
+          badgeText: 'New Guide',
+        },
       },
-    },
-    
-    CTA: {
-      fields: [
-        { key: 'profileImage', type: 'image', label: 'Profile Photo' },
-        { key: 'name', type: 'text', label: 'Your Name', required: true },
-        { key: 'handle', type: 'text', label: 'Social Handle', placeholder: '@yourname' },
-        { key: 'ctaText', type: 'text', label: 'Call to Action', required: true },
-      ],
-      defaultContent: {
-        ctaText: 'Follow for more insights',
-        name: 'LinkedIn User',
-        handle: '@linkedinuser',
+    }],
+    CONTENT: [{
+      id: 'default',
+      name: 'Default',
+      purpose: 'Listing sequential steps or process phases.',
+      bestUsedFor: 'Execution steps, how-to guides, and procedural content with numbered tracks.',
+      component: ExecutionStepsContent,
+      editorConfig: {
+        fields: [
+          { key: 'pillText', type: 'text', label: 'Header Label', placeholder: 'Use case 2:' },
+          { key: 'title', type: 'text', label: 'Main Title', required: true },
+          { 
+            key: 'steps', 
+            type: 'steps', 
+            label: 'Execution Steps',
+            helpText: 'Add numbered steps with titles and descriptions'
+          },
+        ],
+        defaultContent: {
+          title: 'Your process title',
+          steps: [
+            { title: 'First step', description: 'Description here' },
+          ],
+        },
       },
-    },
+    }],
+    CTA: [{
+      id: 'default',
+      name: 'Default',
+      purpose: 'Standard personal brand call-to-action.',
+      bestUsedFor: 'Concluding a guide with a prompt to follow or check out more resources.',
+      component: ExecutionStepsCTA,
+      editorConfig: {
+        fields: [
+          { key: 'profileImage', type: 'image', label: 'Profile Photo' },
+          { key: 'name', type: 'text', label: 'Your Name', required: true },
+          { key: 'handle', type: 'text', label: 'Social Handle', placeholder: '@yourname' },
+          { key: 'ctaText', type: 'text', label: 'Call to Action', required: true },
+        ],
+        defaultContent: {
+          ctaText: 'Follow for more insights',
+          name: 'LinkedIn User',
+          handle: '@linkedinuser',
+        },
+      },
+    }],
   },
   
   defaultColors: {

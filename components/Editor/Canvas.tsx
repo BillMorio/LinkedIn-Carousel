@@ -12,7 +12,9 @@ const Canvas = () => {
   const activeSlide = project.slides.find(s => s.id === activeSlideId) || project.slides[0];
   const { aspectRatio } = project.globalSettings;
   const theme = getTheme(project.themeId);
-  const SlideComponent = theme.components[activeSlide.type as keyof typeof theme.components];
+  const variants = theme.variants[activeSlide.type];
+  const variant = variants.find(v => v.id === activeSlide.variantId) || variants[0];
+  const SlideComponent = variant.component;
 
   const canvasWidth = 1080;
   const canvasHeight = aspectRatio === 'square' ? 1080 : 1350;

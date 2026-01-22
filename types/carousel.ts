@@ -8,6 +8,7 @@ export interface GlobalSettings {
   fontFamily: string;
   backgroundColor: string;
   aspectRatio: 'square' | 'portrait';
+  dimensions?: { width: number; height: number };
 }
 
 export interface ProfileInfo {
@@ -159,6 +160,12 @@ export interface Slide {
   type: SlideType;
   order: number;
   content: SlideContent;
+  variantId?: string;
+  aiContext?: {
+    purpose?: string;
+    bestUsedFor?: string;
+    recommendedDimensions?: { width: number; height: number };
+  };
 }
 
 export interface CarouselProject {
@@ -181,34 +188,26 @@ export interface FieldConfig {
   hasStyleControls?: boolean;
 }
 
+export interface ThemeVariant {
+  id: string;
+  name: string;
+  purpose?: string;
+  bestUsedFor?: string;
+  component: React.ComponentType<{ content: any; globalSettings: GlobalSettings }>;
+  editorConfig: {
+    fields: FieldConfig[];
+    sections?: SectionConfig[];
+    defaultContent: any;
+  };
+}
+
 export interface Theme {
   id: string;
   name: string;
   description: string;
   preview: string;
   thumbnail?: string;
-  components: {
-    INTRO: React.ComponentType<{ content: IntroContent; globalSettings: GlobalSettings }>;
-    CONTENT: React.ComponentType<{ content: ContentSlideContent; globalSettings: GlobalSettings }>;
-    CTA: React.ComponentType<{ content: CTAContent; globalSettings: GlobalSettings }>;
-  };
-  editorConfig: {
-    INTRO: {
-      fields: FieldConfig[];
-      sections?: SectionConfig[];
-      defaultContent: Partial<IntroContent>;
-    };
-    CONTENT: {
-      fields: FieldConfig[];
-      sections?: SectionConfig[];
-      defaultContent: Partial<ContentSlideContent>;
-    };
-    CTA: {
-      fields: FieldConfig[];
-      sections?: SectionConfig[];
-      defaultContent: Partial<CTAContent>;
-    };
-  };
+  variants: Record<SlideType, ThemeVariant[]>;
   defaultColors: {
     primary: string;
     accent: string;

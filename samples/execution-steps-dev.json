@@ -1,0 +1,57 @@
+{
+  "name": "Dev Workflow Guide",
+  "themeId": "execution-steps",
+  "slides": [
+    {
+      "type": "INTRO",
+      "content": {
+        "headline": "My Dev Setup 2024",
+        "subheadline": "Boost your productivity with these simple steps",
+        "styles": {
+          "headline": { "fontSize": "5rem", "fontWeight": "black" },
+          "subheadline": { "fontWeight": "medium", "color": "#666666" }
+        },
+        "sectionStyles": {
+          "header": { "marginBottom": "4rem" }
+        }
+      },
+      "aiContext": {
+        "purpose": "Clean, step-by-step introduction for guides.",
+        "bestUsedFor": "Starting a tutorial or process walkthrough with a clear headline.",
+        "recommendedDimensions": { "width": 1080, "height": 1350 }
+      }
+    },
+    {
+      "type": "CONTENT",
+      "content": {
+        "title": "Local Environment",
+        "steps": [
+          { "title": "Node.js v20", "description": "LTS version for stability" },
+          { "title": "PNPM", "description": "Faster than npm/yarn" },
+          { "title": "VS Code", "description": "With essential extensions" }
+        ]
+      },
+      "aiContext": {
+        "purpose": "Listing sequential steps or process phases.",
+        "bestUsedFor": "Execution steps, how-to guides, and procedural content with numbered tracks.",
+        "recommendedDimensions": { "width": 1080, "height": 1350 }
+      }
+    },
+    {
+      "type": "CTA",
+      "content": {
+        "ctaText": "Check the full guide"
+      },
+      "aiContext": {
+        "purpose": "Standard personal brand call-to-action.",
+        "bestUsedFor": "Concluding a guide with a prompt to follow or check out more resources.",
+        "recommendedDimensions": { "width": 1080, "height": 1350 }
+      }
+    }
+  ],
+  "globalSettings": {
+    "aspectRatio": "portrait",
+    "brandColor": "#000000",
+    "dimensions": { "width": 1080, "height": 1350 }
+  }
+}

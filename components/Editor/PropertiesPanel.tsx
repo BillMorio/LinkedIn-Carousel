@@ -192,12 +192,14 @@ const SectionStyleEditor = ({ style, onChange, isLogoSection = false }: { style?
 }
 
 const PropertiesPanel = () => {
-  const { project, activeSlideId, setTheme, updateSlideContent, updateGlobalSettings } = useCarouselStore();
+  const { project, activeSlideId, setTheme, updateSlideContent, updateGlobalSettings, setSlideVariant } = useCarouselStore();
   const [activeTab, setActiveTab] = React.useState<'content' | 'design'>('content');
   const [expandedStyleField, setExpandedStyleField] = React.useState<string | null>(null);
   const fileInputRef = React.useRef<HTMLInputElement>(null);
   const theme = getTheme(project.themeId);
   const activeSlide = project.slides.find(s => s.id === activeSlideId) || project.slides[0];
+  const activeVariants = theme.variants[activeSlide.type];
+  const activeVariant = activeVariants.find(v => v.id === activeSlide.variantId) || activeVariants[0];
 
   const handleFieldChange = (key: string, value: any) => {
     updateSlideContent(activeSlide.id, { [key]: value } as Partial<IntroContent | ContentSlideContent | CTAContent>);
@@ -287,7 +289,7 @@ const PropertiesPanel = () => {
                  <div className="relative group w-20 h-20 shrink-0">
                     <img src={value} alt="Preview" className="w-full h-full object-cover rounded-xl border-2 border-zinc-100 shadow-sm" />
                     <button 
-                      onClick={() => handleFieldChange(field.key, '')}
+                       onClick={() => handleFieldChange(field.key, '')}
                       className="absolute -top-2 -right-2 bg-white border shadow-md p-1 rounded-full text-zinc-400 hover:text-red-500 opacity-0 group-hover:opacity-100 transition-opacity"
                     >
                       <X size={12} />
@@ -322,7 +324,7 @@ const PropertiesPanel = () => {
                         input.onchange = (e) => {
                           const file = (e.target as HTMLInputElement).files?.[0];
                           if (file) handleImageUpload(field.key, file);
-                        };
+                         };
                         input.click();
                       }}
                       className="mt-2 text-[10px] font-bold text-black hover:underline"
@@ -440,7 +442,7 @@ const PropertiesPanel = () => {
                     <textarea
                       value={step.description || ''}
                       onChange={(e) => {
-                        const newSteps = [...value];
+                         const newSteps = [...value];
                         newSteps[idx] = { ...newSteps[idx], description: e.target.value };
                         handleFieldChange(field.key, newSteps);
                       }}
@@ -451,11 +453,11 @@ const PropertiesPanel = () => {
                   </div>
                 ))}
                 <button 
-                  onClick={() => handleFieldChange(field.key, [...(value || []), { name: 'New Tool', icon: 'tool' }])}
+                  onClick={() => handleFieldChange(field.key, [...(value || []), { title: 'New Item', description: 'Description' }])}
                   disabled={(value || []).length >= 6}
                   className="w-full border-2 border-dashed border-zinc-200 rounded-xl py-3 flex items-center justify-center gap-2 text-zinc-400 hover:border-black hover:text-black disabled:opacity-50 disabled:cursor-not-allowed transition-all text-xs font-bold"
                 >
-                  <Plus size={14} /> {(value || []).length >= 6 ? 'Max Tools Reached' : 'Add Tool'}
+                  <Plus size={14} /> {(value || []).length >= 6 ? 'Max Items Reached' : 'Add Item'}
                 </button>
              </div>
           </div>
@@ -494,6 +496,28 @@ const PropertiesPanel = () => {
       <div className="flex-1 overflow-y-auto p-6 flex flex-col gap-8 pb-12">
         {activeTab === 'design' ? (
           <>
+            {/* Variation Picker */}
+            <section className="flex flex-col gap-3">
+               <h4 className="text-[10px] font-black text-zinc-400 uppercase tracking-widest flex items-center gap-2">
+                 <LayoutPanelLeft size={12} /> Slide Variation
+               </h4>
+               <div className="grid grid-cols-2 gap-2">
+                  {activeVariants.map((v) => (
+                    <button
+                      key={v.id}
+                      onClick={() => setSlideVariant(activeSlide.id, v.id)}
+                      className={`py-3 px-4 rounded-xl border-2 text-[10px] font-black uppercase transition-all ${
+                        (activeSlide.variantId || activeVariants[0].id) === v.id ? 'border-black bg-black text-white' : 'border-zinc-100 text-zinc-400 hover:border-zinc-200 bg-white'
+                      }`}
+                    >
+                      {v.name}
+                    </button>
+                  ))}
+               </div>
+            </section>
+
+            <div className="h-px bg-zinc-100 w-full" />
+
             {/* Theme Picker */}
             <section className="flex flex-col gap-3">
               <h4 className="text-[10px] font-black text-zinc-400 uppercase tracking-widest flex items-center gap-2">
@@ -561,16 +585,18 @@ const PropertiesPanel = () => {
                 <h4 className="text-[10px] font-black text-zinc-400 uppercase tracking-widest flex items-center gap-2">
                   <Settings size={12} /> Edit Slide
                 </h4>
-                <span className="bg-zinc-100 text-zinc-500 px-2 py-0.5 rounded text-[9px] font-black">
-                   {activeSlide.type}
-                </span>
+                <div className="flex items-center gap-2">
+                   <span className="bg-zinc-100 text-zinc-500 px-2 py-0.5 rounded text-[9px] font-black uppercase">
+                      {activeSlide.type}
+                   </span>
+                   <span className="bg-black text-white px-2 py-0.5 rounded text-[9px] font-black uppercase">
+                      {activeVariant.name}
+                   </span>
+                </div>
              </div>
-
+ 
              <div className="flex flex-col gap-6">
-             {(() => {
-                const editorConfig = theme.editorConfig[activeSlide.type.toUpperCase() as keyof typeof theme.editorConfig];
-                return editorConfig.fields.map(renderField);
-             })()}
+             {activeVariant.editorConfig.fields.map(renderField)}
              </div>
           </section>
         )}

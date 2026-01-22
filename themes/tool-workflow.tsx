@@ -145,68 +145,75 @@ export const ToolWorkflowTheme: Theme = {
   description: 'Showcase tools and processes with pill-style badges',
   preview: '/previews/tool-workflow.png',
   
-  components: {
-    INTRO: ToolWorkflowIntro,
-    CONTENT: ToolWorkflowContent,
-    CTA: ToolWorkflowCTA,
-  },
-  
-  editorConfig: {
-    INTRO: {
-      fields: [
-        { key: 'companyLogo', type: 'image', label: 'Company Logo' },
-        { key: 'headline', type: 'text', label: 'Main Headline', required: true },
-        { key: 'stats', type: 'list', label: 'Key Stats' },
-      ],
-      defaultContent: {
-        headline: 'AI Agent Workflow',
-        stats: [
-          { label: 'Efficiency', value: '10x' },
-          { label: 'Accuracy', value: '99%' },
+  variants: {
+    INTRO: [{
+      id: 'default',
+      name: 'Default',
+      component: ToolWorkflowIntro,
+      editorConfig: {
+        fields: [
+          { key: 'companyLogo', type: 'image', label: 'Company Logo' },
+          { key: 'headline', type: 'text', label: 'Main Headline', required: true },
+          { key: 'stats', type: 'list', label: 'Key Stats' },
         ],
-      },
-    },
-    
-    CONTENT: {
-      fields: [
-        { key: 'pillText', type: 'text', label: 'Badge Number', placeholder: '3' },
-        { key: 'title', type: 'text', label: 'Agent/Process Name', required: true },
-        { key: 'subtitle', type: 'text', label: 'Goal Description' },
-        { 
-          key: 'tools', 
-          type: 'tools', 
-          label: 'Tools Used',
-          helpText: 'Add tools with icons and names'
+        defaultContent: {
+          headline: 'AI Agent Workflow',
+          stats: [
+            { label: 'Efficiency', value: '10x' },
+            { label: 'Accuracy', value: '99%' },
+          ],
         },
-        { 
-          key: 'workflow', 
-          type: 'workflow', 
-          label: 'Workflow Steps',
-          helpText: 'Sequential process steps'
+      },
+    }],
+    CONTENT: [{
+      id: 'default',
+      name: 'Default',
+      component: ToolWorkflowContent,
+      editorConfig: {
+        fields: [
+          { key: 'pillText', type: 'text', label: 'Badge Number', placeholder: '3' },
+          { key: 'title', type: 'text', label: 'Agent/Process Name', required: true },
+          { key: 'subtitle', type: 'text', label: 'Goal Description' },
+          { 
+            key: 'tools', 
+            type: 'tools', 
+            label: 'Tools Used',
+            helpText: 'Add tools with icons and names'
+          },
+          { 
+            key: 'workflow', 
+            type: 'workflow', 
+            label: 'Workflow Steps',
+            helpText: 'Sequential process steps'
+          },
+        ],
+        defaultContent: {
+          title: 'Content Agent',
+          subtitle: 'Auto-generate content for your needs',
+          pillText: '3',
+          tools: [{ name: 'Zapier', icon: 'zap' }, { name: 'OpenAI', icon: 'bot' }],
+          workflow: [{ step: 'Takes brand brief input' }, { step: 'Uses OpenAI to write' }],
         },
-      ],
-      defaultContent: {
-        title: 'Content Agent',
-        subtitle: 'Auto-generate content for your needs',
-        pillText: '3',
-        tools: [{ name: 'Zapier', icon: 'zap' }, { name: 'OpenAI', icon: 'bot' }],
-        workflow: [{ step: 'Takes brand brief input' }, { step: 'Uses OpenAI to write' }],
       },
-    },
-    
-    CTA: {
-      fields: [
-        { key: 'name', type: 'text', label: 'Your Name', required: true },
-        { key: 'title', type: 'text', label: 'Job Title' },
-        { key: 'ctaText', type: 'text', label: 'Main CTA', required: true },
-        { key: 'qrCode', type: 'image', label: 'QR Code (optional)' },
-      ],
-      defaultContent: {
-        ctaText: 'Scan to connect with my AI agents',
-        name: 'Tech Founder',
-        title: 'CEO @ AI Lab',
+    }],
+    CTA: [{
+      id: 'default',
+      name: 'Default',
+      component: ToolWorkflowCTA,
+      editorConfig: {
+        fields: [
+          { key: 'name', type: 'text', label: 'Your Name', required: true },
+          { key: 'title', type: 'text', label: 'Job Title' },
+          { key: 'ctaText', type: 'text', label: 'Main CTA', required: true },
+          { key: 'qrCode', type: 'image', label: 'QR Code (optional)' },
+        ],
+        defaultContent: {
+          ctaText: 'Scan to connect with my AI agents',
+          name: 'Tech Founder',
+          title: 'CEO @ AI Lab',
+        },
       },
-    },
+    }],
   },
   
   defaultColors: {

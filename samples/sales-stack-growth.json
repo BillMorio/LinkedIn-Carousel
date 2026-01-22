@@ -1,0 +1,214 @@
+{
+  "name": "AI-Powered SDR: The 2024 Blueprint",
+  "themeId": "sales-stack",
+  "slides": [
+    {
+      "type": "INTRO",
+      "variantId": "modern-squircle",
+      "content": {
+        "mainTitle": "AI POWERED SDR 2024",
+        "subtitle": "The definitive blueprint for high-intent outbound automation",
+        "name": "Michel Lieben",
+        "tagline": "Founder @ ColdIQ",
+        "profileImage": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop",
+        "logoText": "AUTOMATION MASTERCLASS",
+        "logos": [
+          "https://cdn.worldvectorlogo.com/logos/openai-2.svg",
+          "https://cdn.worldvectorlogo.com/logos/clay-1.svg",
+          "https://cdn.worldvectorlogo.com/logos/instantly-1.svg"
+        ],
+        "styles": {
+          "mainTitle": { "fontSize": "8rem", "fontWeight": "900", "letterSpacing": "-0.05em", "lineHeight": "0.8" },
+          "subtitle": { "fontSize": "3rem", "fontWeight": "700", "color": "#4B5563", "letterSpacing": "-0.02em" },
+          "name": { "fontSize": "1.1rem" },
+          "tagline": { "fontSize": "0.75rem", "opacity": 0.6 }
+        },
+        "sectionStyles": {
+          "titleSection": { "marginTop": "12rem" },
+          "subtitleSection": { "marginTop": "3rem" },
+          "footer": { "marginTop": "auto", "itemSize": "4.5rem", "itemGap": "1.5rem" }
+        }
+      },
+      "aiContext": {
+        "purpose": "High-impact hook for LinkedIn carousels.",
+        "bestUsedFor": "Broad topic introductions with visual branding and tech stack logos.",
+        "recommendedDimensions": { "width": 1080, "height": 1350 }
+      }
+    },
+    {
+      "type": "CONTENT",
+      "variantId": "modern-squircle",
+      "content": {
+        "mainTitle": "Phase 1: Research",
+        "subtitle": "Automate high-intent prospect research",
+        "steps": [
+          { 
+            "title": "LinkedIn Scraping", 
+            "description": "Extract data from Sales Navigator with 99% accuracy.",
+            "icon": "https://cdn.worldvectorlogo.com/logos/linkedin-icon-2.svg"
+          },
+          { 
+            "title": "Clay Enrichment", 
+            "description": "Waterfall email finding and social data enrichment.",
+            "icon": "https://cdn.worldvectorlogo.com/logos/clay-1.svg"
+          },
+          { 
+            "title": "AI Synthesis", 
+            "description": "OpenAI summarization of recent news and activities.",
+            "icon": "https://cdn.worldvectorlogo.com/logos/openai-2.svg"
+          }
+        ],
+        "footerNote": "Step 1 of 4",
+        "footerCTA": "coldiq.com/blueprint",
+        "styles": {
+          "mainTitle": { "fontSize": "6.5rem", "letterSpacing": "-0.04em" },
+          "subtitle": { "fontSize": "1.8rem", "backgroundColor": "#FFFFFF", "borderRadius": "100px" }
+        },
+        "sectionStyles": {
+          "titleSection": { "marginBottom": "4rem" },
+          "body": { "gap": "2.5rem" }
+        }
+      },
+      "aiContext": {
+        "purpose": "Showcasing a list of 3-4 tools or steps.",
+        "bestUsedFor": "Tools lists, step-by-step guides, or feature summaries with high visual punch.",
+        "recommendedDimensions": { "width": 1080, "height": 1350 }
+      }
+    },
+    {
+      "type": "CONTENT",
+      "variantId": "modern-squircle",
+      "content": {
+        "mainTitle": "Phase 2: Outreach",
+        "subtitle": "Warm up domains and start sending",
+        "steps": [
+          { 
+            "title": "Instantly Warmup", 
+            "description": "Slowly increase deliverability over 14 days.",
+            "icon": "https://cdn.worldvectorlogo.com/logos/instantly-1.svg"
+          },
+          { 
+            "title": "Smart Rotation", 
+            "description": "Switch between 50+ secondary domains automatically.",
+            "icon": "https://lucide.dev/api/icons/rotate-cw"
+          },
+          { 
+            "title": "Inbox Management", 
+            "description": "Unified platform to handle all active responses.",
+            "icon": "https://lucide.dev/api/icons/mail"
+          }
+        ],
+        "footerNote": "Step 2 of 4",
+        "styles": {
+          "mainTitle": { "fontSize": "6.5rem" }
+        },
+        "sectionStyles": {
+          "titleSection": { "marginBottom": "4rem" }
+        }
+      },
+      "aiContext": {
+        "purpose": "Showcasing a list of 3-4 tools or steps.",
+        "bestUsedFor": "Tools lists, step-by-step guides, or feature summaries with high visual punch.",
+        "recommendedDimensions": { "width": 1080, "height": 1350 }
+      }
+    },
+    {
+      "type": "CONTENT",
+      "variantId": "modern-squircle",
+      "content": {
+        "mainTitle": "Phase 3: Logic",
+        "subtitle": "Adding conditional brainpower",
+        "steps": [
+          { 
+            "title": "Intent Triggers", 
+            "description": "Detect the perfect time to reach out via job changes.",
+            "icon": "https://lucide.dev/api/icons/zap"
+          },
+          { 
+            "title": "Webhooks", 
+            "description": "Connect your CRM to triggers in real-time.",
+            "icon": "https://lucide.dev/api/icons/plug"
+          },
+          { 
+            "title": "Dynamic Content", 
+            "description": "Change emails based on prospect industry.",
+            "icon": "https://lucide.dev/api/icons/component"
+          }
+        ],
+        "footerNote": "Step 3 of 4",
+        "styles": {
+          "mainTitle": { "fontSize": "6.5rem" }
+        }
+      },
+      "aiContext": {
+        "purpose": "Showcasing a list of 3-4 tools or steps.",
+        "bestUsedFor": "Tools lists, step-by-step guides, or feature summaries with high visual punch.",
+        "recommendedDimensions": { "width": 1080, "height": 1350 }
+      }
+    },
+    {
+      "type": "CONTENT",
+      "variantId": "modern-squircle",
+      "content": {
+        "mainTitle": "Phase 4: Scale",
+        "subtitle": "From 100 to 10,000 emails/day",
+        "steps": [
+          { 
+            "title": "A/B Testing", 
+            "description": "Run 5 variations per sequence to find winners.",
+            "icon": "https://lucide.dev/api/icons/test-tube-2"
+          },
+          { 
+            "title": "Reply Analysis", 
+            "description": "AI-categorization of positive vs negative sentiment.",
+            "icon": "https://lucide.dev/api/icons/bar-chart-3"
+          },
+          { 
+            "title": "CRM Automation", 
+            "description": "Sync leads directly to Salesforce or HubSpot.",
+            "icon": "https://lucide.dev/api/icons/refresh-cw"
+          }
+        ],
+        "footerNote": "Step 4 of 4",
+        "styles": {
+          "mainTitle": { "fontSize": "6.5rem" }
+        }
+      },
+      "aiContext": {
+        "purpose": "Showcasing a list of 3-4 tools or steps.",
+        "bestUsedFor": "Tools lists, step-by-step guides, or feature summaries with high visual punch.",
+        "recommendedDimensions": { "width": 1080, "height": 1350 }
+      }
+    },
+    {
+      "type": "CTA",
+      "variantId": "modern-squircle",
+      "content": {
+        "bannerText": "WANT THE FULL BLUEPRINT?",
+        "logoText": "COLDIQ EXCLUSIVE",
+        "name": "Michel Lieben",
+        "title": "B2B Outbound Strategy Expert",
+        "profileImage": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop",
+        "ctaText": "GET THE GUIDE",
+        "styles": {
+          "name": { "fontSize": "3rem", "fontWeight": "900" },
+          "title": { "fontSize": "1.4rem", "color": "#1F2937", "opacity": 0.7 },
+          "ctaText": { "fontSize": "2.5rem", "fontWeight": "900", "letterSpacing": "0.05em" }
+        },
+        "sectionStyles": {
+          "body": { "paddingTop": "6rem" }
+        }
+      },
+      "aiContext": {
+        "purpose": "Classic LinkedIn profile banner style CTA.",
+        "bestUsedFor": "Driving followers and building community credibility.",
+        "recommendedDimensions": { "width": 1080, "height": 1350 }
+      }
+    }
+  ],
+  "globalSettings": {
+    "aspectRatio": "portrait",
+    "fontFamily": "Inter",
+    "dimensions": { "width": 1080, "height": 1350 }
+  }
+}

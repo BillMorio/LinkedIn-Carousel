@@ -8,12 +8,34 @@ import Canvas from './Canvas';
 import PropertiesPanel from './PropertiesPanel';
 import { useCarouselStore } from '../../store/useCarouselStore';
 import { getTheme } from '../../themes';
-import { Download, Layout } from 'lucide-react';
+import { Download, Layout, FileJson, Upload } from 'lucide-react';
 
 const EditorLayout = () => {
-  const { project, activeSlideId, updateProjectName } = useCarouselStore();
+  const { project, activeSlideId, updateProjectName, importProject, exportProject } = useCarouselStore();
   const [isExporting, setIsExporting] = useState(false);
+  const fileInputRef = React.useRef<HTMLInputElement>(null);
   const theme = getTheme(project.themeId);
+
+  const handleJsonImport = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+
+    const reader = new FileReader();
+    reader.onload = (event) => {
+      try {
+        const json = JSON.parse(event.target?.result as string);
+        const result = importProject(json);
+        if (!result.success) {
+          alert(`Import failed: ${result.error}`);
+        }
+      } catch (err) {
+        alert('Invalid JSON file');
+      }
+    };
+    reader.readAsText(file);
+    // Reset input
+    e.target.value = '';
+  };
 
   const handleExport = async () => {
     const el = document.getElementById('slide-canvas');
@@ -100,6 +122,34 @@ const EditorLayout = () => {
             <span className="text-[10px] font-bold text-zinc-400 uppercase tracking-widest">Active Theme</span>
             <span className="text-sm font-bold text-zinc-900">{theme.name}</span>
           </div>
+
+          <div className="h-8 w-px bg-zinc-200 mx-2" />
+          
+          <input 
+            type="file" 
+            ref={fileInputRef} 
+            onChange={handleJsonImport} 
+            accept=".json" 
+            className="hidden" 
+          />
+
+          <button 
+            onClick={() => fileInputRef.current?.click()}
+            className="p-2.5 rounded-full border-2 border-zinc-200 text-zinc-400 hover:border-black hover:text-black hover:bg-zinc-50 transition-all active:scale-95"
+            title="Import JSON"
+          >
+            <Upload size={18} />
+          </button>
+
+          <button 
+            onClick={exportProject}
+            className="p-2.5 rounded-full border-2 border-zinc-200 text-zinc-400 hover:border-black hover:text-black hover:bg-zinc-50 transition-all active:scale-95"
+            title="Export JSON"
+          >
+            <FileJson size={18} />
+          </button>
+
+          <div className="h-8 w-px bg-zinc-200 mx-2" />
           
           <button 
             onClick={handleExportAll}
