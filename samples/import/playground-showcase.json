@@ -1,0 +1,94 @@
+{
+  "name": "The Future of AI Agents",
+  "themeId": "playground",
+  "slides": [
+    {
+      "id": "intro-001",
+      "type": "INTRO",
+      "variantId": "magazine-cover",
+      "order": 0,
+      "content": {
+        "mainTitle": "AGENTIC FUTURE",
+        "subtitle": "How autonomous AI workflows are redefining the digital architecture of 2026.",
+        "badgeText": "VOLUME 04",
+        "name": "NEURAL COMMAND",
+        "tagline": "TECH REPORT",
+        "heroImage": "https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?w=800&q=80",
+        "profileImage": "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=400&h=400&fit=crop",
+        "styles": {
+          "mainTitle": { "fontSize": "9rem", "fontWeight": "900", "letterSpacing": "-0.05em" },
+          "subtitle": { "fontSize": "2.2rem", "opacity": 0.8 }
+        }
+      }
+    },
+    {
+      "id": "content-001",
+      "type": "CONTENT",
+      "variantId": "tech-timeline",
+      "order": 1,
+      "content": {
+        "mainTitle": "Evolution of Autonomy",
+        "steps": [
+          { "title": "Phase 01: LLM Chat", "description": "Simple request-response cycles with limited contextual awareness." },
+          { "id": "step-2", "title": "Phase 02: Tool Use", "description": "Models gain the ability to call APIs and search the live web." },
+          { "id": "step-3", "title": "Phase 03: Full Autonomy", "description": "Agents plan, execute, and verify complex multi-step tasks independently." }
+        ],
+        "styles": {
+          "mainTitle": { "fontSize": "5rem", "color": "#BFFF00" }
+        }
+      }
+    },
+    {
+      "id": "content-002",
+      "type": "CONTENT",
+      "variantId": "floating-modules",
+      "order": 2,
+      "content": {
+        "mainTitle": "Core Tech Stack",
+        "steps": [
+          { "title": "Logic Engine", "description": "State-of-the-art Reasoning Models." },
+          { "title": "Memory Box", "description": "Vector Databases for long-term recall." },
+          { "title": "Toolbox", "description": "Sandboxed environments for local execution." },
+          { "title": "Vision", "description": "Multimodal analysis of live interfaces." }
+        ],
+        "sectionStyles": {
+          "body": { "itemGap": "2rem" }
+        }
+      }
+    },
+    {
+      "id": "content-003",
+      "type": "CONTENT",
+      "variantId": "comparison-versus",
+      "order": 3,
+      "content": {
+        "mainTitle": "The Workflow Shift",
+        "steps": [
+          { "title": "Legacy Approach", "description": "Manual coding, rigid logic, high maintenance, slow scales." },
+          { "title": "Agentic Approach", "description": "Self-healing, adaptive logic, zero maintenance, infinite scale." }
+        ]
+      }
+    },
+    {
+      "id": "cta-001",
+      "type": "CTA",
+      "variantId": "profile-spotlight",
+      "order": 4,
+      "content": {
+        "name": "Antigravity",
+        "title": "NEURAL ARCHITECT",
+        "ctaText": "Ready to build the future of AI?",
+        "ctaButtonText": "CONNECT NOW",
+        "heroImage": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&q=80",
+        "profileImage": "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=400&h=400&fit=crop"
+      }
+    }
+  ],
+  "globalSettings": {
+    "brandColor": "#BFFF00",
+    "accentColor": "#FFFFFF",
+    "fontFamily": "Inter",
+    "backgroundColor": "#000000",
+    "aspectRatio": "portrait"
+  }
+}
