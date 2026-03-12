@@ -5,8 +5,32 @@ import * as SalesStack from './sales-stack';
 import * as Playground from './playground';
 
 export const ThemeRegistry: Record<string, Theme> = {
-  'execution-steps': ExecutionSteps.ExecutionStepsTheme,
-  'tool-workflow': ToolWorkflow.ToolWorkflowTheme,
+  'execution-steps': {
+    ...ExecutionSteps.ExecutionStepsTheme,
+    variants: {
+      ...ExecutionSteps.ExecutionStepsTheme.variants,
+      INTRO: ExecutionSteps.ExecutionStepsTheme.variants.INTRO.map(v => ({
+        ...v,
+        icon: v.id === 'standard' ? 'Type' : 
+              v.id === 'emoji' ? 'Smile' : 
+              v.id === 'headshot' ? 'User' : 
+              v.id === 'image' ? 'ImageIcon' : undefined
+      }))
+    }
+  },
+  'tool-workflow': {
+    ...ToolWorkflow.ToolWorkflowTheme,
+    variants: {
+      ...ToolWorkflow.ToolWorkflowTheme.variants,
+      INTRO: ToolWorkflow.ToolWorkflowTheme.variants.INTRO.map(v => ({
+        ...v,
+        icon: v.id === 'standard' ? 'Type' : 
+              v.id === 'emoji' ? 'Smile' : 
+              v.id === 'headshot' ? 'User' : 
+              v.id === 'image' ? 'ImageIcon' : undefined
+      }))
+    }
+  },
   'sales-stack': {
     id: 'sales-stack',
     name: 'Sales Stack',
@@ -16,8 +40,88 @@ export const ThemeRegistry: Record<string, Theme> = {
     variants: {
       INTRO: [
         {
+          id: 'standard',
+          name: 'Standard',
+          icon: 'Type',
+          purpose: 'Clean text-only introduction with Sales Stack aesthetic.',
+          bestUsedFor: 'Direct headlines with high-impact typography.',
+          component: SalesStack.StandardIntro,
+          editorConfig: {
+            fields: [
+              { key: 'mainTitle', type: 'text', label: 'Main Title', required: true, hasStyleControls: true },
+              { key: 'subtitle', type: 'text', label: 'Subtitle', hasStyleControls: true },
+              { key: 'logoText', type: 'text', label: 'Logo / Brand Text' },
+            ],
+            defaultContent: {
+              mainTitle: 'Sales Technology Stack',
+              subtitle: 'The 2024 Blueprint',
+              logoText: 'COLDIQ',
+            },
+          },
+        },
+        {
+          id: 'emoji',
+          name: 'Emoji',
+          icon: 'Smile',
+          purpose: 'Expressive intro with large emoji and squircle background.',
+          bestUsedFor: 'Mood-setting openers for sales guides.',
+          component: SalesStack.EmojiIntro,
+          editorConfig: {
+            fields: [
+              { key: 'description', type: 'text', label: 'Emoji (e.g. 🚀)', hasStyleControls: true },
+              { key: 'mainTitle', type: 'text', label: 'Main Title', required: true, hasStyleControls: true },
+              { key: 'subtitle', type: 'text', label: 'Subtitle', hasStyleControls: true },
+            ],
+            defaultContent: {
+              mainTitle: 'Big Moves',
+              description: '🔥',
+            },
+          },
+        },
+        {
+          id: 'headshot',
+          name: 'Headshot',
+          icon: 'User',
+          purpose: 'Classic circular headshot for personal branding.',
+          bestUsedFor: 'Introductions where the face builds immediate trust.',
+          component: SalesStack.HeadshotIntro,
+          editorConfig: {
+            fields: [
+              { key: 'profileImage', type: 'image', label: 'Profile Photo', hasStyleControls: true },
+              { key: 'name', type: 'text', label: 'Name', hasStyleControls: true },
+              { key: 'tagline', type: 'text', label: 'Tagline', hasStyleControls: true },
+              { key: 'mainTitle', type: 'text', label: 'Headline', hasStyleControls: true },
+              { key: 'subtitle', type: 'text', label: 'Subtitle', hasStyleControls: true },
+            ],
+            defaultContent: {
+              name: 'Michel Lieben',
+              tagline: 'website.com',
+            },
+          },
+        },
+        {
+          id: 'image',
+          name: 'Image',
+          icon: 'ImageIcon',
+          purpose: 'Split-screen layout with hero image.',
+          bestUsedFor: 'Showcasing product shots or workflow visualizations.',
+          component: SalesStack.ImageIntro,
+          editorConfig: {
+            fields: [
+              { key: 'heroImage', type: 'image', label: 'Hero Image', hasStyleControls: true },
+              { key: 'mainTitle', type: 'text', label: 'Main Title', required: true, hasStyleControls: true },
+              { key: 'subtitle', type: 'text', label: 'Subtitle', hasStyleControls: true },
+            ],
+            defaultContent: {
+              mainTitle: 'Building Stacks',
+              subtitle: 'Step-by-step guide',
+            },
+          },
+        },
+        {
           id: 'modern-squircle',
           name: 'Modern Squircle',
+          icon: 'LayoutPanelLeft',
           purpose: 'High-impact hook for LinkedIn carousels.',
           bestUsedFor: 'Broad topic introductions with visual branding and tech stack logos.',
           component: SalesStack.ModernSquircleIntro,
@@ -34,31 +138,8 @@ export const ThemeRegistry: Record<string, Theme> = {
             ],
             defaultContent: {
               mainTitle: 'Sales Technology Stack',
-              subheadline: 'Build your',
+              subtitle: 'Build your',
               logos: [],
-            },
-          },
-        },
-        {
-          id: 'minimal-split',
-          name: 'Minimal Split',
-          purpose: 'Clean, professional introduction.',
-          bestUsedFor: 'Personal brand intros where the profile photo is as important as the title.',
-          component: SalesStack.MinimalSplitIntro,
-          editorConfig: {
-            fields: [
-              { key: 'titleSection', type: 'section-controls', label: 'Title Section' },
-              { key: 'mainTitle', type: 'text', label: 'Main Title', required: true, hasStyleControls: true },
-              { key: 'subtitleSection', type: 'section-controls', label: 'Subtitle Section' },
-              { key: 'subtitle', type: 'text', label: 'Subtitle', hasStyleControls: true },
-              { key: 'header', type: 'section-controls', label: 'Profile Controls' },
-              { key: 'name', type: 'text', label: 'Name', hasStyleControls: true },
-              { key: 'tagline', type: 'text', label: 'Tagline', hasStyleControls: true },
-              { key: 'profileImage', type: 'image', label: 'Profile Photo', hasStyleControls: true },
-            ],
-            defaultContent: {
-              mainTitle: 'Building My Stack',
-              subtitle: 'Here is how I do it in 2024',
             },
           },
         }
@@ -172,6 +253,7 @@ export const ThemeRegistry: Record<string, Theme> = {
         {
           id: 'standard',
           name: 'Standard',
+          icon: 'Type',
           purpose: 'Text-only introduction without images.',
           bestUsedFor: 'Clean, focused introductions emphasizing the headline and message.',
           component: Playground.StandardIntro,
@@ -184,7 +266,6 @@ export const ThemeRegistry: Record<string, Theme> = {
               { key: 'subtitle', type: 'text', label: 'Subtitle', hasStyleControls: true },
             ],
             defaultContent: {
-              headline: 'FUTURE IS NOW',
               mainTitle: 'FUTURE IS NOW',
               subtitle: 'Building tomorrow\'s innovations with cutting-edge technology',
               badgeText: 'PLAYGROUND',
@@ -192,8 +273,32 @@ export const ThemeRegistry: Record<string, Theme> = {
           },
         },
         {
+          id: 'emoji',
+          name: 'Emoji',
+          icon: 'Smile',
+          purpose: 'Fun, expressive intro with a large emoji.',
+          bestUsedFor: 'Casual or high-energy carousels with a specific mood.',
+          component: Playground.EmojiIntro,
+          editorConfig: {
+            fields: [
+              { key: 'header', type: 'section-controls', label: 'Top Badge Section' },
+              { key: 'badgeText', type: 'text', label: 'Badge Text' },
+              { key: 'description', type: 'text', label: 'Emoji (e.g. 🚀)', hasStyleControls: true },
+              { key: 'titleSection', type: 'section-controls', label: 'Title Section' },
+              { key: 'mainTitle', type: 'text', label: 'Main Title', required: true, hasStyleControls: true },
+              { key: 'subtitle', type: 'text', label: 'Subtitle', hasStyleControls: true },
+            ],
+            defaultContent: {
+              mainTitle: 'BIG ENERGY',
+              description: '🔥',
+              badgeText: 'PLAYGROUND',
+            },
+          },
+        },
+        {
           id: 'headshot',
           name: 'Headshot',
+          icon: 'User',
           purpose: 'Large circular profile image with headline.',
           bestUsedFor: 'Personal brand introductions with strong visual identity.',
           component: Playground.HeadshotIntro,
@@ -208,7 +313,6 @@ export const ThemeRegistry: Record<string, Theme> = {
               { key: 'subtitle', type: 'text', label: 'Tagline/Description', hasStyleControls: true },
             ],
             defaultContent: {
-              headline: 'Your Name',
               mainTitle: 'Your Name',
               badgeText: 'PLAYGROUND',
             },
@@ -217,6 +321,7 @@ export const ThemeRegistry: Record<string, Theme> = {
         {
           id: 'image',
           name: 'Image',
+          icon: 'ImageIcon',
           purpose: 'Hero image with title overlay and placement controls.',
           bestUsedFor: 'Magazine-style covers with dramatic imagery.',
           component: Playground.ImageIntro,
@@ -239,13 +344,65 @@ export const ThemeRegistry: Record<string, Theme> = {
               { key: 'subtitle', type: 'text', label: 'Subtitle', hasStyleControls: true },
             ],
             defaultContent: {
-              headline: 'Your Title',
               mainTitle: 'Your Title',
               badgeText: 'PLAYGROUND',
               imagePlacement: 'top',
             },
           },
-        }
+        },
+        {
+          id: 'magazine-cover',
+          name: 'Magazine Cover',
+          icon: 'LayoutPanelLeft',
+          purpose: 'High-impact editorial cover.',
+          bestUsedFor: 'Dramatic hooks and storytelling openers.',
+          component: Playground.MagazineCoverIntro,
+          editorConfig: {
+            fields: [
+              { key: 'heroImage', type: 'image', label: 'Hero Image', hasStyleControls: true },
+              { key: 'header', type: 'section-controls', label: 'Badge Section' },
+              { key: 'badgeText', type: 'text', label: 'Badge Text' },
+              { key: 'profileCorner', type: 'section-controls', label: 'Profile Corner' },
+              { key: 'profileImage', type: 'image', label: 'Profile Photo', hasStyleControls: true },
+              { key: 'name', type: 'text', label: 'Name', hasStyleControls: true },
+              { key: 'tagline', type: 'text', label: 'Tagline', hasStyleControls: true },
+              { key: 'titleSection', type: 'section-controls', label: 'Title Section' },
+              { key: 'mainTitle', type: 'text', label: 'Main Title', required: true, hasStyleControls: true },
+              { key: 'subtitle', type: 'text', label: 'Subtitle', hasStyleControls: true },
+            ],
+            defaultContent: {
+              mainTitle: 'THE FUTURE',
+              subtitle: 'How artificial intelligence is changing everything we know about creation.',
+              badgeText: 'PLAYGROUND',
+              name: 'Creative Director',
+              tagline: 'VOLUME 01',
+            },
+          },
+        },
+        {
+          id: 'cinematic-split',
+          name: 'Cinematic Split',
+          icon: 'RectangleVertical',
+          purpose: 'Modern split-screen layout.',
+          bestUsedFor: 'Introductions where the visual and text share equal importance.',
+          component: Playground.CinematicSplitIntro,
+          editorConfig: {
+            fields: [
+              { key: 'heroImage', type: 'image', label: 'Hero Image', hasStyleControls: true },
+              { key: 'header', type: 'section-controls', label: 'Floating Badge Section' },
+              { key: 'name', type: 'text', label: 'Name Label' },
+              { key: 'profileImage', type: 'image', label: 'Profile Photo', hasStyleControls: true },
+              { key: 'titleSection', type: 'section-controls', label: 'Title Section' },
+              { key: 'mainTitle', type: 'text', label: 'Main Title', required: true, hasStyleControls: true },
+              { key: 'subtitle', type: 'text', label: 'Subtitle', hasStyleControls: true },
+            ],
+            defaultContent: {
+              mainTitle: 'Cinematic Story',
+              subtitle: 'A high-end introduction to your latest breakthrough.',
+              name: 'STORYTELLER',
+            },
+          },
+        },
       ],
       CONTENT: [
         {
@@ -265,7 +422,6 @@ export const ThemeRegistry: Record<string, Theme> = {
               { key: 'footerCTA', type: 'text', label: 'Footer Right' },
             ],
             defaultContent: {
-              title: 'Content Title',
               mainTitle: 'Content Title',
               steps: [
                 { title: 'Item 1', description: 'Description here' },
@@ -274,8 +430,8 @@ export const ThemeRegistry: Record<string, Theme> = {
           },
         },
         {
-          id: 'text-image',
-          name: 'Text + Image',
+          id: 'hero-feature',
+          name: 'Hero Feature',
           purpose: 'Content with supporting hero image.',
           bestUsedFor: 'Feature highlights with visual context.',
           component: Playground.HeroFeatureContent,
@@ -291,7 +447,6 @@ export const ThemeRegistry: Record<string, Theme> = {
               { key: 'footerCTA', type: 'text', label: 'Footer Right' },
             ],
             defaultContent: {
-              title: 'Feature Title',
               mainTitle: 'Feature Title',
               steps: [
                 { title: 'Feature 1', description: 'Description here' },
@@ -300,9 +455,30 @@ export const ThemeRegistry: Record<string, Theme> = {
           },
         },
         {
+          id: 'image-grid',
+          name: 'Image Grid',
+          purpose: '2x2 grid showcase.',
+          bestUsedFor: 'Comparing items or showcasing multiple visual features.',
+          component: Playground.ImageGridContent,
+          editorConfig: {
+            fields: [
+              { key: 'titleSection', type: 'section-controls', label: 'Title Section' },
+              { key: 'mainTitle', type: 'text', label: 'Title', required: true, hasStyleControls: true },
+              { key: 'body', type: 'section-controls', label: 'Grid Items' },
+              { key: 'steps', type: 'steps', label: 'Grid Items (max 4, use icon field for image URLs)' },
+            ],
+            defaultContent: {
+              mainTitle: 'Visual Showcase',
+              steps: [
+                { title: 'Item 1', description: 'Details here', icon: '' },
+              ],
+            },
+          },
+        },
+        {
           id: 'image-only',
           name: 'Image Only',
-          purpose: 'Image showcase with minimal text.',
+          purpose: 'Image showcase with minimal text and layout options.',
           bestUsedFor: 'Visual portfolios, galleries, or image-heavy content.',
           component: Playground.ImageOnlyContent,
           editorConfig: {
@@ -324,11 +500,79 @@ export const ThemeRegistry: Record<string, Theme> = {
               { key: 'steps', type: 'steps', label: 'Images (use icon field for image URLs)' },
             ],
             defaultContent: {
-              title: 'Image Gallery',
               mainTitle: 'Image Gallery',
               gridLayout: '2x2',
               steps: [
                 { title: 'Image 1', description: 'Description', icon: '' },
+              ],
+            },
+          },
+        },
+        {
+          id: 'tech-timeline',
+          name: 'Tech Timeline',
+          icon: 'GitCommit',
+          purpose: 'Vertical flow with neon accents and glass cards.',
+          bestUsedFor: 'Sequential steps, roadmaps, or evolution of tech.',
+          component: Playground.TechTimelineContent,
+          editorConfig: {
+            fields: [
+              { key: 'titleSection', type: 'section-controls', label: 'Title Section' },
+              { key: 'mainTitle', type: 'text', label: 'Title', required: true, hasStyleControls: true },
+              { key: 'body', type: 'section-controls', label: 'Timeline Section' },
+              { key: 'steps', type: 'steps', label: 'Timeline Steps (max 4)' },
+            ],
+            defaultContent: {
+              mainTitle: 'Project Roadmap',
+              steps: [
+                { title: 'Phase 01', description: 'Initial development and prototyping.' },
+                { title: 'Phase 02', description: 'Modular architecture implementation.' },
+              ],
+            },
+          },
+        },
+        {
+          id: 'floating-modules',
+          name: 'Floating Modules',
+          icon: 'LayoutGrid',
+          purpose: 'Non-linear asymmetrical layout for dynamic content.',
+          bestUsedFor: 'Highlighting key pillars, features, or unstructured technical tips.',
+          component: Playground.FloatingModulesContent,
+          editorConfig: {
+            fields: [
+              { key: 'titleSection', type: 'section-controls', label: 'Header Section' },
+              { key: 'mainTitle', type: 'text', label: 'Slide Title', required: true, hasStyleControls: true },
+              { key: 'body', type: 'section-controls', label: 'Modules Section' },
+              { key: 'steps', type: 'steps', label: 'Modular Items (max 4)' },
+            ],
+            defaultContent: {
+              mainTitle: 'Core Capabilities',
+              steps: [
+                { title: 'Scalable', description: 'Built on serverless infra.' },
+                { title: 'Secure', description: 'End-to-end encryption.' },
+              ],
+            },
+          },
+        },
+        {
+          id: 'comparison-versus',
+          name: 'Comparison/Versus',
+          icon: 'ArrowLeftRight',
+          purpose: 'High-contrast comparison layout for before/after or A/B.',
+          bestUsedFor: 'Optimized vs Traditional, Good vs Bad, or feature comparisons.',
+          component: Playground.ComparisonVersusContent,
+          editorConfig: {
+            fields: [
+              { key: 'titleSection', type: 'section-controls', label: 'Title Section' },
+              { key: 'mainTitle', type: 'text', label: 'Slide Title', required: true, hasStyleControls: true },
+              { key: 'body', type: 'section-controls', label: 'Comparison Section' },
+              { key: 'steps', type: 'steps', label: 'Comparison Items (max 2)' },
+            ],
+            defaultContent: {
+              mainTitle: 'The Upgrade',
+              steps: [
+                { title: 'Manual Flow', description: 'Slow, error-prone, high cost.' },
+                { title: 'AI Workflow', description: 'Fast, automated, 10x cheaper.' },
               ],
             },
           },

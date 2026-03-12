@@ -9,7 +9,7 @@ import { User, CheckCircle2, ChevronRight } from 'lucide-react';
 
 // --- Components ---
 
-const ExecutionStepsIntro = ({ content, globalSettings }: { content: IntroContent, globalSettings: GlobalSettings }) => {
+export const StandardIntro = ({ content, globalSettings }: { content: IntroContent, globalSettings: GlobalSettings }) => {
   return (
     <div 
       className="relative flex h-full w-full flex-col items-center justify-center p-16 text-center"
@@ -30,20 +30,91 @@ const ExecutionStepsIntro = ({ content, globalSettings }: { content: IntroConten
         )}
       </div>
 
-      <h1 className="text-6xl font-black leading-tight tracking-tighter" style={{ color: '#1B1B1B' }}>
-        {content.headline}
+      <h1 className="text-7xl font-black leading-tight tracking-tighter break-words max-w-full" style={{ color: '#1B1B1B' }}>
+        {content.mainTitle || content.headline || 'Your Headline'}
       </h1>
-      {content.subheadline && (
-        <p className="mt-6 text-2xl font-medium text-zinc-600">
-          {content.subheadline}
+      {(content.subtitle || content.subheadline) && (
+        <p className="mt-8 text-3xl font-medium text-zinc-600 max-w-2xl break-words">
+          {content.subtitle || content.subheadline}
         </p>
       )}
 
-      {/* Pagination dots placeholder */}
-      <div className="absolute bottom-12 flex gap-2">
-        <div className="h-2 w-8 rounded-full" style={{ backgroundColor: globalSettings.brandColor }}></div>
-        <div className="h-2 w-2 rounded-full bg-zinc-200"></div>
-        <div className="h-2 w-2 rounded-full bg-zinc-200"></div>
+      {/* Execution Path SVG Accent */}
+      <svg className="absolute bottom-24 w-64 h-2 opacity-20" viewBox="0 0 256 8">
+        <path d="M0 4H256" stroke={globalSettings.brandColor} strokeWidth="8" strokeDasharray="12 12" />
+      </svg>
+    </div>
+  );
+};
+
+export const EmojiIntro = ({ content, globalSettings }: { content: IntroContent, globalSettings: GlobalSettings }) => {
+  return (
+    <div 
+      className="relative flex h-full w-full flex-col items-center justify-center p-16 text-center"
+      style={{ backgroundColor: globalSettings.backgroundColor }}
+    >
+      <div className="text-[12rem] mb-12 animate-bounce-slow">
+        {content.description || '🚀'}
+      </div>
+      <h1 className="text-6xl font-black leading-tight tracking-tighter break-words max-w-full" style={{ color: '#1B1B1B' }}>
+        {content.mainTitle || content.headline}
+      </h1>
+      <p className="mt-6 text-2xl font-medium text-zinc-600 break-words max-w-full">
+        {content.subtitle || content.subheadline}
+      </p>
+    </div>
+  );
+};
+
+export const HeadshotIntro = ({ content, globalSettings }: { content: IntroContent, globalSettings: GlobalSettings }) => {
+  return (
+    <div 
+      className="relative flex h-full w-full flex-col items-center justify-center p-16 text-center"
+      style={{ backgroundColor: globalSettings.backgroundColor }}
+    >
+      <div className="relative mb-12">
+        <div className="w-80 h-80 rounded-full border-[10px] border-white shadow-2xl overflow-hidden bg-zinc-100">
+          {content.profileImage ? (
+            <img src={content.profileImage} className="w-full h-full object-cover" alt="Profile" />
+          ) : (
+            <div className="w-full h-full flex items-center justify-center font-bold text-zinc-300 text-6xl">?</div>
+          )}
+        </div>
+        <div className="absolute -bottom-4 -right-4 w-16 h-16 rounded-2xl flex items-center justify-center shadow-xl rotate-12" style={{ backgroundColor: globalSettings.brandColor }}>
+           <User size={32} className="text-white" />
+        </div>
+      </div>
+      <h1 className="text-6xl font-black leading-tight tracking-tighter break-words max-w-full" style={{ color: '#1B1B1B' }}>
+        {content.mainTitle || content.headline || content.name || 'Your Name'}
+      </h1>
+      <p className="mt-4 text-3xl font-bold break-words max-w-full" style={{ color: globalSettings.brandColor }}>
+        {content.subtitle || content.subheadline || content.tagline}
+      </p>
+    </div>
+  );
+};
+
+export const ImageIntro = ({ content, globalSettings }: { content: IntroContent, globalSettings: GlobalSettings }) => {
+  return (
+    <div 
+      className="relative flex h-full w-full bg-white overflow-hidden"
+    >
+      <div className="w-1/2 h-full flex flex-col justify-center p-20" style={{ backgroundColor: globalSettings.backgroundColor }}>
+         <div className="w-12 h-1 bg-red-600 mb-8" style={{ backgroundColor: globalSettings.brandColor }} />
+         <h1 className="text-6xl font-black leading-tight tracking-tighter mb-8 break-words max-w-full" style={{ color: '#1B1B1B' }}>
+           {content.mainTitle || content.headline}
+         </h1>
+         <p className="text-2xl font-medium text-zinc-600 break-words max-w-full">
+           {content.subtitle || content.subheadline}
+         </p>
+      </div>
+      <div className="w-1/2 h-full relative">
+         {content.heroImage ? (
+           <img src={content.heroImage} className="w-full h-full object-cover" alt="Hero" />
+         ) : (
+           <div className="w-full h-full bg-zinc-100 flex items-center justify-center font-bold text-zinc-300">Image Placeholder</div>
+         )}
+         <div className="absolute inset-0 border-l-[16px] border-white/20 pointer-events-none" />
       </div>
     </div>
   );
@@ -64,7 +135,7 @@ const ExecutionStepsContent = ({ content, globalSettings }: { content: ContentSl
         </div>
       )}
 
-      <h2 className="text-5xl font-extrabold leading-tight tracking-tight text-zinc-900 mb-12">
+      <h2 className="text-5xl font-extrabold leading-tight tracking-tight text-zinc-900 mb-12 break-words max-w-full">
         {content.title}
       </h2>
 
@@ -82,9 +153,9 @@ const ExecutionStepsContent = ({ content, globalSettings }: { content: ContentSl
             >
               {step.number || idx + 1}
             </div>
-            <div className="flex flex-col pt-1">
-              <h3 className="text-2xl font-bold text-zinc-900 leading-none mb-2">{step.title}</h3>
-              <p className="text-xl font-medium text-zinc-500 leading-relaxed">{step.description}</p>
+            <div className="flex flex-col pt-1 min-w-0">
+              <h3 className="text-2xl font-bold text-zinc-900 leading-none mb-2 break-words">{step.title}</h3>
+              <p className="text-xl font-medium text-zinc-500 leading-relaxed break-words">{step.description}</p>
             </div>
           </div>
         ))}
@@ -113,15 +184,15 @@ const ExecutionStepsCTA = ({ content, globalSettings }: { content: CTAContent, g
           </div>
         )}
 
-      <h2 className="text-5xl font-black text-zinc-900 mb-2">
+      <h2 className="text-5xl font-black text-zinc-900 mb-2 break-words max-w-full">
         {content.name || 'Your Name'}
       </h2>
-      <p className="text-2xl font-bold mb-12" style={{ color: globalSettings.brandColor }}>
+      <p className="text-2xl font-bold mb-12 break-words max-w-full" style={{ color: globalSettings.brandColor }}>
         {content.handle || '@yourname'}
       </p>
 
       <div 
-        className="rounded-3xl px-12 py-6 text-3xl font-black text-white shadow-2xl transition-transform hover:scale-105"
+        className="rounded-3xl px-12 py-6 text-3xl font-black text-white shadow-2xl transition-transform hover:scale-105 break-words max-w-full"
         style={{ backgroundColor: globalSettings.brandColor }}
       >
         {content.ctaText}
@@ -145,26 +216,87 @@ export const ExecutionStepsTheme: Theme = {
   preview: '/previews/execution-steps.png',
   
   variants: {
-    INTRO: [{
-      id: 'default',
-      name: 'Default',
-      purpose: 'Clean, step-by-step introduction for guides.',
-      bestUsedFor: 'Starting a tutorial or process walkthrough with a clear headline.',
-      component: ExecutionStepsIntro,
-      editorConfig: {
-        fields: [
-          { key: 'profileImage', type: 'image', label: 'Profile Photo' },
-          { key: 'headline', type: 'text', label: 'Main Headline', required: true },
-          { key: 'subheadline', type: 'text', label: 'Subheadline' },
-          { key: 'badgeText', type: 'text', label: 'Badge Text' },
-        ],
-        defaultContent: {
-          headline: 'Your Headline Here',
-          subheadline: 'Supporting text goes here',
-          badgeText: 'New Guide',
+    INTRO: [
+      {
+        id: 'standard',
+        name: 'Standard',
+        icon: 'Type',
+        purpose: 'Clean, step-by-step introduction for guides.',
+        bestUsedFor: 'Starting a tutorial or process walkthrough with a clear headline.',
+        component: StandardIntro,
+        editorConfig: {
+          fields: [
+            { key: 'profileImage', type: 'image', label: 'Profile Photo' },
+            { key: 'mainTitle', type: 'text', label: 'Main Headline', required: true },
+            { key: 'subtitle', type: 'text', label: 'Subtitle' },
+            { key: 'badgeText', type: 'text', label: 'Badge Text' },
+          ],
+          defaultContent: {
+            mainTitle: 'Your Headline Here',
+            subtitle: 'Supporting text goes here',
+            badgeText: 'New Guide',
+          },
         },
       },
-    }],
+      {
+        id: 'emoji',
+        name: 'Emoji',
+        icon: 'Smile',
+        purpose: 'Expressive intro with large emoji centered.',
+        bestUsedFor: 'Quick tips or high-energy procedural guides.',
+        component: EmojiIntro,
+        editorConfig: {
+          fields: [
+            { key: 'description', type: 'text', label: 'Emoji (e.g. 🚀)' },
+            { key: 'mainTitle', type: 'text', label: 'Headline', required: true },
+            { key: 'subtitle', type: 'text', label: 'Subtitle' },
+          ],
+          defaultContent: {
+            mainTitle: 'Step-by-Step Guide',
+            description: '🔥',
+          },
+        },
+      },
+      {
+        id: 'headshot',
+        name: 'Headshot',
+        icon: 'User',
+        purpose: 'Personalized intro with a large profile photo.',
+        bestUsedFor: 'Authored guides where credibility is key.',
+        component: HeadshotIntro,
+        editorConfig: {
+          fields: [
+            { key: 'profileImage', type: 'image', label: 'Profile Photo' },
+            { key: 'name', type: 'text', label: 'Your Name', required: true },
+            { key: 'tagline', type: 'text', label: 'Tagline' },
+            { key: 'mainTitle', type: 'text', label: 'Headline' },
+          ],
+          defaultContent: {
+            name: 'LinkedIn User',
+            tagline: '@username',
+          },
+        },
+      },
+      {
+        id: 'image',
+        name: 'Image',
+        icon: 'ImageIcon',
+        purpose: 'Visual-heavy intro with split screen.',
+        bestUsedFor: 'Guides that start with a powerful outcome image.',
+        component: ImageIntro,
+        editorConfig: {
+          fields: [
+            { key: 'heroImage', type: 'image', label: 'Hero Image' },
+            { key: 'mainTitle', type: 'text', label: 'Headline', required: true },
+            { key: 'subtitle', type: 'text', label: 'Subtitle' },
+          ],
+          defaultContent: {
+            mainTitle: 'The Visual Guide',
+            subtitle: 'Master the process',
+          },
+        },
+      }
+    ],
     CONTENT: [{
       id: 'default',
       name: 'Default',

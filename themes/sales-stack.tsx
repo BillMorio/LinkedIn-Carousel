@@ -95,18 +95,16 @@ export const ModernSquircleIntro = ({ content, globalSettings }: { content: Intr
         </div>
       </div>
 
-      {/* Title Section */}
-      <div style={{ marginTop: '10rem', ...getSectionStyle(content.sectionStyles, 'titleSection') }} className="relative z-10">
-        <h1 className="text-[8.5rem] font-black text-[#1B1B1B] leading-[0.85] tracking-tighter" style={getStyle(content.styles, 'mainTitle')}>
+      <div style={{ marginTop: '10rem', ...getSectionStyle(content.sectionStyles, 'titleSection') }} className="relative z-10 max-w-full">
+        <h1 className="text-[8.5rem] font-black text-[#1B1B1B] leading-[0.85] tracking-tighter break-words" style={getStyle(content.styles, 'mainTitle')}>
           {(content as any).mainTitle?.split(' ').map((word: string, i: number) => (
             <span key={i} className="block">{word}</span>
           )) || 'Sales Technology Stack'}
         </h1>
       </div>
 
-      {/* Subtitle Section */}
-      <div style={{ marginTop: '2rem', ...getSectionStyle(content.sectionStyles, 'subtitleSection') }} className="relative z-10">
-        <h2 className="text-[3.5rem] font-bold text-zinc-500/80 tracking-tight leading-none mb-4" style={getStyle(content.styles, 'subtitle')}>
+      <div style={{ marginTop: '2rem', ...getSectionStyle(content.sectionStyles, 'subtitleSection') }} className="relative z-10 max-w-full">
+        <h2 className="text-[3.5rem] font-bold text-zinc-500/80 tracking-tight leading-none mb-4 break-words" style={getStyle(content.styles, 'subtitle')}>
           {content.subtitle || content.subheadline || 'Build your'}
         </h2>
       </div>
@@ -148,43 +146,98 @@ export const ModernSquircleIntro = ({ content, globalSettings }: { content: Intr
   );
 };
 
-export const MinimalSplitIntro = ({ content, globalSettings }: { content: IntroContent, globalSettings: GlobalSettings }) => {
+export const StandardIntro = ({ content, globalSettings }: { content: IntroContent, globalSettings: GlobalSettings }) => {
   return (
-    <div className="w-full h-full relative flex overflow-hidden bg-white" 
-      style={{ 
-        fontFamily: globalSettings.fontFamily 
-      }}
+    <div className="w-full h-full relative p-16 px-20 flex flex-col justify-center overflow-hidden" 
+      style={{ background: 'linear-gradient(135deg, #FFEDE1 0%, #FAAE87 100%)' }}
     >
-      <div className="w-1/2 h-full bg-[#1B1B1B] p-20 flex flex-col justify-between text-white relative">
-         <div className="text-sm font-black tracking-widest uppercase text-white/40">Introduction</div>
-         <div style={getSectionStyle(content.sectionStyles, 'titleSection')}>
-            <h1 className="text-[6rem] font-black leading-none tracking-tighter" style={getStyle(content.styles, 'mainTitle')}>
-              {content.mainTitle || 'Sales Tech Stack'}
-            </h1>
-         </div>
-         <div style={getSectionStyle(content.sectionStyles, 'subtitleSection')}>
-            <p className="text-2xl font-medium text-white/60 max-w-sm" style={getStyle(content.styles, 'subtitle')}>
-              {content.subtitle || content.subheadline}
-            </p>
-         </div>
+      <GrainOverlay />
+      <GridOverlay />
+      <div className="relative z-10 max-w-full">
+        <h1 className="text-[7.5rem] font-black text-[#1B1B1B] leading-[0.85] tracking-tighter break-words" style={getStyle(content.styles, 'mainTitle')}>
+          {content.mainTitle || content.headline || 'Sales Tech Stack'}
+        </h1>
+        <h2 className="text-[3rem] font-bold text-zinc-500/80 tracking-tight leading-none mt-8 break-words" style={getStyle(content.styles, 'subtitle')}>
+          {content.subtitle || content.subheadline || 'The 2024 Blueprint'}
+        </h2>
       </div>
-      <div className="w-1/2 h-full p-20 flex flex-col justify-center items-center bg-[#F8F8F8] relative">
-         <div className="absolute top-12 right-12 flex items-center gap-3">
-            <span className="text-sm font-bold text-black/20 tracking-wider">COLDIQ.COM</span>
-         </div>
-         <div style={getSectionStyle(content.sectionStyles, 'header')} className="flex flex-col items-center">
-            <div className="w-64 h-64 rounded-3xl overflow-hidden shadow-2xl mb-8 border-8 border-white bg-zinc-100" style={getStyle(content.styles, 'profileImage')}>
-               {content.profileImage ? (
-                 <img src={content.profileImage} className="w-full h-full object-cover" alt="" />
-               ) : (
-                 <div className="w-full h-full flex items-center justify-center font-bold text-zinc-300">?</div>
-               )}
-            </div>
-            <div className="text-center">
-               <h3 className="text-3xl font-black text-black" style={getStyle(content.styles, 'name')}>{content.name || 'Michel Lieben'}</h3>
-               <p className="text-lg font-bold text-black/40 uppercase tracking-widest mt-1" style={getStyle(content.styles, 'tagline')}>{content.tagline || 'Cold Outreach Expert'}</p>
-            </div>
-         </div>
+      <div className="absolute top-16 right-16 text-[14px] font-black text-zinc-800 tracking-[0.4em] uppercase opacity-70">
+        {(content as any).logoText || 'COLDIQ'}
+      </div>
+    </div>
+  );
+};
+
+export const EmojiIntro = ({ content, globalSettings }: { content: IntroContent, globalSettings: GlobalSettings }) => {
+  return (
+    <div className="w-full h-full relative p-16 px-20 flex flex-col items-center justify-center text-center overflow-hidden" 
+      style={{ background: 'linear-gradient(135deg, #FFEDE1 0%, #FAAE87 100%)' }}
+    >
+      <GrainOverlay />
+      <GridOverlay />
+      <div className="relative z-10 max-w-full">
+        <div className="text-[12rem] mb-8" style={getStyle(content.styles, 'emoji')}>
+          {content.description || '🚀'}
+        </div>
+        <h1 className="text-[6rem] font-black text-[#1B1B1B] leading-none tracking-tighter mb-6 break-words" style={getStyle(content.styles, 'mainTitle')}>
+          {content.mainTitle || content.headline || 'Big Moves'}
+        </h1>
+        <p className="text-3xl font-bold text-zinc-500/80 tracking-tight break-words" style={getStyle(content.styles, 'subtitle')}>
+          {content.subtitle || content.subheadline}
+        </p>
+      </div>
+    </div>
+  );
+};
+
+export const HeadshotIntro = ({ content, globalSettings }: { content: IntroContent, globalSettings: GlobalSettings }) => {
+  return (
+    <div className="w-full h-full relative p-16 px-20 flex flex-col items-center justify-center text-center overflow-hidden" 
+      style={{ background: 'linear-gradient(135deg, #FFEDE1 0%, #FAAE87 100%)' }}
+    >
+      <GrainOverlay />
+      <GridOverlay />
+      <div className="relative z-10 flex flex-col items-center max-w-full">
+        <div className="w-80 h-80 rounded-full overflow-hidden border-[12px] border-white shadow-2xl mb-12 bg-zinc-100" style={getStyle(content.styles, 'profileImage')}>
+          {content.profileImage ? (
+            <img src={content.profileImage} alt="Profile" className="w-full h-full object-cover" />
+          ) : (
+            <div className="w-full h-full flex items-center justify-center font-bold text-zinc-300 text-6xl">?</div>
+          )}
+        </div>
+        <h1 className="text-6xl font-black text-[#1B1B1B] leading-tight tracking-tighter mb-4 break-words w-full" style={getStyle(content.styles, 'mainTitle')}>
+          {content.mainTitle || content.headline || content.name || 'Your Name'}
+        </h1>
+        <p className="text-3xl font-bold text-zinc-500/80 tracking-tight break-words w-full" style={getStyle(content.styles, 'subtitle')}>
+          {content.subtitle || content.subheadline || content.tagline}
+        </p>
+      </div>
+    </div>
+  );
+};
+
+export const ImageIntro = ({ content, globalSettings }: { content: IntroContent, globalSettings: GlobalSettings }) => {
+  return (
+    <div className="w-full h-full relative flex overflow-hidden bg-white">
+      <div className="w-1/2 h-full relative" style={{ background: 'linear-gradient(135deg, #FFEDE1 0%, #FAAE87 100%)' }}>
+        <GrainOverlay />
+        <GridOverlay />
+        <div className="h-full flex flex-col justify-center p-16 relative z-10 max-w-full">
+          <h1 className="text-7xl font-black text-[#1B1B1B] leading-none tracking-tighter mb-8 break-words" style={getStyle(content.styles, 'mainTitle')}>
+            {content.mainTitle || content.headline}
+          </h1>
+          <p className="text-3xl font-bold text-zinc-500/80 tracking-tight break-words" style={getStyle(content.styles, 'subtitle')}>
+            {content.subtitle || content.subheadline}
+          </p>
+        </div>
+      </div>
+      <div className="w-1/2 h-full relative bg-zinc-100">
+        {content.heroImage ? (
+          <img src={content.heroImage} className="w-full h-full object-cover" alt="Hero" style={getStyle(content.styles, 'heroImage')} />
+        ) : (
+          <div className="w-full h-full flex items-center justify-center font-bold text-zinc-300">Image Placeholder</div>
+        )}
+        <div className="absolute top-0 left-0 w-2 h-full bg-black/10" />
       </div>
     </div>
   );
@@ -201,14 +254,14 @@ export const ModernSquircleContent = ({ content, globalSettings }: { content: Co
       <GridOverlay />
       
       {/* Header Section */}
-      <div style={getSectionStyle(content.sectionStyles, 'header')} className="relative z-10">
+      <div style={getSectionStyle(content.sectionStyles, 'header')} className="relative z-10 max-w-full">
         <div style={getSectionStyle(content.sectionStyles, 'titleSection')}>
-          <h1 className="text-[6.5rem] font-black text-[#1B1B1B] leading-[0.95] tracking-tighter mb-8" style={getStyle(content.styles, 'mainTitle')}>
+          <h1 className="text-[6.5rem] font-black text-[#1B1B1B] leading-[0.95] tracking-tighter mb-8 break-words" style={getStyle(content.styles, 'mainTitle')}>
             {(content as any).mainTitle || content.title}
           </h1>
         </div>
         <div style={getSectionStyle(content.sectionStyles, 'subtitleSection')}>
-          <div className="inline-block px-8 py-4 rounded-full border border-black/10 bg-white/40 backdrop-blur-sm text-xl font-bold text-zinc-800" style={getStyle(content.styles, 'subtitle')}>
+          <div className="inline-block px-8 py-4 rounded-full border border-black/10 bg-white/40 backdrop-blur-sm text-xl font-bold text-zinc-800 break-words max-w-full" style={getStyle(content.styles, 'subtitle')}>
             {content.subtitle}
           </div>
         </div>
@@ -225,9 +278,9 @@ export const ModernSquircleContent = ({ content, globalSettings }: { content: Co
                  <div className="w-12 h-12 rounded bg-zinc-100" />
                )}
             </SquircleIcon>
-            <div className="flex flex-col">
-              <h3 className="text-4xl font-black text-[#1B1B1B]">{item.title}</h3>
-              <p className="text-2xl font-medium text-zinc-500/80">{item.description}</p>
+            <div className="flex flex-col min-w-0">
+              <h3 className="text-4xl font-black text-[#1B1B1B] break-words">{item.title}</h3>
+              <p className="text-2xl font-medium text-zinc-500/80 break-words">{item.description}</p>
             </div>
           </div>
         ))}
@@ -242,9 +295,9 @@ export const ModernSquircleContent = ({ content, globalSettings }: { content: Co
 export const MinimalDetailsContent = ({ content, globalSettings }: { content: ContentSlideContent, globalSettings: GlobalSettings }) => {
   return (
     <div className="w-full h-full relative p-20 flex flex-col bg-white" style={{ fontFamily: globalSettings.fontFamily }}>
-       <div className="flex items-center gap-4 mb-16">
+       <div className="flex items-center gap-4 mb-16 max-w-full">
           <div className="w-3 h-12 bg-black rounded-full" />
-          <h2 className="text-6xl font-black tracking-tighter" style={getStyle(content.styles, 'mainTitle')}>{content.title}</h2>
+          <h2 className="text-6xl font-black tracking-tighter break-words" style={getStyle(content.styles, 'mainTitle')}>{content.title}</h2>
        </div>
 
        <div className="grid grid-cols-2 gap-10">
@@ -253,9 +306,9 @@ export const MinimalDetailsContent = ({ content, globalSettings }: { content: Co
                <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center text-4xl font-black shadow-sm">
                   {i + 1}
                </div>
-               <div className="flex flex-col gap-2">
-                  <h3 className="text-3xl font-black">{item.title}</h3>
-                  <p className="text-xl font-bold text-zinc-400 leading-tight">{item.description}</p>
+               <div className="flex flex-col gap-2 min-w-0">
+                  <h3 className="text-3xl font-black break-words">{item.title}</h3>
+                  <p className="text-xl font-bold text-zinc-400 leading-tight break-words">{item.description}</p>
                </div>
             </div>
           ))}
@@ -300,10 +353,10 @@ export const ModernSquircleCTA = ({ content, globalSettings }: { content: CTACon
           </div>
 
           <div className="flex justify-between items-start">
-             <div className="max-w-[65%]">
-                <h2 className="text-4xl font-black text-zinc-900 mb-2" style={getStyle(content.styles, 'name')}>{content.name || 'Your Name'}</h2>
-                <p className="text-xl font-bold text-zinc-600 leading-tight" style={getStyle(content.styles, 'title')}>{content.title || 'Your Title'}</p>
-                <p className="text-base text-blue-600 font-bold mt-4">Barcelona, Catalonia, Spain · Contact info</p>
+             <div className="max-w-[65%] min-w-0">
+                <h2 className="text-4xl font-black text-zinc-900 mb-2 break-words" style={getStyle(content.styles, 'name')}>{content.name || 'Your Name'}</h2>
+                <p className="text-xl font-bold text-zinc-600 leading-tight break-words" style={getStyle(content.styles, 'title')}>{content.title || 'Your Title'}</p>
+                <p className="text-base text-blue-600 font-bold mt-4 break-words">Barcelona, Catalonia, Spain · Contact info</p>
              </div>
              
              <div className="flex flex-col gap-3 scale-100 origin-top-right">
@@ -347,12 +400,12 @@ export const MinimalCardCTA = ({ content, globalSettings }: { content: CTAConten
                 <div className="w-full h-full flex items-center justify-center font-bold text-white/20">?</div>
              )}
           </div>
-          <h2 className="text-6xl font-black mb-2">{content.name}</h2>
-          <p className="text-2xl font-bold text-white/40 mb-16">{content.title}</p>
+          <h2 className="text-6xl font-black mb-2 break-words max-w-full">{content.name}</h2>
+          <p className="text-2xl font-bold text-white/40 mb-16 break-words max-w-full">{content.title}</p>
           
-          <div className="w-full py-8 border-y border-white/10 flex flex-col gap-4">
+          <div className="w-full py-8 border-y border-white/10 flex flex-col gap-4 min-w-0">
              <span className="text-sm font-black uppercase tracking-[0.3em] text-white/30">Call to action</span>
-             <h3 className="text-4xl font-black italic" style={getStyle(content.styles, 'ctaText')}>{content.ctaText}</h3>
+             <h3 className="text-4xl font-black italic break-words" style={getStyle(content.styles, 'ctaText')}>{content.ctaText}</h3>
           </div>
 
           <button className="mt-16 bg-white text-black px-16 py-6 rounded-full text-2xl font-black hover:scale-105 transition-transform">

@@ -197,6 +197,7 @@ export interface FieldConfig {
 export interface ThemeVariant {
   id: string;
   name: string;
+  icon?: string;
   purpose?: string;
   bestUsedFor?: string;
   component: React.ComponentType<{ content: any; globalSettings: GlobalSettings }>;

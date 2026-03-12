@@ -4,7 +4,7 @@ import React from 'react';
 import { useCarouselStore } from '../../store/useCarouselStore';
 import { getTheme, ThemeRegistry } from '../../themes';
 import { FieldConfig, IntroContent, ContentSlideContent, CTAContent } from '../../types/carousel';
-import { Square, RectangleVertical, Settings, PenLine, Palette, Smartphone, Image as ImageIcon, Plus, Trash2, Layout, Upload, X, Settings2, Italic, Type, Maximize2, LayoutPanelLeft } from 'lucide-react';
+import { Square, RectangleVertical, Settings, PenLine, Palette, Smartphone, Image as ImageIcon, Plus, Trash2, Layout, Upload, X, Settings2, Italic, Type, Maximize2, LayoutPanelLeft, Smile, User, LayoutGrid, GitCommit, Layers, ArrowLeftRight } from 'lucide-react';
 import { ElementStyle, SectionStyle } from '../../types/carousel';
 
 const StyleEditor = ({ style, onChange, isImage = false }: { style?: ElementStyle, onChange: (newStyle: ElementStyle) => void, isImage?: boolean }) => {
@@ -190,6 +190,21 @@ const SectionStyleEditor = ({ style, onChange, isLogoSection = false }: { style?
     </div>
   )
 }
+
+const VariantIcon = ({ name, size = 16, className }: { name?: string, size?: number, className?: string }) => {
+  switch (name) {
+    case 'Type': return <Type size={size} className={className} />;
+    case 'Smile': return <Smile size={size} className={className} />;
+    case 'User': return <User size={size} className={className} />;
+    case 'ImageIcon': return <ImageIcon size={size} className={className} />;
+    case 'LayoutPanelLeft': return <LayoutPanelLeft size={size} className={className} />;
+    case 'RectangleVertical': return <RectangleVertical size={size} className={className} />;
+    case 'GitCommit': return <GitCommit size={size} className={className} />;
+    case 'Layers': return <Layers size={size} className={className} />;
+    case 'ArrowLeftRight': return <ArrowLeftRight size={size} className={className} />;
+    default: return <LayoutGrid size={size} className={className} />;
+  }
+};
 
 const PropertiesPanel = () => {
   const { project, activeSlideId, setTheme, updateSlideContent, updateGlobalSettings, setSlideVariant } = useCarouselStore();
@@ -498,19 +513,31 @@ const PropertiesPanel = () => {
           <>
             {/* Variation Picker */}
             <section className="flex flex-col gap-3">
-               <h4 className="text-[10px] font-black text-zinc-400 uppercase tracking-widest flex items-center gap-2">
-                 <LayoutPanelLeft size={12} /> Slide Variation
-               </h4>
-               <div className="grid grid-cols-2 gap-2">
+               <div className="flex items-center justify-between">
+                 <h4 className="text-[10px] font-black text-zinc-400 uppercase tracking-widest flex items-center gap-2">
+                   <LayoutPanelLeft size={12} /> Slide Variation
+                 </h4>
+                 <span className="text-[10px] font-bold text-zinc-300">
+                   {activeVariant.name}
+                 </span>
+               </div>
+               <div className="flex flex-wrap gap-2">
                   {activeVariants.map((v) => (
                     <button
                       key={v.id}
                       onClick={() => setSlideVariant(activeSlide.id, v.id)}
-                      className={`py-3 px-4 rounded-xl border-2 text-[10px] font-black uppercase transition-all ${
-                        (activeSlide.variantId || activeVariants[0].id) === v.id ? 'border-black bg-black text-white' : 'border-zinc-100 text-zinc-400 hover:border-zinc-200 bg-white'
+                      title={v.name}
+                      className={`group relative flex flex-col items-center justify-center w-12 h-12 rounded-xl border-2 transition-all ${
+                        (activeSlide.variantId || activeVariants[0].id) === v.id 
+                          ? 'border-black bg-black text-white shadow-lg scale-105 z-10' 
+                          : 'border-zinc-100 text-zinc-400 hover:border-zinc-300 bg-white hover:scale-105'
                       }`}
                     >
-                      {v.name}
+                      <VariantIcon name={v.icon} size={20} />
+                      {/* Tooltip-like label on hover if needed, but the icon should be enough */}
+                      <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 bg-zinc-900 text-white text-[8px] font-black py-1 px-2 rounded opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity whitespace-nowrap z-20">
+                        {v.name}
+                      </div>
                     </button>
                   ))}
                </div>

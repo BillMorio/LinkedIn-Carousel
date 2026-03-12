@@ -40,15 +40,18 @@ const GrainyGradientBg = () => (
 );
 
 // Glass panel component
-const GlassPanel = ({ children, className = "" }: { children: React.ReactNode, className?: string }) => (
-  <div className={`backdrop-blur-3xl bg-white/5 border border-white/10 ${className}`}>
+const GlassPanel = ({ children, className = "", style = {} }: { children: React.ReactNode, className?: string, style?: React.CSSProperties }) => (
+  <div className={`backdrop-blur-3xl bg-white/5 border border-white/10 ${className}`} style={style}>
     {children}
   </div>
 );
 
 // Technical label component
-const TechLabel = ({ text, className = "" }: { text: string, className?: string }) => (
-  <span className={`text-[9px] font-black uppercase tracking-[0.3em] text-white/40 ${className}`}>
+const TechLabel = ({ text, className = "", style = {} }: { text: string, className?: string, style?: React.CSSProperties }) => (
+  <span 
+    className={`text-[9px] font-black uppercase tracking-[0.3em] text-white/40 ${className}`}
+    style={style}
+  >
     {text}
   </span>
 );
@@ -146,7 +149,7 @@ export const MagazineCoverIntro = ({ content, globalSettings }: { content: Intro
       <div style={getSectionStyle(content.sectionStyles, 'titleSection')} className="absolute bottom-0 left-0 right-0 p-16 z-10">
         <LimeAccent className="w-24 h-1 mb-8" />
         <h1 
-          className="text-[7rem] font-black leading-[0.9] tracking-tighter mb-6 bg-clip-text text-transparent"
+          className="text-[7rem] font-black leading-[0.9] tracking-tighter mb-6 bg-clip-text text-transparent break-words w-full"
           style={{
             ...getStyle(content.styles, 'mainTitle'),
             backgroundImage: 'linear-gradient(to bottom, #FFFFFF, rgba(255, 255, 255, 0.4))',
@@ -155,7 +158,7 @@ export const MagazineCoverIntro = ({ content, globalSettings }: { content: Intro
           {content.mainTitle || content.headline || 'Your Magazine Title'}
         </h1>
         <p 
-          className="text-3xl font-bold text-white/60 max-w-3xl"
+          className="text-3xl font-bold text-white/60 max-w-3xl break-words"
           style={getStyle(content.styles, 'subtitle')}
         >
           {content.subtitle || content.subheadline || 'Supporting headline goes here'}
@@ -206,7 +209,7 @@ export const CinematicSplitIntro = ({ content, globalSettings }: { content: Intr
         <div style={getSectionStyle(content.sectionStyles, 'titleSection')}>
           <TechLabel text="INTRODUCTION" className="mb-6 block" />
           <h1 
-            className="text-6xl font-black leading-tight tracking-tighter mb-8 bg-clip-text text-transparent"
+            className="text-6xl font-black leading-tight tracking-tighter mb-8 bg-clip-text text-transparent break-words w-full"
             style={{
               ...getStyle(content.styles, 'mainTitle'),
               backgroundImage: 'linear-gradient(to bottom, #FFFFFF, rgba(255, 255, 255, 0.4))',
@@ -215,7 +218,7 @@ export const CinematicSplitIntro = ({ content, globalSettings }: { content: Intr
             {content.mainTitle || content.headline || 'Your Story Begins'}
           </h1>
           <p 
-            className="text-2xl font-medium text-white/50 leading-relaxed"
+            className="text-2xl font-medium text-white/50 leading-relaxed break-words max-w-full"
             style={getStyle(content.styles, 'subtitle')}
           >
             {content.subtitle || content.subheadline || 'A cinematic introduction to your content'}
@@ -252,7 +255,7 @@ export const StandardIntro = ({ content, globalSettings }: { content: IntroConte
           <LimeAccent className="w-32 h-1 mx-auto mb-12" />
           
           <h1 
-            className="text-[8rem] font-black leading-[0.85] tracking-tighter mb-12 bg-clip-text text-transparent"
+            className="text-[8rem] font-black leading-[0.85] tracking-tighter mb-12 bg-clip-text text-transparent break-words w-full"
             style={{
               ...getStyle(content.styles, 'mainTitle'),
               backgroundImage: 'linear-gradient(to bottom, #FFFFFF, rgba(255, 255, 255, 0.4))',
@@ -262,7 +265,7 @@ export const StandardIntro = ({ content, globalSettings }: { content: IntroConte
           </h1>
           
           <p 
-            className="text-4xl font-bold text-white/50 leading-tight max-w-3xl mx-auto"
+            className="text-4xl font-bold text-white/50 leading-tight max-w-3xl mx-auto break-words"
             style={getStyle(content.styles, 'subtitle')}
           >
             {content.subtitle || content.subheadline || 'Building tomorrow\'s innovations with cutting-edge technology'}
@@ -310,7 +313,7 @@ export const HeadshotIntro = ({ content, globalSettings }: { content: IntroConte
         {/* Content */}
         <div style={getSectionStyle(content.sectionStyles, 'titleSection')}>
           <h1 
-            className="text-7xl font-black leading-tight tracking-tighter mb-8 bg-clip-text text-transparent"
+            className="text-7xl font-black leading-tight tracking-tighter mb-8 bg-clip-text text-transparent break-words w-full"
             style={{
               ...getStyle(content.styles, 'mainTitle'),
               backgroundImage: 'linear-gradient(to bottom, #FFFFFF, rgba(255, 255, 255, 0.4))',
@@ -320,10 +323,55 @@ export const HeadshotIntro = ({ content, globalSettings }: { content: IntroConte
           </h1>
           
           <p 
-            className="text-3xl font-bold text-white/50 leading-relaxed"
+            className="text-3xl font-bold text-white/50 leading-relaxed break-words max-w-full"
             style={getStyle(content.styles, 'subtitle')}
           >
             {content.subtitle || content.subheadline || content.tagline || 'Your tagline or description'}
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+// Emoji Intro - Large emoji centered
+export const EmojiIntro = ({ content, globalSettings }: { content: IntroContent, globalSettings: GlobalSettings }) => {
+  return (
+    <div className="w-full h-full relative flex items-center justify-center overflow-hidden">
+      <GrainyGradientBg />
+      <GridPattern />
+
+      {/* Top Badge */}
+      <div style={getSectionStyle(content.sectionStyles, 'header')} className="absolute top-12 left-12 z-20">
+        <GlassPanel className="px-6 py-3 rounded-full">
+          <TechLabel text={content.badgeText || 'PLAYGROUND'} />
+        </GlassPanel>
+      </div>
+
+      {/* Centered Content */}
+      <div className="max-w-4xl text-center px-16 relative z-10">
+        {/* Emoji Section */}
+        <div className="mb-12 text-[12rem]" style={getStyle(content.styles, 'emoji')}>
+          {content.description || '🚀'}
+        </div>
+
+        {/* Content */}
+        <div style={getSectionStyle(content.sectionStyles, 'titleSection')}>
+          <h1 
+            className="text-7xl font-black leading-tight tracking-tighter mb-8 bg-clip-text text-transparent break-words w-full"
+            style={{
+              ...getStyle(content.styles, 'mainTitle'),
+              backgroundImage: 'linear-gradient(to bottom, #FFFFFF, rgba(255, 255, 255, 0.4))',
+            }}
+          >
+            {content.mainTitle || content.headline || 'Your Headline'}
+          </h1>
+          
+          <p 
+            className="text-3xl font-bold text-white/50 leading-relaxed break-words max-w-full"
+            style={getStyle(content.styles, 'subtitle')}
+          >
+            {content.subtitle || content.subheadline || 'Supporting message here'}
           </p>
         </div>
       </div>
@@ -353,7 +401,7 @@ export const ImageIntro = ({ content, globalSettings }: { content: IntroContent,
           <div style={getSectionStyle(content.sectionStyles, 'titleSection')}>
             <LimeAccent className="w-24 h-1 mb-8" />
             <h1 
-              className="text-7xl font-black leading-tight tracking-tighter mb-8 bg-clip-text text-transparent"
+              className="text-7xl font-black leading-tight tracking-tighter mb-8 bg-clip-text text-transparent break-words w-full"
               style={{
                 ...getStyle(content.styles, 'mainTitle'),
                 backgroundImage: 'linear-gradient(to bottom, #FFFFFF, rgba(255, 255, 255, 0.4))',
@@ -362,7 +410,7 @@ export const ImageIntro = ({ content, globalSettings }: { content: IntroContent,
               {content.mainTitle || content.headline || 'Your Title'}
             </h1>
             <p 
-              className="text-3xl font-bold text-white/50 leading-relaxed max-w-2xl"
+              className="text-3xl font-bold text-white/50 leading-relaxed max-w-2xl break-words"
               style={getStyle(content.styles, 'subtitle')}
             >
               {content.subtitle || content.subheadline || 'Your message here'}
@@ -420,7 +468,7 @@ export const ImageIntro = ({ content, globalSettings }: { content: IntroContent,
       <div style={getSectionStyle(content.sectionStyles, 'titleSection')} className="absolute bottom-0 left-0 right-0 p-16 z-10">
         <LimeAccent className="w-24 h-1 mb-8" />
         <h1 
-          className="text-[7rem] font-black leading-[0.9] tracking-tighter mb-6 bg-clip-text text-transparent"
+          className="text-[7rem] font-black leading-[0.9] tracking-tighter mb-6 bg-clip-text text-transparent break-words w-full"
           style={{
             ...getStyle(content.styles, 'mainTitle'),
             backgroundImage: 'linear-gradient(to bottom, #FFFFFF, rgba(255, 255, 255, 0.4))',
@@ -429,7 +477,7 @@ export const ImageIntro = ({ content, globalSettings }: { content: IntroContent,
           {content.mainTitle || content.headline || 'Your Title'}
         </h1>
         <p 
-          className="text-3xl font-bold text-white/60 max-w-3xl"
+          className="text-3xl font-bold text-white/60 max-w-3xl break-words"
           style={getStyle(content.styles, 'subtitle')}
         >
           {content.subtitle || content.subheadline || 'Your message here'}
@@ -445,11 +493,12 @@ export const ImageIntro = ({ content, globalSettings }: { content: IntroContent,
 
 export const HeroFeatureContent = ({ content, globalSettings }: { content: ContentSlideContent, globalSettings: GlobalSettings }) => {
   return (
-    <div className="w-full h-full relative bg-black overflow-hidden">
+    <div className="w-full h-full relative overflow-hidden">
+      <GrainyGradientBg />
       <GridPattern />
 
       {/* Hero Image Top (40% height) */}
-      <div className="absolute top-0 left-0 right-0 h-[40%]">
+      <div className="absolute top-0 left-0 right-0 h-[40%] z-10">
         {(content as any).heroImage ? (
           <>
             <img 
@@ -461,17 +510,17 @@ export const HeroFeatureContent = ({ content, globalSettings }: { content: Conte
             <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/40 to-black" />
           </>
         ) : (
-          <div className="w-full h-full bg-gradient-to-b from-zinc-900 to-black" />
+          <div className="w-full h-full bg-gradient-to-b from-zinc-900/40 to-black/60" />
         )}
       </div>
 
       {/* Content Section */}
-      <div className="absolute top-[35%] left-0 right-0 bottom-0 p-16">
+      <div className="absolute top-[35%] left-0 right-0 bottom-0 p-16 z-20">
         {/* Title */}
         <div style={getSectionStyle(content.sectionStyles, 'titleSection')} className="mb-12">
           <LimeAccent className="w-20 h-1 mb-6" />
           <h1 
-            className="text-6xl font-black tracking-tighter mb-4 bg-clip-text text-transparent"
+            className="text-6xl font-black tracking-tighter mb-4 bg-clip-text text-transparent break-words w-full"
             style={{
               ...getStyle(content.styles, 'mainTitle'),
               backgroundImage: 'linear-gradient(to bottom, #FFFFFF, rgba(255, 255, 255, 0.4))',
@@ -480,7 +529,7 @@ export const HeroFeatureContent = ({ content, globalSettings }: { content: Conte
             {content.mainTitle || content.title}
           </h1>
           {content.subtitle && (
-            <p className="text-xl text-white/40 font-medium" style={getStyle(content.styles, 'subtitle')}>
+            <p className="text-xl text-white/40 font-medium break-words max-w-full" style={getStyle(content.styles, 'subtitle')}>
               {content.subtitle}
             </p>
           )}
@@ -489,15 +538,15 @@ export const HeroFeatureContent = ({ content, globalSettings }: { content: Conte
         {/* Steps/Items */}
         <div style={getSectionStyle(content.sectionStyles, 'body')} className="flex flex-col gap-6">
           {(content.steps || []).slice(0, 3).map((step, i) => (
-            <GlassPanel key={i} className="p-6 rounded-[2rem] flex items-start gap-6 hover:bg-white/10 transition-all">
+            <GlassPanel key={i} className="p-6 rounded-[2.5rem] flex items-start gap-6 hover:bg-white/10 transition-all">
               <div className="flex-shrink-0">
                 <div className="w-12 h-12 rounded-full bg-[#BFFF00]/20 border border-[#BFFF00] flex items-center justify-center">
                   <span className="text-[#BFFF00] font-black text-xl">{i + 1}</span>
                 </div>
               </div>
-              <div className="flex-1">
-                <h3 className="text-2xl font-black text-white mb-2">{step.title}</h3>
-                <p className="text-lg text-white/50 font-medium">{step.description}</p>
+              <div className="flex-1 min-w-0">
+                <h3 className="text-2xl font-black text-white mb-2 break-words">{step.title}</h3>
+                <p className="text-lg text-white/50 font-medium break-words">{step.description}</p>
               </div>
             </GlassPanel>
           ))}
@@ -515,11 +564,12 @@ export const HeroFeatureContent = ({ content, globalSettings }: { content: Conte
 
 export const ImageGridContent = ({ content, globalSettings }: { content: ContentSlideContent, globalSettings: GlobalSettings }) => {
   return (
-    <div className="w-full h-full relative bg-black p-16 overflow-hidden">
+    <div className="w-full h-full relative p-16 overflow-hidden">
+      <GrainyGradientBg />
       <GridPattern />
 
       {/* Title */}
-      <div style={getSectionStyle(content.sectionStyles, 'titleSection')} className="mb-12">
+      <div style={getSectionStyle(content.sectionStyles, 'titleSection')} className="mb-12 relative z-10">
         <TechLabel text="FEATURED CONTENT" className="mb-4 block" />
         <h1 
           className="text-6xl font-black tracking-tighter mb-2 bg-clip-text text-transparent"
@@ -534,29 +584,29 @@ export const ImageGridContent = ({ content, globalSettings }: { content: Content
       </div>
 
       {/* 2x2 Grid */}
-      <div style={getSectionStyle(content.sectionStyles, 'body')} className="grid grid-cols-2 gap-6 h-[calc(100%-200px)]">
+      <div style={getSectionStyle(content.sectionStyles, 'body')} className="grid grid-cols-2 gap-6 h-[calc(100%-250px)] relative z-10">
         {(content.steps || []).slice(0, 4).map((step, i) => (
-          <div key={i} className="relative group overflow-hidden rounded-[2rem]">
+          <div key={i} className="relative group overflow-hidden rounded-[2.5rem] border border-white/5">
             {/* Image */}
             {step.icon ? (
               <img src={step.icon} alt={step.title} className="w-full h-full object-cover" />
             ) : (
-              <div className="w-full h-full bg-gradient-to-br from-zinc-800 to-zinc-900" />
+              <div className="w-full h-full bg-gradient-to-br from-zinc-800/40 to-zinc-900/40" />
             )}
             
             {/* Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent opacity-100 group-hover:opacity-90 transition-opacity" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-100 group-hover:opacity-90 transition-opacity" />
             
             {/* Content */}
-            <div className="absolute bottom-0 left-0 right-0 p-8">
+            <div className="absolute bottom-0 left-0 right-0 p-8 min-w-0">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-8 h-8 rounded-full bg-[#BFFF00]/20 border border-[#BFFF00] flex items-center justify-center">
                   <span className="text-[#BFFF00] font-black text-sm">{i + 1}</span>
                 </div>
-                <LimeAccent className="flex-1 h-px" />
+                <LimeAccent className="flex-1 h-px opacity-30" />
               </div>
-              <h3 className="text-2xl font-black text-white mb-2">{step.title}</h3>
-              <p className="text-sm text-white/60 font-medium">{step.description}</p>
+              <h3 className="text-2xl font-black text-white mb-2 tracking-tight break-words">{step.title}</h3>
+              <p className="text-sm text-white/50 font-medium leading-relaxed break-words">{step.description}</p>
             </div>
           </div>
         ))}
@@ -568,15 +618,16 @@ export const ImageGridContent = ({ content, globalSettings }: { content: Content
 // Text-Only Content - No images, pure text layout
 export const TextOnlyContent = ({ content, globalSettings }: { content: ContentSlideContent, globalSettings: GlobalSettings }) => {
   return (
-    <div className="w-full h-full relative bg-black p-16 overflow-hidden flex flex-col">
+    <div className="w-full h-full relative p-16 overflow-hidden flex flex-col">
+      <GrainyGradientBg />
       <GridPattern />
 
       {/* Title */}
-      <div style={getSectionStyle(content.sectionStyles, 'titleSection')} className="mb-16">
+      <div style={getSectionStyle(content.sectionStyles, 'titleSection')} className="mb-16 relative z-10">
         <TechLabel text="CONTENT" className="mb-6 block" />
         <LimeAccent className="w-24 h-1 mb-8" />
         <h1 
-          className="text-7xl font-black tracking-tighter mb-6 bg-clip-text text-transparent"
+          className="text-7xl font-black tracking-tighter mb-6 bg-clip-text text-transparent break-words w-full"
           style={{
             ...getStyle(content.styles, 'mainTitle'),
             backgroundImage: 'linear-gradient(to bottom, #FFFFFF, rgba(255, 255, 255, 0.4))',
@@ -585,34 +636,34 @@ export const TextOnlyContent = ({ content, globalSettings }: { content: ContentS
           {content.mainTitle || content.title}
         </h1>
         {content.subtitle && (
-          <p className="text-2xl text-white/40 font-medium" style={getStyle(content.styles, 'subtitle')}>
+          <p className="text-2xl text-white/40 font-medium max-w-2xl break-words" style={getStyle(content.styles, 'subtitle')}>
             {content.subtitle}
           </p>
         )}
       </div>
 
       {/* Content Items */}
-      <div style={getSectionStyle(content.sectionStyles, 'body')} className="flex-1 flex flex-col gap-8">
+      <div style={getSectionStyle(content.sectionStyles, 'body')} className="flex-1 flex flex-col gap-8 relative z-10">
         {(content.steps || []).slice(0, 4).map((step, i) => (
-          <div key={i} className="flex items-start gap-8">
+          <div key={i} className="flex items-start gap-8 group">
             {/* Number Badge */}
             <div className="flex-shrink-0">
-              <div className="w-16 h-16 rounded-full bg-[#BFFF00]/20 border-2 border-[#BFFF00] flex items-center justify-center">
+              <div className="w-16 h-16 rounded-full bg-[#BFFF00]/20 border-2 border-[#BFFF00] flex items-center justify-center group-hover:bg-[#BFFF00]/30 transition-all">
                 <span className="text-[#BFFF00] font-black text-2xl">{i + 1}</span>
               </div>
             </div>
             
             {/* Content */}
-            <div className="flex-1 pt-2">
-              <h3 className="text-3xl font-black text-white mb-3 leading-tight">{step.title}</h3>
-              <p className="text-xl text-white/50 font-medium leading-relaxed">{step.description}</p>
+            <div className="flex-1 pt-2 min-w-0">
+              <h3 className="text-3xl font-black text-white mb-3 leading-tight tracking-tight break-words">{step.title}</h3>
+              <p className="text-xl text-white/50 font-medium leading-relaxed break-words">{step.description}</p>
             </div>
           </div>
         ))}
       </div>
 
       {/* Footer */}
-      <div className="mt-12 flex justify-between items-center">
+      <div className="mt-12 flex justify-between items-center relative z-10">
         <TechLabel text={content.footerNote || 'PLAYGROUND'} />
         <TechLabel text={content.footerCTA || 'CONTINUE'} />
       </div>
@@ -650,7 +701,7 @@ export const ImageOnlyContent = ({ content, globalSettings }: { content: Content
         <div style={getSectionStyle(content.sectionStyles, 'titleSection')} className="absolute top-16 left-16 right-16 z-10">
           <GlassPanel className="inline-block px-8 py-4 rounded-[2rem]">
             <h1 
-              className="text-5xl font-black tracking-tighter bg-clip-text text-transparent"
+              className="text-5xl font-black tracking-tighter bg-clip-text text-transparent break-words max-w-full"
               style={{
                 ...getStyle(content.styles, 'mainTitle'),
                 backgroundImage: 'linear-gradient(to bottom, #FFFFFF, rgba(255, 255, 255, 0.4))',
@@ -665,7 +716,7 @@ export const ImageOnlyContent = ({ content, globalSettings }: { content: Content
         <div className="absolute bottom-16 left-16 right-16 z-10">
           <LimeAccent className="w-32 h-1 mb-6" />
           {content.subtitle && (
-            <p className="text-3xl font-bold text-white/80 max-w-3xl" style={getStyle(content.styles, 'subtitle')}>
+            <p className="text-3xl font-bold text-white/80 max-w-3xl break-words" style={getStyle(content.styles, 'subtitle')}>
               {content.subtitle}
             </p>
           )}
@@ -684,7 +735,7 @@ export const ImageOnlyContent = ({ content, globalSettings }: { content: Content
         <div style={getSectionStyle(content.sectionStyles, 'titleSection')} className="mb-12">
           <TechLabel text="GALLERY" className="mb-4 block" />
           <h1 
-            className="text-6xl font-black tracking-tighter mb-2 bg-clip-text text-transparent"
+            className="text-6xl font-black tracking-tighter mb-2 bg-clip-text text-transparent break-words w-full"
             style={{
               ...getStyle(content.styles, 'mainTitle'),
               backgroundImage: 'linear-gradient(to bottom, #FFFFFF, rgba(255, 255, 255, 0.4))',
@@ -707,9 +758,9 @@ export const ImageOnlyContent = ({ content, globalSettings }: { content: Content
               
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-100 group-hover:opacity-90 transition-opacity" />
               
-              <div className="absolute bottom-0 left-0 right-0 p-6">
+              <div className="absolute bottom-0 left-0 right-0 p-6 min-w-0">
                 <LimeAccent className="w-12 h-px mb-3" />
-                <h3 className="text-xl font-black text-white">{step.title}</h3>
+                <h3 className="text-xl font-black text-white break-words">{step.title}</h3>
               </div>
             </div>
           ))}
@@ -748,20 +799,183 @@ export const ImageOnlyContent = ({ content, globalSettings }: { content: Content
             
             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent" />
             
-            <div className="absolute bottom-0 left-0 right-0 p-8">
+            <div className="absolute bottom-0 left-0 right-0 p-8 min-w-0">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 rounded-full bg-[#BFFF00]/20 border-2 border-[#BFFF00] flex items-center justify-center">
                   <span className="text-[#BFFF00] font-black text-lg">{i + 1}</span>
                 </div>
                 <LimeAccent className="flex-1 h-px" />
               </div>
-              <h3 className="text-3xl font-black text-white mb-2">{step.title}</h3>
+              <h3 className="text-3xl font-black text-white mb-2 break-words">{step.title}</h3>
               {step.description && (
-                <p className="text-base text-white/60 font-medium">{step.description}</p>
+                <p className="text-base text-white/60 font-medium break-words">{step.description}</p>
               )}
             </div>
           </div>
         ))}
+      </div>
+    </div>
+  );
+};
+
+// Tech Timeline Content - Vertical flow with glass cards
+export const TechTimelineContent = ({ content, globalSettings }: { content: ContentSlideContent, globalSettings: GlobalSettings }) => {
+  return (
+    <div className="w-full h-full relative p-16 overflow-hidden flex flex-col">
+      <GrainyGradientBg />
+      <GridPattern />
+
+      {/* Title Section */}
+      <div style={getSectionStyle(content.sectionStyles, 'titleSection')} className="mb-12 relative z-10">
+        <TechLabel text="TIMELINE / PHASE" className="mb-4 block" />
+        <h1 
+          className="text-6xl font-black tracking-tighter mb-4 bg-clip-text text-transparent break-words w-full"
+          style={{
+            ...getStyle(content.styles, 'mainTitle'),
+            backgroundImage: 'linear-gradient(to bottom, #FFFFFF, rgba(255, 255, 255, 0.4))',
+          }}
+        >
+          {content.mainTitle || content.title}
+        </h1>
+        <LimeAccent className="w-32 h-1" />
+      </div>
+
+      {/* Timeline Section */}
+      <div style={getSectionStyle(content.sectionStyles, 'body')} className="flex-1 relative z-10">
+        {/* Vertical Line */}
+        <div className="absolute left-10 top-0 bottom-0 w-px bg-gradient-to-b from-[#BFFF00] via-[#BFFF00]/20 to-transparent" />
+        
+        <div className="flex flex-col gap-10">
+          {(content.steps || []).slice(0, 4).map((step, i) => (
+            <div key={i} className="flex items-start gap-12 relative">
+              {/* Dot */}
+              <div className="flex-shrink-0 relative z-20">
+                <div className="w-20 h-20 rounded-2xl bg-black border-2 border-[#BFFF00] flex items-center justify-center shadow-[0_0_20px_rgba(191,255,0,0.3)]">
+                  <span className="text-[#BFFF00] font-black text-2xl">{i + 1}</span>
+                </div>
+              </div>
+
+              {/* Card */}
+              <GlassPanel className="flex-1 p-8 rounded-[2.5rem] border-white/10 hover:border-[#BFFF00]/30 transition-all min-w-0">
+                <h3 className="text-3xl font-black text-white mb-3 break-words">{step.title}</h3>
+                <p className="text-xl text-white/50 font-medium leading-relaxed break-words">{step.description}</p>
+              </GlassPanel>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+
+// Floating Modules Content - Asymmetrical grid of glass cards
+export const FloatingModulesContent = ({ content, globalSettings }: { content: ContentSlideContent, globalSettings: GlobalSettings }) => {
+  return (
+    <div className="w-full h-full relative p-16 overflow-hidden flex flex-col">
+      <GrainyGradientBg />
+      <GridPattern />
+
+      {/* Background Accent */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#BFFF00]/5 blur-[120px] rounded-full pointer-events-none" />
+
+      {/* Header */}
+      <div style={getSectionStyle(content.sectionStyles, 'titleSection')} className="mb-12 relative z-20">
+        <TechLabel text="MODULAR OVERVIEW" className="mb-4 block" />
+        <h1 
+          className="text-6xl font-black tracking-tighter mb-4 bg-clip-text text-transparent break-words w-full"
+          style={{
+            ...getStyle(content.styles, 'mainTitle'),
+            backgroundImage: 'linear-gradient(to bottom, #FFFFFF, rgba(255, 255, 255, 0.4))',
+          }}
+        >
+          {content.mainTitle || content.title}
+        </h1>
+        <div className="flex items-center gap-4">
+          <LimeAccent className="w-16 h-1" />
+          <TechLabel text="UNSTRUCTURED DATA" />
+        </div>
+      </div>
+
+      {/* Modules Area */}
+      <div style={getSectionStyle(content.sectionStyles, 'body')} className="flex-1 relative z-10">
+        <div className="grid grid-cols-12 grid-rows-6 gap-6 h-full">
+          {(content.steps || []).slice(0, 4).map((step, i) => {
+            const gridConfig = [
+              'col-span-12 lg:col-span-7 row-span-3',
+              'col-span-12 lg:col-span-5 row-span-2',
+              'col-span-12 lg:col-span-5 row-span-4',
+              'col-span-12 lg:col-span-7 row-span-3'
+            ];
+            return (
+              <GlassPanel key={i} className={`${gridConfig[i]} p-8 rounded-[3rem] border-white/10 hover:bg-white/10 transition-all group overflow-hidden relative`}>
+                <div className="relative z-10 flex flex-col h-full">
+                  <div className="mb-auto">
+                     <TechLabel text={`MODULE 0${i + 1}`} className="text-[#BFFF00]/60 mb-4 block" />
+                     <h3 className="text-3xl font-black text-white mb-3 tracking-tight break-words">{step.title}</h3>
+                  </div>
+                  <p className="text-lg text-white/50 font-medium leading-relaxed break-words line-clamp-3">{step.description}</p>
+                </div>
+                {/* Visual Accent */}
+                <div className="absolute -right-4 -bottom-4 w-24 h-24 bg-[#BFFF00]/5 rounded-full blur-2xl group-hover:bg-[#BFFF00]/20 transition-all" />
+              </GlassPanel>
+            );
+          })}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+// Comparison Versus Content - High-contrast split for comparison
+export const ComparisonVersusContent = ({ content, globalSettings }: { content: ContentSlideContent, globalSettings: GlobalSettings }) => {
+  return (
+    <div className="w-full h-full relative overflow-hidden flex flex-col">
+      <GrainyGradientBg />
+      <GridPattern />
+
+      {/* Content */}
+      <div className="flex-1 flex flex-col p-16 relative z-10">
+        <div style={getSectionStyle(content.sectionStyles, 'titleSection')} className="mb-16">
+          <TechLabel text="COMPARISON / VERSUS" className="mb-4 block" />
+          <h1 
+            className="text-7xl font-black tracking-tighter bg-clip-text text-transparent break-words w-full"
+            style={{
+              ...getStyle(content.styles, 'mainTitle'),
+              backgroundImage: 'linear-gradient(to bottom, #FFFFFF, rgba(255, 255, 255, 0.4))',
+            }}
+          >
+            {content.mainTitle || content.title}
+          </h1>
+        </div>
+
+        <div style={getSectionStyle(content.sectionStyles, 'body')} className="flex-1 flex gap-10 items-center">
+          {(content.steps || []).slice(0, 2).map((step, i) => (
+            <React.Fragment key={i}>
+              <div className="flex-1 h-full flex flex-col justify-center">
+                <GlassPanel className={`p-10 rounded-[4rem] h-[500px] flex flex-col border-white/10 ${i === 1 ? 'border-[#BFFF00]/30 shadow-[0_0_50px_rgba(191,255,0,0.05)]' : ''}`}>
+                  <div className="mb-8">
+                    <span className={`text-sm font-black uppercase tracking-[0.4em] ${i === 0 ? 'text-zinc-500' : 'text-[#BFFF00]'}`}>
+                      {i === 0 ? 'TRADITIONAL' : 'OPTIMIZED'}
+                    </span>
+                    <h3 className="text-4xl font-black text-white mt-4 break-words">{step.title}</h3>
+                  </div>
+                  <div className="flex-1 flex items-center">
+                    <p className="text-2xl text-white/50 font-medium leading-relaxed break-words">{step.description}</p>
+                  </div>
+                  <div className={`w-full h-1 mt-8 ${i === 0 ? 'bg-zinc-800' : 'bg-[#BFFF00]'}`} />
+                </GlassPanel>
+              </div>
+              {i === 0 && (
+                <div className="flex-shrink-0 z-20">
+                  <div className="w-24 h-24 rounded-full bg-white/5 backdrop-blur-3xl border border-white/20 flex items-center justify-center">
+                    <span className="text-white font-black text-2xl tracking-widest italic">VS</span>
+                  </div>
+                </div>
+              )}
+            </React.Fragment>
+          ))}
+        </div>
       </div>
     </div>
   );
@@ -773,7 +987,8 @@ export const ImageOnlyContent = ({ content, globalSettings }: { content: Content
 
 export const ProfileSpotlightCTA = ({ content, globalSettings }: { content: CTAContent, globalSettings: GlobalSettings }) => {
   return (
-    <div className="w-full h-full relative bg-black overflow-hidden flex items-center justify-center">
+    <div className="w-full h-full relative overflow-hidden flex items-center justify-center">
+      <GrainyGradientBg />
       {/* Background Hero Image */}
       <div className="absolute inset-0">
         {(content as any).heroImage ? (
@@ -784,19 +999,19 @@ export const ProfileSpotlightCTA = ({ content, globalSettings }: { content: CTAC
               className="w-full h-full object-cover"
               style={getStyle(content.styles, 'heroImage')}
             />
-            <div className="absolute inset-0 bg-black/70" />
+            <div className="absolute inset-0 bg-black/60" />
             <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/50" />
           </>
         ) : (
-          <div className="w-full h-full bg-gradient-to-br from-zinc-900 to-black" />
+          <div className="w-full h-full bg-gradient-to-br from-zinc-900/40 to-black/60" />
         )}
       </div>
 
       <GridPattern />
 
       {/* CTA Card */}
-      <div style={getSectionStyle(content.sectionStyles, 'body')} className="relative z-10">
-        <GlassPanel className="p-16 rounded-[4rem] max-w-2xl text-center">
+      <div style={getSectionStyle(content.sectionStyles, 'body')} className="relative z-10 w-full px-16">
+        <GlassPanel className="p-16 rounded-[4rem] max-w-2xl mx-auto text-center border-white/20">
           {/* Profile Image */}
           {content.profileImage && (
             <div className="mx-auto mb-8 w-32 h-32 rounded-full overflow-hidden border-4 border-[#BFFF00] shadow-2xl shadow-[#BFFF00]/20" style={getStyle(content.styles, 'profileImage')}>
@@ -805,32 +1020,34 @@ export const ProfileSpotlightCTA = ({ content, globalSettings }: { content: CTAC
           )}
 
           {/* Name & Title */}
-          <div style={getSectionStyle(content.sectionStyles, 'header')} className="mb-8">
+          <div style={getSectionStyle(content.sectionStyles, 'header')} className="mb-8 min-w-0">
             <h2 
-              className="text-5xl font-black text-white mb-3"
+              className="text-5xl font-black text-white mb-3 tracking-tighter break-words"
               style={getStyle(content.styles, 'name')}
             >
               {content.name || 'Your Name'}
             </h2>
-            <p 
-              className="text-xl text-white/50 font-bold"
+            <TechLabel 
+              text={content.title || 'CREATOR'} 
+              className="text-lg opacity-60 break-words"
               style={getStyle(content.styles, 'title')}
-            >
-              {content.title || 'Your Title'}
-            </p>
+            />
           </div>
 
           {/* CTA Message */}
           <p 
-            className="text-3xl font-black text-white mb-10 leading-tight"
-            style={getStyle(content.styles, 'ctaText')}
+            className="text-4xl font-black text-white mb-10 leading-tight tracking-tight bg-clip-text text-transparent break-words w-full"
+            style={{
+              ...getStyle(content.styles, 'ctaText'),
+              backgroundImage: 'linear-gradient(to bottom, #FFFFFF, rgba(255, 255, 255, 0.4))',
+            }}
           >
             {content.ctaText || 'Let\'s connect and create something amazing'}
           </p>
 
           {/* CTA Button */}
           <button 
-            className="bg-[#BFFF00] text-black px-12 py-6 rounded-full text-2xl font-black hover:scale-105 transition-transform shadow-2xl shadow-[#BFFF00]/30"
+            className="bg-[#BFFF00] text-black px-12 py-6 rounded-full text-2xl font-black hover:scale-105 transition-all shadow-2xl shadow-[#BFFF00]/30 active:scale-95"
             style={getStyle(content.styles, 'ctaButtonText')}
           >
             {content.ctaButtonText || 'FOLLOW NOW'}
@@ -843,7 +1060,8 @@ export const ProfileSpotlightCTA = ({ content, globalSettings }: { content: CTAC
 
 export const MinimalTechCTA = ({ content, globalSettings }: { content: CTAContent, globalSettings: GlobalSettings }) => {
   return (
-    <div className="w-full h-full relative bg-black flex items-center justify-center overflow-hidden">
+    <div className="w-full h-full relative flex items-center justify-center overflow-hidden">
+      <GrainyGradientBg />
       <GridPattern />
 
       {/* Centered Content */}
@@ -851,7 +1069,7 @@ export const MinimalTechCTA = ({ content, globalSettings }: { content: CTAConten
         {/* Profile Image */}
         {content.profileImage && (
           <div className="mx-auto mb-12 relative">
-            <div className="w-48 h-48 rounded-full overflow-hidden border-4 border-white/10 shadow-2xl" style={getStyle(content.styles, 'profileImage')}>
+            <div className="w-48 h-48 rounded-full overflow-hidden border-4 border-[#BFFF00]/30 shadow-2xl shadow-[#BFFF00]/10" style={getStyle(content.styles, 'profileImage')}>
               <img src={content.profileImage} alt="Profile" className="w-full h-full object-cover" />
             </div>
             <LimeAccent className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-24 h-1" />
@@ -859,33 +1077,36 @@ export const MinimalTechCTA = ({ content, globalSettings }: { content: CTAConten
         )}
 
         {/* Name */}
-        <div style={getSectionStyle(content.sectionStyles, 'header')} className="mb-6">
-          <h2 
-            className="text-6xl font-black text-white mb-4 tracking-tighter"
-            style={getStyle(content.styles, 'name')}
+        <div style={getSectionStyle(content.sectionStyles, 'header')} className="mb-6 min-w-0">
+          <h1 
+            className="text-7xl font-black text-white mb-4 tracking-tighter bg-clip-text text-transparent break-words w-full"
+            style={{
+              ...getStyle(content.styles, 'name'),
+              backgroundImage: 'linear-gradient(to bottom, #FFFFFF, rgba(255, 255, 255, 0.4))',
+            }}
           >
             {content.name || 'Your Name'}
-          </h2>
-          <TechLabel text={content.title || 'CREATOR / BUILDER'} className="text-[11px]" />
+          </h1>
+          <TechLabel text={content.title || 'CREATOR / BUILDER'} className="text-[11px] break-words" />
         </div>
 
         {/* Divider */}
         <div className="flex items-center gap-4 my-12">
-          <div className="flex-1 h-px bg-white/10" />
+          <div className="flex-1 h-px bg-[#BFFF00]/20" />
           <TechLabel text="CALL TO ACTION" />
-          <div className="flex-1 h-px bg-white/10" />
+          <div className="flex-1 h-px bg-[#BFFF00]/20" />
         </div>
 
         {/* CTA Message */}
         <p 
-          className="text-4xl font-black text-white mb-12 leading-tight"
+          className="text-4xl font-black text-white mb-12 leading-tight tracking-tight break-words max-w-full"
           style={getStyle(content.styles, 'ctaText')}
         >
           {content.ctaText || 'Join me on this journey'}
         </p>
 
         {/* CTA Button */}
-        <GlassPanel className="inline-block px-12 py-6 rounded-full hover:bg-white/10 transition-all group cursor-pointer">
+        <GlassPanel className="inline-block px-12 py-6 rounded-full hover:bg-[#BFFF00]/10 border-[#BFFF00]/20 transition-all group cursor-pointer shadow-2xl shadow-[#BFFF00]/5">
           <span 
             className="text-2xl font-black text-[#BFFF00] group-hover:text-white transition-colors"
             style={getStyle(content.styles, 'ctaButtonText')}
