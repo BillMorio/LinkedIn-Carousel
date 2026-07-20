@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Forge Clipper",
+  "version": "0.2.0",
+  "description": "Clip ideas from anywhere (tweets, articles, posts) straight into your Forge Idea Bank — with notes + tags. An in-page selection toolbar + button, offline queue, syncs when Forge is running.",
+  "permissions": ["contextMenus", "storage", "alarms"],
+  "host_permissions": ["http://localhost:8000/*", "http://127.0.0.1:8000/*"],
+  "background": { "service_worker": "background.js" },
+  "action": { "default_title": "Forge Clipper — toggle clip panel" },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "commands": {
+    "clip-selection": {
+      "suggested_key": { "default": "Alt+Shift+S" },
+      "description": "Clip the current selection to Forge"
+    }
+  }
+}

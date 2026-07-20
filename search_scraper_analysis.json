@@ -1,0 +1,1242 @@
+[
+    {
+        "share_url": "https://www.linkedin.com/posts/analytics-vidhya_research-paper-of-the-week-activity-7439226480640901120-p0PR?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAGW8vZUBhgrl5QOfv_FCPqWaq7pBBTL0Chc",
+        "actor": {
+            "actor_image": "na",
+            "actor_description": "210,835 followers",
+            "actor_name": "Analytics Vidhya",
+            "actor_subDescription": "32m \u2022   ",
+            "actor_navigationContext": "https://www.linkedin.com/company/analytics-vidhya/posts"
+        },
+        "commentary": "\ud83d\udd25 Hot off the press: This week's top AI research!\n\u00a0\n\u27a1\ufe0f Bootstrapping Exploration with Group-Level Natural Language Feedback in Reinforcement Learning \u2013 GOLF uses group feedback to guide RL exploration, boosting learning efficiency. This offers a practical approach for training LLMs with informative signals.\n\ud83d\udd17 Full Paper: https://lnkd.in/gY29Qadi\n\u00a0\n\u27a1\ufe0f Geometry-Guided Reinforcement Learning for Multi-view Consistent 3D Scene Editing \u2013 RL3DEdit leverages RL and pre-trained models to ensure multi-view consistency in 3D scene editing, without needing huge datasets. This enables faster and more data-efficient 3D editing.\n\ud83d\udd17 Full Paper: https://lnkd.in/g8XcNbsx\n\u00a0\n\u27a1\ufe0f OpenClaw-RL: Train Any Agent Simply by Talking \u2013 OpenClaw-RL allows agents to improve through natural interactions, using next-state signals for live learning. It can optimize agent behavior directly from deployed environments.\n\ud83d\udd17 Full Paper: https://lnkd.in/gW6AqPaM\n\u00a0\nWhich breakthrough excites you most? Share your thoughts below!",
+        "social_details": {
+            "numLikes": 4,
+            "numComments": 0,
+            "numShares": 0,
+            "reactionTypeCounts": [
+                {
+                    "type": "LIKE",
+                    "count": 4
+                }
+            ]
+        },
+        "postedAt": "2026-03-16T08:30:07.000Z",
+        "documentComponent": {
+            "title": "Research Paper of the week",
+            "transcribedDocumentUrl": "https://media.licdn.com/dms/document/media/v2/D561FAQG5IdLsQKzLZg/feedshare-document-url-metadata-scrapper-pdf/B56Zz1HK5kHwA4-/0/1773638824572?e=1774260000&v=beta&t=iouum_c4oXTe58CicpCDJG1OjVz4gtj6lRZ5dVfLQOo",
+            "coverPages": [
+                {
+                    "width": 387,
+                    "height": 484,
+                    "imageUrls": [
+                        "https://media.licdn.com/dms/image/v2/D561FAQG5IdLsQKzLZg/feedshare-document-cover-images_480/B56Zz1HK5kHwBA-/0/1773638824573?e=1774260000&v=beta&t=BHFiwnaw9NfSmpflXaussfxgvWBNKSW3bBVUE2aa40M",
+                        "https://media.licdn.com/dms/image/v2/D561FAQG5IdLsQKzLZg/feedshare-document-cover-images_480/B56Zz1HK5kHwBA-/1/1773638824573?e=1774260000&v=beta&t=RPSBtHuf7oSf9JRe7pdWj1-TNw2J7woKtMBmnEQLg5s",
+                        "https://media.licdn.com/dms/image/v2/D561FAQG5IdLsQKzLZg/feedshare-document-cover-images_480/B56Zz1HK5kHwBA-/2/1773638824573?e=1774260000&v=beta&t=VVo0hfePIG_f74uVMuLLy1EwtMcYPL5mBMAzG9d3gIQ"
+                    ]
+                },
+                {
+                    "width": 650,
+                    "height": 812,
+                    "imageUrls": [
+                        "https://media.licdn.com/dms/image/v2/D561FAQG5IdLsQKzLZg/feedshare-document-cover-images_800/B56Zz1HK5kHwBM-/0/1773638824855?e=1774260000&v=beta&t=FzVptLmEMcEIpUthpoJlcx1R8ROOjBWbYxq6-AR_89I",
+                        "https://media.licdn.com/dms/image/v2/D561FAQG5IdLsQKzLZg/feedshare-document-cover-images_800/B56Zz1HK5kHwBM-/1/1773638824855?e=1774260000&v=beta&t=YavuDp66nGB_UYtDyKNtlsL0yqXupEiOW5QvDp7brD0",
+                        "https://media.licdn.com/dms/image/v2/D561FAQG5IdLsQKzLZg/feedshare-document-cover-images_800/B56Zz1HK5kHwBM-/2/1773638824855?e=1774260000&v=beta&t=P33cbaqrX2xE91NnhOKMyZv8T5_pEYMg2bR_ltIPhw0"
+                    ]
+                },
+                {
+                    "width": 1025,
+                    "height": 1281,
+                    "imageUrls": [
+                        "https://media.licdn.com/dms/image/v2/D561FAQG5IdLsQKzLZg/feedshare-document-cover-images_1280/B56Zz1HK5kHwAs-/0/1773638824854?e=1774260000&v=beta&t=Cgt03fHTv2yaG77V1gPWFTTU3kzZO6vAp_INcH2hG7o",
+                        "https://media.licdn.com/dms/image/v2/D561FAQG5IdLsQKzLZg/feedshare-document-cover-images_1280/B56Zz1HK5kHwAs-/1/1773638824854?e=1774260000&v=beta&t=rsMPKUXlGIJ5MgQANMKHV7dVbDTBv0XJHzgncrGcXpQ",
+                        "https://media.licdn.com/dms/image/v2/D561FAQG5IdLsQKzLZg/feedshare-document-cover-images_1280/B56Zz1HK5kHwAs-/2/1773638824854?e=1774260000&v=beta&t=BB_HDr-iHxUT9c0VfQ3VzuZWKhzzAoM-bFAUG7KpcHs"
+                    ]
+                },
+                {
+                    "width": 1537,
+                    "height": 1921,
+                    "imageUrls": [
+                        "https://media.licdn.com/dms/image/v2/D561FAQG5IdLsQKzLZg/feedshare-document-cover-images_1920/B56Zz1HK5kHwBQ-/0/1773638825113?e=1774260000&v=beta&t=Z7nw_PZgca5BzqsbouN38ezHT2U7ZftJhpygrSU5HwY",
+                        "https://media.licdn.com/dms/image/v2/D561FAQG5IdLsQKzLZg/feedshare-document-cover-images_1920/B56Zz1HK5kHwBQ-/1/1773638825113?e=1774260000&v=beta&t=hKuqgRrD2iDPHh9M2tcobF4JyeHMafJppFj7COsS0Lw",
+                        "https://media.licdn.com/dms/image/v2/D561FAQG5IdLsQKzLZg/feedshare-document-cover-images_1920/B56Zz1HK5kHwBQ-/2/1773638825113?e=1774260000&v=beta&t=EgogxEaiVWghxzOmca8bFBYUdLvUsczCDTYa1AaCKu0"
+                    ]
+                }
+            ]
+        },
+        "urn": "urn:li:activity:7439226480640901120",
+        "reactionsUrn": "urn:li:ugcPost:7439180586730254336",
+        "commentsUrn": "urn:li:fsd_socialDetail:(urn:li:ugcPost:7439180586730254336,urn:li:ugcPost:7439180586730254336,urn:li:highlightedReply:-)",
+        "repostsUrn": "urn:li:ugcPost:7439180586730254336",
+        "scrapedAt": "2026-03-16T09:02:48.270Z"
+    },
+    {
+        "share_url": "https://www.linkedin.com/posts/data-driven-vc_ddvc-summit-agenda-activity-7439219175677632512-p_GG?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAGW8vZUBhgrl5QOfv_FCPqWaq7pBBTL0Chc",
+        "actor": {
+            "actor_image": "na",
+            "actor_description": "2,806 followers",
+            "actor_name": "Data Driven VC",
+            "actor_subDescription": "1h \u2022 Edited \u2022   ",
+            "actor_navigationContext": "https://www.linkedin.com/company/data-driven-vc/posts"
+        },
+        "commentary": "\ud83d\udea8 7 days to go. The full agenda for the Virtual DDVC Summit 2026 is live.\n\n18 sessions. 40 speakers. 3 days.\n\nFrom building scoring models to AI-native VC tech stacks to running investment workflows with OpenClaw. Every session is built around real tools, real workflows, and real systems you can bring back to your firm the following day.\n\nSpeakers from Accel, Atomico, Balderton, Bessemer Venture Partners, LocalGlobe, Point Nine, and more.\n\n\ud83d\udcc5 March 23\u201325 | 16:00\u201322:00 CET live daily \n\nBrowse the full agenda and grab one of the final tickets. \n\nLink in the comments \ud83d\udc47",
+        "social_details": {
+            "numLikes": 1,
+            "numComments": 1,
+            "numShares": 0,
+            "reactionTypeCounts": [
+                {
+                    "type": "LIKE",
+                    "count": 1
+                }
+            ]
+        },
+        "postedAt": "2026-03-16T08:01:05.000Z",
+        "documentComponent": {
+            "title": "DDVC Summit Agenda",
+            "transcribedDocumentUrl": "https://media.licdn.com/dms/document/media/v2/D4D1FAQFOQJSBIrkpfg/feedshare-document-url-metadata-scrapper-pdf/B4DZz1llR4KgA4-/0/1773646797105?e=1774260000&v=beta&t=2b_2n6cs2OPjgrGdvGX4FxadBdQnulAAiiVSkqGnmys",
+            "coverPages": [
+                {
+                    "width": 487,
+                    "height": 487,
+                    "imageUrls": [
+                        "https://media.licdn.com/dms/image/v2/D4D1FAQFOQJSBIrkpfg/feedshare-document-cover-images_480/B4DZz1llR4KgBA-/0/1773646797235?e=1774260000&v=beta&t=41v2vLR87eefmyCo4GTZxM0csyLyxHzE6xviVVBgKMI",
+                        "https://media.licdn.com/dms/image/v2/D4D1FAQFOQJSBIrkpfg/feedshare-document-cover-images_480/B4DZz1llR4KgBA-/1/1773646797235?e=1774260000&v=beta&t=iEb8bt7K2Yr-Mb6r2CBMLy_T6eEH3HSrpL83qVc0ua0",
+                        "https://media.licdn.com/dms/image/v2/D4D1FAQFOQJSBIrkpfg/feedshare-document-cover-images_480/B4DZz1llR4KgBA-/2/1773646797235?e=1774260000&v=beta&t=EBUIaH4Zkv2a8rg5swCC-0g6xoZm28lhC-EDYHeWd6A"
+                    ]
+                },
+                {
+                    "width": 800,
+                    "height": 800,
+                    "imageUrls": [
+                        "https://media.licdn.com/dms/image/v2/D4D1FAQFOQJSBIrkpfg/feedshare-document-cover-images_800/B4DZz1llR4KgBM-/0/1773646797235?e=1774260000&v=beta&t=RC_83ct4G1ePG81HUHQ6b6CHpw6Y7Itaj11A20BA8qM",
+                        "https://media.licdn.com/dms/image/v2/D4D1FAQFOQJSBIrkpfg/feedshare-document-cover-images_800/B4DZz1llR4KgBM-/1/1773646797235?e=1774260000&v=beta&t=0qaWpZzgSvSii3Bzw0LbFnBU5uRxy5bspJOjgHcyxpU",
+                        "https://media.licdn.com/dms/image/v2/D4D1FAQFOQJSBIrkpfg/feedshare-document-cover-images_800/B4DZz1llR4KgBM-/2/1773646797235?e=1774260000&v=beta&t=EICoiajr3hAT2Vu78tVSFmSQCqpUqmrtObSRW-uiW0M"
+                    ]
+                },
+                {
+                    "width": 1287,
+                    "height": 1287,
+                    "imageUrls": [
+                        "https://media.licdn.com/dms/image/v2/D4D1FAQFOQJSBIrkpfg/feedshare-document-cover-images_1280/B4DZz1llR4KgAs-/0/1773646797527?e=1774260000&v=beta&t=YCv94DqSNNjsUbfk_yuKVIsNMJLvDJ9m-KcnVLsnzZk",
+                        "https://media.licdn.com/dms/image/v2/D4D1FAQFOQJSBIrkpfg/feedshare-document-cover-images_1280/B4DZz1llR4KgAs-/1/1773646797527?e=1774260000&v=beta&t=8bAr6WKNwRBxznBDTENoXSLAUKC3g-jr8u-9_NK1mRE",
+                        "https://media.licdn.com/dms/image/v2/D4D1FAQFOQJSBIrkpfg/feedshare-document-cover-images_1280/B4DZz1llR4KgAs-/2/1773646797527?e=1774260000&v=beta&t=yHgA6zpbeN8xLTQPjiJCgNFs12QZOEgSHfqMO6wCOaI"
+                    ]
+                },
+                {
+                    "width": 1925,
+                    "height": 1925,
+                    "imageUrls": [
+                        "https://media.licdn.com/dms/image/v2/D4D1FAQFOQJSBIrkpfg/feedshare-document-cover-images_1920/B4DZz1llR4KgBQ-/0/1773646798084?e=1774260000&v=beta&t=CIq_N7A1zJs0p-jqF3LyqFLCb1TtlSld2KtjsST3uY8",
+                        "https://media.licdn.com/dms/image/v2/D4D1FAQFOQJSBIrkpfg/feedshare-document-cover-images_1920/B4DZz1llR4KgBQ-/1/1773646798084?e=1774260000&v=beta&t=Eq-XrciHdzJkAHXtCKfGqGSyYwNFH02M14QwciaYj84",
+                        "https://media.licdn.com/dms/image/v2/D4D1FAQFOQJSBIrkpfg/feedshare-document-cover-images_1920/B4DZz1llR4KgBQ-/2/1773646798084?e=1774260000&v=beta&t=RmG1ADFPZt2wu7DJohL2xqr-6KdGHuxMJey4gNJMtoo"
+                    ]
+                }
+            ]
+        },
+        "urn": "urn:li:activity:7439219175677632512",
+        "reactionsUrn": "urn:li:ugcPost:7439213952221306880",
+        "commentsUrn": "urn:li:fsd_socialDetail:(urn:li:ugcPost:7439213952221306880,urn:li:ugcPost:7439213952221306880,urn:li:highlightedReply:-)",
+        "repostsUrn": "urn:li:ugcPost:7439213952221306880",
+        "scrapedAt": "2026-03-16T09:02:48.270Z"
+    },
+    {
+        "share_url": "https://www.linkedin.com/posts/satwikbhavanari_openclaw-activity-7439211395155648512-ZAbJ?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAGW8vZUBhgrl5QOfv_FCPqWaq7pBBTL0Chc",
+        "actor": {
+            "actor_image": "https://media.licdn.com/dms/image/v2/D5635AQH128wl6UpmTw/profile-framedphoto-shrink_200_200/B56ZzYGuOZG4Ac-/0/1773152167110?e=1774260000&v=beta&t=bFM2Cnc0tKqKVkyg5dWJZ3DACyWpBfTYulnCqcHj144",
+            "actor_description": "UI/UX & Full Stack Intern at SISA Infosec | Cybersecurity & AI Enthusiast | Blockchain | React | Angular | JavaScript | TypeScript | Node.js | MongoDB | Figma | Git | Agile",
+            "actor_name": "Shiva Satwik Bhavanari",
+            "actor_subDescription": "1h \u2022   ",
+            "actor_navigationContext": "https://www.linkedin.com/in/satwikbhavanari?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAAE5YZwIBWEcny9JtTgIdmb4wCW1QoULgPBg"
+        },
+        "commentary": "\ud83e\udd2fI got tired of paying for AI tools that forget everything the moment I close the tab.\n\nSo I deployed my own. \ud83d\udc3e\n\nOpenClaw \u2014 a self-hosted AI assistant that runs on my VPS, knows my entire setup, and works while I sleep.\n\nNo subscriptions.\nNo context resets.\nNo \"I don't remember last session.\"\n\nHere's what it actually does \ud83d\udc47\n\n\ud83e\udde0 One brain across Telegram, WhatsApp, Discord, Signal \u2014 all connected.\n\u26a1 Runs real shell commands on my server when I ask.\n\ud83d\udd01 Monitors my services on a schedule \u2014 and fixes things before I wake up.\n\ud83e\udd16 Delegates heavy tasks to Claude Code or Codex as sub-agents.\n\ud83d\udcc1 Remembers everything \u2014 because it has access to my actual files.\n\nThe best part?\n\n$6/month in server costs.\nThat's it.\n\nMost people are renting intelligence from someone else's box.\n\nI own mine.\n\nFull breakdown below \ud83d\udc47 If you're a developer with a VPS, this changes how you work.\n\n#AI #SelfHosted #OpenSource #DevTools #AIAssistant #OpenClaw",
+        "social_details": {
+            "numLikes": 0,
+            "numComments": 0,
+            "numShares": 0,
+            "reactionTypeCounts": []
+        },
+        "postedAt": "2026-03-16T07:30:10.000Z",
+        "documentComponent": {
+            "title": "openclaw ",
+            "transcribedDocumentUrl": "https://media.licdn.com/dms/document/media/v2/D561FAQHrD75BVJSbXA/feedshare-document-sanitized-pdf/B56Zzw2vHkI0BA-/0/1773567407440?e=1774260000&v=beta&t=olNiJawrluJIppNuZuQvHAkVP7DPdFLVU9uMx4404-E",
+            "coverPages": [
+                {
+                    "width": 482,
+                    "height": 482,
+                    "imageUrls": [
+                        "https://media.licdn.com/dms/image/v2/D561FAQHrD75BVJSbXA/feedshare-document-cover-images_480/B56Zzw2vHkI0BE-/0/1773567407381?e=1774260000&v=beta&t=DkMOb1zF0n2xdRe2ErZ6WaBNPHWpIql1ldEvW4NR13Q",
+                        "https://media.licdn.com/dms/image/v2/D561FAQHrD75BVJSbXA/feedshare-document-cover-images_480/B56Zzw2vHkI0BE-/1/1773567407381?e=1774260000&v=beta&t=3W7RK1DUkV3CGv5YX3dP2WkTH8gjoPutnnBZJ-IKTAg",
+                        "https://media.licdn.com/dms/image/v2/D561FAQHrD75BVJSbXA/feedshare-document-cover-images_480/B56Zzw2vHkI0BE-/2/1773567407381?e=1774260000&v=beta&t=-eS7dV0AiqBTtFM5aDPovb49EO14ioC3ARNwzHD7o4c"
+                    ]
+                },
+                {
+                    "width": 806,
+                    "height": 806,
+                    "imageUrls": [
+                        "https://media.licdn.com/dms/image/v2/D561FAQHrD75BVJSbXA/feedshare-document-cover-images_800/B56Zzw2vHkI0BQ-/0/1773567407380?e=1774260000&v=beta&t=UImHHl58ii48pwvs-RwV8YbiE5vi-0xxMrM44PVpjTE",
+                        "https://media.licdn.com/dms/image/v2/D561FAQHrD75BVJSbXA/feedshare-document-cover-images_800/B56Zzw2vHkI0BQ-/1/1773567407380?e=1774260000&v=beta&t=Io_7lJvz2TT_9q1yR79w09FCrzJ-jc3n_aTwylbboLo",
+                        "https://media.licdn.com/dms/image/v2/D561FAQHrD75BVJSbXA/feedshare-document-cover-images_800/B56Zzw2vHkI0BQ-/2/1773567407380?e=1774260000&v=beta&t=ZLhCkY5xKH-FKoLu9ULRJFV83wXdWywXKKJGkbe27IU"
+                    ]
+                },
+                {
+                    "width": 1281,
+                    "height": 1281,
+                    "imageUrls": [
+                        "https://media.licdn.com/dms/image/v2/D561FAQHrD75BVJSbXA/feedshare-document-cover-images_1280/B56Zzw2vHkI0Aw-/0/1773567407381?e=1774260000&v=beta&t=KHzS0ieQNUTpCAoTPvWqwX7u5JQ5p8PkdBNwN-pf3jI",
+                        "https://media.licdn.com/dms/image/v2/D561FAQHrD75BVJSbXA/feedshare-document-cover-images_1280/B56Zzw2vHkI0Aw-/1/1773567407381?e=1774260000&v=beta&t=FMzCX5Pe-wp7xI2K9iye2UmqGTSxuOWqzEJvQEcNOxE",
+                        "https://media.licdn.com/dms/image/v2/D561FAQHrD75BVJSbXA/feedshare-document-cover-images_1280/B56Zzw2vHkI0Aw-/2/1773567407381?e=1774260000&v=beta&t=A5EI8XyAEo_jPD2Nqcf7yTN78JeiRiEI5aNiz_rpMIs"
+                    ]
+                },
+                {
+                    "width": 1922,
+                    "height": 1922,
+                    "imageUrls": [
+                        "https://media.licdn.com/dms/image/v2/D561FAQHrD75BVJSbXA/feedshare-document-cover-images_1920/B56Zzw2vHkI0BU-/0/1773567407908?e=1774260000&v=beta&t=DMSOhfzKhTemxmLs_XtfNCoF7apoMCX4n4NudSDD3Zw",
+                        "https://media.licdn.com/dms/image/v2/D561FAQHrD75BVJSbXA/feedshare-document-cover-images_1920/B56Zzw2vHkI0BU-/1/1773567407908?e=1774260000&v=beta&t=Hil7MxPR8eLn3v9ZZRz78rl6KXG_ITp00fvgNRNqcvg",
+                        "https://media.licdn.com/dms/image/v2/D561FAQHrD75BVJSbXA/feedshare-document-cover-images_1920/B56Zzw2vHkI0BU-/2/1773567407908?e=1774260000&v=beta&t=enOsxpVA0Ip24DH_YrtDRaaPEt4jqrq5MC8scFGfLZ0"
+                    ]
+                }
+            ]
+        },
+        "urn": "urn:li:activity:7439211395155648512",
+        "reactionsUrn": "urn:li:ugcPost:7438881050249867264",
+        "commentsUrn": "urn:li:fsd_socialDetail:(urn:li:ugcPost:7438881050249867264,urn:li:ugcPost:7438881050249867264,urn:li:highlightedReply:-)",
+        "repostsUrn": "urn:li:ugcPost:7438881050249867264",
+        "scrapedAt": "2026-03-16T09:02:48.270Z"
+    },
+    {
+        "share_url": "https://www.linkedin.com/posts/asia-cyber-pulse_asia-cyber-pulse-2-activity-7439211328055173120-_yqP?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAGW8vZUBhgrl5QOfv_FCPqWaq7pBBTL0Chc",
+        "actor": {
+            "actor_image": "na",
+            "actor_description": "1 follower",
+            "actor_name": "ASIA Cyber Pulse",
+            "actor_subDescription": "1h \u2022   ",
+            "actor_navigationContext": "https://www.linkedin.com/company/asia-cyber-pulse/posts"
+        },
+        "commentary": "This week in Asia Cyber Pulse #2:\n\n\n\u2022 AI adoption vs governance \u2014 China promotes the OpenClaw AI agent while government agencies warn about security risks from its broad system access.\n\u2022 Cyberattack disrupting manufacturing \u2014 Medical technology company Stryker reports operational disruption affecting orders, manufacturing, and shipments.\n\u2022 Critical Microsoft vulnerabilities \u2014 Singapore\u2019s Cyber Security Agency urges organizations to urgently patch high-severity flaws.\n\nFull breakdown in Asia Cyber Pulse #2.",
+        "social_details": {
+            "numLikes": 0,
+            "numComments": 1,
+            "numShares": 0,
+            "reactionTypeCounts": []
+        },
+        "postedAt": "2026-03-16T07:29:54.000Z",
+        "documentComponent": {
+            "title": "ASIA Cyber Pulse #2",
+            "transcribedDocumentUrl": "https://media.licdn.com/dms/document/media/v2/D561FAQFxuF-PrMrwLg/feedshare-document-url-metadata-scrapper-pdf/B56Zz1jHLGKcA4-/0/1773646149731?e=1774260000&v=beta&t=kPG8o9AquBh-VxTz946O3zmbnwgMewGqCfPzItpq6vQ",
+            "coverPages": [
+                {
+                    "width": 487,
+                    "height": 487,
+                    "imageUrls": [
+                        "https://media.licdn.com/dms/image/v2/D561FAQFxuF-PrMrwLg/feedshare-document-cover-images_480/B56Zz1jHLGKcBA-/0/1773646150344?e=1774260000&v=beta&t=nUumqPxqeo0KEL-AatTBCyo6_WpuyqT40BPRPNv9tdI",
+                        "https://media.licdn.com/dms/image/v2/D561FAQFxuF-PrMrwLg/feedshare-document-cover-images_480/B56Zz1jHLGKcBA-/1/1773646150344?e=1774260000&v=beta&t=Umw21K_tYt_609m3AqxfIl2prUvFFLKmcBz7ARqy2UA",
+                        "https://media.licdn.com/dms/image/v2/D561FAQFxuF-PrMrwLg/feedshare-document-cover-images_480/B56Zz1jHLGKcBA-/2/1773646150344?e=1774260000&v=beta&t=m3A-1P4oMioD3Y_IglO_6lmrDurSJcr7ul7W8At7YZc"
+                    ]
+                },
+                {
+                    "width": 800,
+                    "height": 800,
+                    "imageUrls": [
+                        "https://media.licdn.com/dms/image/v2/D561FAQFxuF-PrMrwLg/feedshare-document-cover-images_800/B56Zz1jHLGKcBM-/0/1773646150344?e=1774260000&v=beta&t=KxBiWtIiZ2peMMjlc8DkV0OyZ79ZeDK9oua3atxe6kU",
+                        "https://media.licdn.com/dms/image/v2/D561FAQFxuF-PrMrwLg/feedshare-document-cover-images_800/B56Zz1jHLGKcBM-/1/1773646150344?e=1774260000&v=beta&t=1Nv_NWgwnDSTplhAQmopZYA0ogjrbIcRFSHrZVMl0JU",
+                        "https://media.licdn.com/dms/image/v2/D561FAQFxuF-PrMrwLg/feedshare-document-cover-images_800/B56Zz1jHLGKcBM-/2/1773646150344?e=1774260000&v=beta&t=IAr1IQU_Mvc3FgY9FLt09gTXNclYoprDL-4JndHZRKU"
+                    ]
+                },
+                {
+                    "width": 1287,
+                    "height": 1287,
+                    "imageUrls": [
+                        "https://media.licdn.com/dms/image/v2/D561FAQFxuF-PrMrwLg/feedshare-document-cover-images_1280/B56Zz1jHLGKcAs-/0/1773646150343?e=1774260000&v=beta&t=l_Ti3Lm1Qdz17iNpH4WusEJWeOfUQVvwYBAUDV_JVco",
+                        "https://media.licdn.com/dms/image/v2/D561FAQFxuF-PrMrwLg/feedshare-document-cover-images_1280/B56Zz1jHLGKcAs-/1/1773646150343?e=1774260000&v=beta&t=7OugyJgCQRrbzGESRpj5rHW5Nx_gGWT--twukFKNXdk",
+                        "https://media.licdn.com/dms/image/v2/D561FAQFxuF-PrMrwLg/feedshare-document-cover-images_1280/B56Zz1jHLGKcAs-/2/1773646150343?e=1774260000&v=beta&t=b7u9jhyzIp8-VrnW0NbncdF4FEApexmtvMw5LiMFEQQ"
+                    ]
+                },
+                {
+                    "width": 1925,
+                    "height": 1925,
+                    "imageUrls": [
+                        "https://media.licdn.com/dms/image/v2/D561FAQFxuF-PrMrwLg/feedshare-document-cover-images_1920/B56Zz1jHLGKcBQ-/0/1773646150343?e=1774260000&v=beta&t=paLnBCkZ6VYZ3nBHzS6p3XfxjoOcF2kg_yjRizz4440",
+                        "https://media.licdn.com/dms/image/v2/D561FAQFxuF-PrMrwLg/feedshare-document-cover-images_1920/B56Zz1jHLGKcBQ-/1/1773646150343?e=1774260000&v=beta&t=7MCloYpsacYhScLDfMmPEuZyYvQK3eWWm27S5VFn0ns",
+                        "https://media.licdn.com/dms/image/v2/D561FAQFxuF-PrMrwLg/feedshare-document-cover-images_1920/B56Zz1jHLGKcBQ-/2/1773646150343?e=1774260000&v=beta&t=m-CeuohRJ3GGP2Qri7x_JJCBAcJjgZkz-cxvri5rA7I"
+                    ]
+                }
+            ]
+        },
+        "urn": "urn:li:activity:7439211328055173120",
+        "reactionsUrn": "urn:li:ugcPost:7439211327228837889",
+        "commentsUrn": "urn:li:fsd_socialDetail:(urn:li:ugcPost:7439211327228837889,urn:li:ugcPost:7439211327228837889,urn:li:highlightedReply:-)",
+        "repostsUrn": "urn:li:ugcPost:7439211327228837889",
+        "scrapedAt": "2026-03-16T09:02:48.270Z"
+    },
+    {
+        "share_url": "https://www.linkedin.com/posts/sohelmerchant_exponentual-ai-news-activity-7439203255605276672-AeiI?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAGW8vZUBhgrl5QOfv_FCPqWaq7pBBTL0Chc",
+        "actor": {
+            "actor_image": "https://media.licdn.com/dms/image/v2/D4D03AQGzCFxB0qco3g/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1727609318270?e=1775088000&v=beta&t=ZBmMBY9MyvQMnNXh7ZiVGsj2BGqizYfpLPozREw6_i0",
+            "actor_description": "Helping Business & Educational Leaders get on AI fast track Founder Building the Future of Intelligent ERP & AI-Powered Education | Pragmatic Techsoft | EduAI Hub | Odoo, Automation, Agentic AI",
+            "actor_name": "Shabbir Merchant",
+            "actor_subDescription": "2h \u2022   ",
+            "actor_navigationContext": "https://www.linkedin.com/in/sohelmerchant?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAAAC6sLoBczBRACAyD4ySmEGVFlc37CXZC5o"
+        },
+        "commentary": "Exponential AI News (Mar 9 \u2013 15, 2026 \u00b7 IST)\n\nInteractive learning becomes the new AI battleground: Anthropic rolled out dynamic visual learning tools\u2014think interactive charts, sliders, and timelines\u2014to all users, while OpenAI launched its own dynamic visual explanations for 70+ core math and science concepts inside ChatGPT. \n\nPerplexity turns \u201cComputer\u201d into a product tier weapon: its OpenClaw-like browser agent is live for Max users, with 10,000 monthly credits plus a limited-time 20,000-credit bonus, and Perplexity says Pro access is coming soon. \n\nCanva\u2019s \u201cMagic Layers\u201d gives AI images a real edit button: flat images can now be broken into fully editable layers, including separated objects and editable text, so creators can manipulate visuals without starting over. \n\nGoogle launches Gemini Embedding 2: its first natively multimodal embedding model, mapping text, images, video, audio, and documents into one shared space for stronger retrieval, search, and classification.",
+        "social_details": {
+            "numLikes": 4,
+            "numComments": 0,
+            "numShares": 0,
+            "reactionTypeCounts": [
+                {
+                    "type": "LIKE",
+                    "count": 4
+                }
+            ]
+        },
+        "postedAt": "2026-03-16T06:57:49.000Z",
+        "documentComponent": {
+            "title": "Exponentual AI News",
+            "transcribedDocumentUrl": "https://media.licdn.com/dms/document/media/v2/D4D1FAQGeeCNAX4WTbQ/feedshare-document-sanitized-pdf/B4DZz1buH1KgA8-/0/1773644212495?e=1774260000&v=beta&t=lKZk5rQlzioykK8PMeq7UvixDZuYhTwAM1sB2o_F3Js",
+            "coverPages": [
+                {
+                    "width": 483,
+                    "height": 483,
+                    "imageUrls": [
+                        "https://media.licdn.com/dms/image/v2/D4D1FAQGeeCNAX4WTbQ/feedshare-document-cover-images_480/B4DZz1buH1KgBA-/0/1773644212188?e=1774260000&v=beta&t=rPKM5KWCF0XKCkRZ1l-sBEr0JqSBajb2vguix6MJvIM",
+                        "https://media.licdn.com/dms/image/v2/D4D1FAQGeeCNAX4WTbQ/feedshare-document-cover-images_480/B4DZz1buH1KgBA-/1/1773644212188?e=1774260000&v=beta&t=20wxc_wQm9AHyL7rnOYgjHQUuHPY69lyEJeOWaBD_5A",
+                        "https://media.licdn.com/dms/image/v2/D4D1FAQGeeCNAX4WTbQ/feedshare-document-cover-images_480/B4DZz1buH1KgBA-/2/1773644212188?e=1774260000&v=beta&t=RY6G1JnO4JISJ6rM54bJ-bmFj83psAvNOKY6ezhTd5E"
+                    ]
+                },
+                {
+                    "width": 810,
+                    "height": 810,
+                    "imageUrls": [
+                        "https://media.licdn.com/dms/image/v2/D4D1FAQGeeCNAX4WTbQ/feedshare-document-cover-images_800/B4DZz1buH1KgBM-/0/1773644212189?e=1774260000&v=beta&t=wDwLEzdrc9IWxLjYd6mc-8vpcEvrL41ZyI3XJ6yqLP0",
+                        "https://media.licdn.com/dms/image/v2/D4D1FAQGeeCNAX4WTbQ/feedshare-document-cover-images_800/B4DZz1buH1KgBM-/1/1773644212189?e=1774260000&v=beta&t=pztdeAfpUG_uBaWJg4y1WKBvtj09pXc_AbelU-EbxH0",
+                        "https://media.licdn.com/dms/image/v2/D4D1FAQGeeCNAX4WTbQ/feedshare-document-cover-images_800/B4DZz1buH1KgBM-/2/1773644212189?e=1774260000&v=beta&t=cqmaXFGtOgxJaRlHuzuCdh17KzpwoRXiHS29qNdw-OI"
+                    ]
+                },
+                {
+                    "width": 1280,
+                    "height": 1280,
+                    "imageUrls": [
+                        "https://media.licdn.com/dms/image/v2/D4D1FAQGeeCNAX4WTbQ/feedshare-document-cover-images_1280/B4DZz1buH1KgAs-/0/1773644212336?e=1774260000&v=beta&t=jGW0_XU5o7qPA2kn3FlZsQPQWhw62H1VptrhqtOi31M",
+                        "https://media.licdn.com/dms/image/v2/D4D1FAQGeeCNAX4WTbQ/feedshare-document-cover-images_1280/B4DZz1buH1KgAs-/1/1773644212336?e=1774260000&v=beta&t=Wrihi_BTBSKZv5Zh2ILZovYHnvp2iPTpgllH3iVIoL0",
+                        "https://media.licdn.com/dms/image/v2/D4D1FAQGeeCNAX4WTbQ/feedshare-document-cover-images_1280/B4DZz1buH1KgAs-/2/1773644212336?e=1774260000&v=beta&t=Qxc6SzE7z6UXSKo2_tRwo7uErz0kbaayRQ9QSus1Ro4"
+                    ]
+                },
+                {
+                    "width": 1920,
+                    "height": 1920,
+                    "imageUrls": [
+                        "https://media.licdn.com/dms/image/v2/D4D1FAQGeeCNAX4WTbQ/feedshare-document-cover-images_1920/B4DZz1buH1KgBQ-/0/1773644212413?e=1774260000&v=beta&t=yw7niRykEZ6zg3gs13zmuH9EZzZo5J93Mp5zBxf_LUc",
+                        "https://media.licdn.com/dms/image/v2/D4D1FAQGeeCNAX4WTbQ/feedshare-document-cover-images_1920/B4DZz1buH1KgBQ-/1/1773644212413?e=1774260000&v=beta&t=t1XjGBTRHKc_1H32vyV3OYmRo0bHTSL4YifOeceQHmY",
+                        "https://media.licdn.com/dms/image/v2/D4D1FAQGeeCNAX4WTbQ/feedshare-document-cover-images_1920/B4DZz1buH1KgBQ-/2/1773644212413?e=1774260000&v=beta&t=3FtMkIpsZpO1M39yC5Kp014FewmGgndeMMIfGN5Roxs"
+                    ]
+                }
+            ]
+        },
+        "urn": "urn:li:activity:7439203255605276672",
+        "reactionsUrn": "urn:li:ugcPost:7439203254669983744",
+        "commentsUrn": "urn:li:fsd_socialDetail:(urn:li:ugcPost:7439203254669983744,urn:li:ugcPost:7439203254669983744,urn:li:highlightedReply:-)",
+        "repostsUrn": "urn:li:ugcPost:7439203254669983744",
+        "scrapedAt": "2026-03-16T09:02:48.270Z"
+    },
+    {
+        "share_url": "https://www.linkedin.com/posts/ca-milind-shigam-pmp-4284a4149_agentic-ai-coding-experience-activity-7439191092023042049-uE1Y?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAGW8vZUBhgrl5QOfv_FCPqWaq7pBBTL0Chc",
+        "actor": {
+            "actor_image": "https://media.licdn.com/dms/image/v2/D4D03AQEPalCFhl9v9A/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1706709131560?e=1775088000&v=beta&t=M8gE1GDxrX-RWZzJ2s4of6wdBEkTkia3Vgd-tRSzJzc",
+            "actor_description": "Data Solution Architect | Business Analyst | Infor LN Finance Consultant | Chartered Accountant | PMP\u00ae",
+            "actor_name": "CA Milind Shigam, PMP",
+            "actor_subDescription": "2h \u2022 Edited \u2022   ",
+            "actor_navigationContext": "https://www.linkedin.com/in/ca-milind-shigam-pmp-4284a4149?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAACPYh2AB32U7nOMRS4Urq2K0x58Y84ajWMk"
+        },
+        "commentary": "Over the past several months, I've been experimenting with tools that are redefining how software gets built. After spending 100's of dollars and consuming Millions of AI Tokens, I am writing down my experience.\n\nFrom autonomous development workflows in Claude Code, to open-source experimentation with OpenClaw, running powerful models like Qwen with Qwen Code locally, and exploring fully agentic frameworks like Antigravity the pace of innovation is unreal.\n\nWhat fascinates me the most is how these systems are moving beyond simple code completion to planning, debugging, refactoring, and building entire projects autonomously.\n\nThat said, the biggest lesson so far:\nAI agents are incredible force multipliers, but they still need clear instructions, boundaries, and human oversight to deliver production quality results.\n\nWe\u2019re entering a phase where developers are becoming orchestrators of intelligent coding agents, not just writers of code.\n\nExciting times ahead for software engineering.\n\n#AgenticAI #AICoding #ClaudeCode #OpenSourceAI #Qwen #AntigravityAI #AIEngineering #SoftwareDevelopment #AIForDevelopers #FutureOfCoding",
+        "social_details": {
+            "numLikes": 5,
+            "numComments": 0,
+            "numShares": 1,
+            "reactionTypeCounts": [
+                {
+                    "type": "LIKE",
+                    "count": 5
+                }
+            ]
+        },
+        "postedAt": "2026-03-16T06:09:29.000Z",
+        "documentComponent": {
+            "title": "Agentic AI Coding Experience",
+            "transcribedDocumentUrl": "https://media.licdn.com/dms/document/media/v2/D4D1FAQGcldGuVh08vQ/feedshare-document-url-metadata-scrapper-pdf/B4DZz1PxDdGsA8-/0/1773641077995?e=1774260000&v=beta&t=ksiTNG22x79RrDSAhthjsEYlf5H433ctRs36p6Dr6l8",
+            "coverPages": [
+                {
+                    "width": 347,
+                    "height": 491,
+                    "imageUrls": [
+                        "https://media.licdn.com/dms/image/v2/D4D1FAQGcldGuVh08vQ/feedshare-document-cover-images_480/B4DZz1PxDdGsBE-/0/1773641077919?e=1774260000&v=beta&t=p-6tebnmVdrwWsdR7lQZV444WXIuDVChEpkrDFpTCus",
+                        "https://media.licdn.com/dms/image/v2/D4D1FAQGcldGuVh08vQ/feedshare-document-cover-images_480/B4DZz1PxDdGsBE-/1/1773641077919?e=1774260000&v=beta&t=GVnia1UkEXc1BRmB83UcJjH1dWc7_-qT2cjGqy9QusQ",
+                        "https://media.licdn.com/dms/image/v2/D4D1FAQGcldGuVh08vQ/feedshare-document-cover-images_480/B4DZz1PxDdGsBE-/2/1773641077919?e=1774260000&v=beta&t=v_HtOBfiJWShVUgNcaEHmOwaahNQg8StPDrzVvLfLww"
+                    ]
+                },
+                {
+                    "width": 570,
+                    "height": 806,
+                    "imageUrls": [
+                        "https://media.licdn.com/dms/image/v2/D4D1FAQGcldGuVh08vQ/feedshare-document-cover-images_800/B4DZz1PxDdGsBQ-/0/1773641077919?e=1774260000&v=beta&t=-_7w24L-kfm1hHU11aFqsuEpPfLyxby-kL4mnUi1i7A",
+                        "https://media.licdn.com/dms/image/v2/D4D1FAQGcldGuVh08vQ/feedshare-document-cover-images_800/B4DZz1PxDdGsBQ-/1/1773641077919?e=1774260000&v=beta&t=2LTrXsDqA-A5_5TQnZ2P0sDAMyPjeFdm8q1PZmdTzZs",
+                        "https://media.licdn.com/dms/image/v2/D4D1FAQGcldGuVh08vQ/feedshare-document-cover-images_800/B4DZz1PxDdGsBQ-/2/1773641077919?e=1774260000&v=beta&t=eekYkfcvuwvMfB4_6gu5L0E2-OIBu5C1f3Fp1V2zVds"
+                    ]
+                },
+                {
+                    "width": 909,
+                    "height": 1286,
+                    "imageUrls": [
+                        "https://media.licdn.com/dms/image/v2/D4D1FAQGcldGuVh08vQ/feedshare-document-cover-images_1280/B4DZz1PxDdGsAw-/0/1773641078309?e=1774260000&v=beta&t=br3u9S9OHvmsKE62gGHwpSceKkqADe5Jv1kvdaWE_z8",
+                        "https://media.licdn.com/dms/image/v2/D4D1FAQGcldGuVh08vQ/feedshare-document-cover-images_1280/B4DZz1PxDdGsAw-/1/1773641078309?e=1774260000&v=beta&t=_jCe7M8NIvFJ6Kh7-V-W9ka0mNArDJtK53D4MvUOAwA",
+                        "https://media.licdn.com/dms/image/v2/D4D1FAQGcldGuVh08vQ/feedshare-document-cover-images_1280/B4DZz1PxDdGsAw-/2/1773641078309?e=1774260000&v=beta&t=rPrwN8I7ms-7yaSnEzzwzMLHuoY6Icx_HV7W5i1JR38"
+                    ]
+                },
+                {
+                    "width": 1364,
+                    "height": 1929,
+                    "imageUrls": [
+                        "https://media.licdn.com/dms/image/v2/D4D1FAQGcldGuVh08vQ/feedshare-document-cover-images_1920/B4DZz1PxDdGsBU-/0/1773641079108?e=1774260000&v=beta&t=jZro-2BnyH7ecJPU4cHlywlgcM09mIjpzlv4DAXcHS4",
+                        "https://media.licdn.com/dms/image/v2/D4D1FAQGcldGuVh08vQ/feedshare-document-cover-images_1920/B4DZz1PxDdGsBU-/1/1773641079108?e=1774260000&v=beta&t=mClt_KEgIw1Kwo1GvNRTsp3UAMyGKYJMqi7BC2VFAXo",
+                        "https://media.licdn.com/dms/image/v2/D4D1FAQGcldGuVh08vQ/feedshare-document-cover-images_1920/B4DZz1PxDdGsBU-/2/1773641079108?e=1774260000&v=beta&t=CUuhIzIaQNlti2vTqBu19ksbs_HMagDhEGdApRu6xvs"
+                    ]
+                }
+            ]
+        },
+        "urn": "urn:li:activity:7439191092023042049",
+        "reactionsUrn": "urn:li:ugcPost:7439191090835910656",
+        "commentsUrn": "urn:li:fsd_socialDetail:(urn:li:ugcPost:7439191090835910656,urn:li:ugcPost:7439191090835910656,urn:li:highlightedReply:-)",
+        "repostsUrn": "urn:li:ugcPost:7439191090835910656",
+        "scrapedAt": "2026-03-16T09:02:48.270Z"
+    },
+    {
+        "share_url": "https://www.linkedin.com/posts/influence-matters_5-tech-news-by-influence-matterschina-activity-7439189205886611456-b2QH?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAGW8vZUBhgrl5QOfv_FCPqWaq7pBBTL0Chc",
+        "actor": {
+            "actor_image": "na",
+            "actor_description": "2,709 followers",
+            "actor_name": "Influence Matters",
+            "actor_subDescription": "3h \u2022   ",
+            "actor_navigationContext": "https://www.linkedin.com/company/influence-matters/posts"
+        },
+        "commentary": "Stay ahead of the fast-evolving tech landscape with this week's breakdown of the top stories shaping the #China and #APAC tech scene! \ud83d\ude80\n\nHere are the key highlights from our latest China Tech News flyer:\n1\ufe0f\u20e3 CNN reports on China\u2019s strategic Five-Year Plan to transform China into a global tech superpower, targeting a $1.45 trillion #AI industry by 2030. (Read: https://lnkd.in/gVfjwSv7)\n2\ufe0f\u20e3 GlobalChinaEV highlights the launch of the Volkswagen Group ID.Unyx 08, co-developed with XPENG in just 24 months using a third-party architecture. (Read: https://lnkd.in/gPTf3Cy5)\n3\ufe0f\u20e3 CNBC covers the nationwide lobster-themed craze for OpenClaw, with local governments offering 10 million yuan subsidies to AI-driven startups. (Read: https://lnkd.in/drqCMxW6)\n4\ufe0f\u20e3 Global Times flags urgent risk warnings from NIFA regarding OpenClaw\u2019s security vulnerabilities and potential for financial fraud. (Read: https://lnkd.in/g6Fs98ei)\n5\ufe0f\u20e3 South China Morning Post SCMP notes that the #TwoSessions signaled a new era of intensified tech competition with the U.S. in strategic industries. (Read: https://lnkd.in/g-a5ur-i)\n\n\ud83e\udd9e The OpenClaw craze presents a fascinating paradox: it is being championed by local governments as an economic engine while simultaneously being flagged by national regulators as a major security threat. \n\nHow do you see this playing out? \u2935\ufe0f Comment your thoughts and check out the full flyer below! \n\n#TechNews #ChinaTech #OpenClaw #AIagents #Innovation #DigitalEconomy",
+        "social_details": {
+            "numLikes": 1,
+            "numComments": 1,
+            "numShares": 0,
+            "reactionTypeCounts": [
+                {
+                    "type": "LIKE",
+                    "count": 1
+                }
+            ]
+        },
+        "postedAt": "2026-03-16T06:02:00.000Z",
+        "documentComponent": {
+            "title": "5 Tech News by Influence Matters_China",
+            "transcribedDocumentUrl": "https://media.licdn.com/dms/document/media/v2/D561FAQEFKcdMxCzuVQ/feedshare-document-url-metadata-scrapper-pdf/B56Zz1OE5MJgA4-/0/1773640634920?e=1774260000&v=beta&t=eNJDSCUH0D_bmBMv7QSswMPrATCSec35R-o0z5XMt7M",
+            "coverPages": [
+                {
+                    "width": 480,
+                    "height": 480,
+                    "imageUrls": [
+                        "https://media.licdn.com/dms/image/v2/D561FAQEFKcdMxCzuVQ/feedshare-document-cover-images_480/B56Zz1OE5MJgBA-/0/1773640635096?e=1774260000&v=beta&t=mt2cezrV_83Wo-lMaeDUmydchDKkQzW_aU4ljLWoHbc",
+                        "https://media.licdn.com/dms/image/v2/D561FAQEFKcdMxCzuVQ/feedshare-document-cover-images_480/B56Zz1OE5MJgBA-/1/1773640635096?e=1774260000&v=beta&t=H9L8PFAWBvI2A_De2bv9tpGEIBVrE6C0XLSzajwF5a8",
+                        "https://media.licdn.com/dms/image/v2/D561FAQEFKcdMxCzuVQ/feedshare-document-cover-images_480/B56Zz1OE5MJgBA-/2/1773640635096?e=1774260000&v=beta&t=ObA0pJQLMqfKqQzWsRkOFZljhgYc9n2kAHUzq2G5G6Y"
+                    ]
+                },
+                {
+                    "width": 802,
+                    "height": 802,
+                    "imageUrls": [
+                        "https://media.licdn.com/dms/image/v2/D561FAQEFKcdMxCzuVQ/feedshare-document-cover-images_800/B56Zz1OE5MJgBM-/0/1773640635096?e=1774260000&v=beta&t=EUFtIOFrtMmTxh6lgiKp1u8gP-xbmJ6v3yNZeOJ30ws",
+                        "https://media.licdn.com/dms/image/v2/D561FAQEFKcdMxCzuVQ/feedshare-document-cover-images_800/B56Zz1OE5MJgBM-/1/1773640635096?e=1774260000&v=beta&t=m84cQQ4opvsFCPf-DSalTX8Vq4Cf9dYp2w0-hptDWHM",
+                        "https://media.licdn.com/dms/image/v2/D561FAQEFKcdMxCzuVQ/feedshare-document-cover-images_800/B56Zz1OE5MJgBM-/2/1773640635096?e=1774260000&v=beta&t=THl0qwBxQJB1wjPvvtp3sRHidUpUmnbbfdqDS-hxoD8"
+                    ]
+                },
+                {
+                    "width": 1282,
+                    "height": 1282,
+                    "imageUrls": [
+                        "https://media.licdn.com/dms/image/v2/D561FAQEFKcdMxCzuVQ/feedshare-document-cover-images_1280/B56Zz1OE5MJgAs-/0/1773640635814?e=1774260000&v=beta&t=6pEb1bWzlbsXW2VprYx7Xkv_c08K0U1v9hEzRbSG2_Y",
+                        "https://media.licdn.com/dms/image/v2/D561FAQEFKcdMxCzuVQ/feedshare-document-cover-images_1280/B56Zz1OE5MJgAs-/1/1773640635814?e=1774260000&v=beta&t=LlmPsVYbNecUYZQC9-4w0YqltnX1GrBNVBbIWAYuL0c",
+                        "https://media.licdn.com/dms/image/v2/D561FAQEFKcdMxCzuVQ/feedshare-document-cover-images_1280/B56Zz1OE5MJgAs-/2/1773640635814?e=1774260000&v=beta&t=IrjpMLMv1RhX_O-NE2XvNVa5Rh2ajLSRh9EMc3kMk7w"
+                    ]
+                },
+                {
+                    "width": 1920,
+                    "height": 1920,
+                    "imageUrls": [
+                        "https://media.licdn.com/dms/image/v2/D561FAQEFKcdMxCzuVQ/feedshare-document-cover-images_1920/B56Zz1OE5MJgBQ-/0/1773640637697?e=1774260000&v=beta&t=9_RFsJqoi4GkK086_bPoou2nchrlP5p5gbyYbD6Gm2I",
+                        "https://media.licdn.com/dms/image/v2/D561FAQEFKcdMxCzuVQ/feedshare-document-cover-images_1920/B56Zz1OE5MJgBQ-/1/1773640637697?e=1774260000&v=beta&t=hopsmJbfYsTagA1kwD85u7Zn_hRnE5MbS2bopNG5Qkc",
+                        "https://media.licdn.com/dms/image/v2/D561FAQEFKcdMxCzuVQ/feedshare-document-cover-images_1920/B56Zz1OE5MJgBQ-/2/1773640637697?e=1774260000&v=beta&t=izvrcfAAJhc1cxmFOIKQLVJvqFbOWRG8nbIC7MhtF6I"
+                    ]
+                }
+            ]
+        },
+        "urn": "urn:li:activity:7439189205886611456",
+        "reactionsUrn": "urn:li:ugcPost:7439189204187688960",
+        "commentsUrn": "urn:li:fsd_socialDetail:(urn:li:ugcPost:7439189204187688960,urn:li:ugcPost:7439189204187688960,urn:li:highlightedReply:-)",
+        "repostsUrn": "urn:li:ugcPost:7439189204187688960",
+        "scrapedAt": "2026-03-16T09:02:48.270Z"
+    },
+    {
+        "share_url": "https://www.linkedin.com/posts/jimkwon_certificate-of-completion-ai-assistant-creation-activity-7439182797333831680-ghBY?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAGW8vZUBhgrl5QOfv_FCPqWaq7pBBTL0Chc",
+        "actor": {
+            "actor_image": "https://media.licdn.com/dms/image/v2/C5603AQGpD0wLiRlj2A/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1651708170566?e=1775088000&v=beta&t=Br12ZQKSYseBMqCuRrP-Z3-k0aoEQ2XFj1eqx3dzbqo",
+            "actor_description": "Delivering customized program management solutions for the automotive industry",
+            "actor_name": "Jim Kwon",
+            "actor_subDescription": "3h \u2022   ",
+            "actor_navigationContext": "https://www.linkedin.com/in/jimkwon?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAAAGwT7EBW_x7EMBa8_XFikap2H6gRARMMVA"
+        },
+        "commentary": "Continuing to build my knowledge in applied AI, I\u2019m grateful to share that I\u2019ve completed my second Certificate of Completion from Vanderbilt University, this time focused on Custom AI Assistants through OpenAI. I\u2019m looking forward to starting my next course in Prompt Engineering as I continue learning more about this fast-evolving space. I\u2019ve also been spending time exploring Claude Code and working on my own OpenClaw project. There is still a great deal to learn, and I\u2019m enjoying every step of the process. #LifelongLearning #ArtificialIntelligence #OpenAI #PromptEngineering #ProfessionalGrowth #VanderbiltUniversity #CustomAI #AIAssistants #ClaudeCode #ContinuousLearning",
+        "social_details": {
+            "numLikes": 1,
+            "numComments": 1,
+            "numShares": 0,
+            "reactionTypeCounts": [
+                {
+                    "type": "LIKE",
+                    "count": 1
+                }
+            ]
+        },
+        "postedAt": "2026-03-16T05:36:32.000Z",
+        "documentComponent": {
+            "title": "Certificate of Completion; AI Assistant Creation ",
+            "transcribedDocumentUrl": "https://media.licdn.com/dms/document/media/v2/D561FAQGdID5wB48zKw/feedshare-document-chunked-pdf/B56Zz1FmLGJgBk-/0/1773638412440?e=1774260000&v=beta&t=ve9PDLz1iFBAb8mXGfAHIHGS55JVNnOmfuO8QNldQ1Q",
+            "coverPages": [
+                {
+                    "width": 484,
+                    "height": 374,
+                    "imageUrls": [
+                        "https://media.licdn.com/dms/image/v2/D561FAQGdID5wB48zKw/feedshare-document-cover-images_480/B56Zz1FmLGJgBA-/0/1773638413130?e=1774260000&v=beta&t=9q2XoMZ-xXbuwCNu5ZiXaWiXZuRPauqlj_lxSXoJ328"
+                    ]
+                },
+                {
+                    "width": 802,
+                    "height": 620,
+                    "imageUrls": [
+                        "https://media.licdn.com/dms/image/v2/D561FAQGdID5wB48zKw/feedshare-document-cover-images_800/B56Zz1FmLGJgBM-/0/1773638413130?e=1774260000&v=beta&t=kaWi6gU4KRqI6V1VZSBJbzISf0qBeso2UCfbAH1cqBg"
+                    ]
+                },
+                {
+                    "width": 1287,
+                    "height": 994,
+                    "imageUrls": [
+                        "https://media.licdn.com/dms/image/v2/D561FAQGdID5wB48zKw/feedshare-document-cover-images_1280/B56Zz1FmLGJgAs-/0/1773638413501?e=1774260000&v=beta&t=45CxtvoAq6Jtr0mSvOG_HCLU5T-xFQYv2MkR2l1SCmI"
+                    ]
+                },
+                {
+                    "width": 1925,
+                    "height": 1487,
+                    "imageUrls": [
+                        "https://media.licdn.com/dms/image/v2/D561FAQGdID5wB48zKw/feedshare-document-cover-images_1920/B56Zz1FmLGJgBQ-/0/1773638415328?e=1774260000&v=beta&t=1Tjxarn0KSs0CscLV5-XcfKs05qH44yAIUSAiKCVWco"
+                    ]
+                }
+            ]
+        },
+        "urn": "urn:li:activity:7439182797333831680",
+        "reactionsUrn": "urn:li:ugcPost:7439182796427939840",
+        "commentsUrn": "urn:li:fsd_socialDetail:(urn:li:ugcPost:7439182796427939840,urn:li:ugcPost:7439182796427939840,urn:li:highlightedReply:-)",
+        "repostsUrn": "urn:li:ugcPost:7439182796427939840",
+        "scrapedAt": "2026-03-16T09:02:48.270Z"
+    },
+    {
+        "share_url": "https://www.linkedin.com/posts/the-next-wave-ai_china-are-waiting-for-install-openclaw-activity-7439179336374652928-8H18?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAGW8vZUBhgrl5QOfv_FCPqWaq7pBBTL0Chc",
+        "actor": {
+            "actor_image": "na",
+            "actor_description": "9 followers",
+            "actor_name": "The Next Wave AI",
+            "actor_subDescription": "3h \u2022   ",
+            "actor_navigationContext": "https://www.linkedin.com/company/the-next-wave-ai/posts"
+        },
+        "commentary": "Something remarkable happened in Shenzhen.\n\nMore than 20 engineers set up a free street booth to help people install the AI agent OpenClaw on their laptops. Within hours, thousands of people lined up.\n\nWhat stood out wasn\u2019t just the number of people\u2014but who they were.\n\nStudents, teachers, parents, farmers, and even grandparents showed up to learn how to run AI locally on their own computers.\n\nVolunteers guided them step-by-step: download, setup, and launch.\n\nThe gathering took place outside Tencent\u2019s headquarters, just as OpenClaw started going viral across China.\n\nIt\u2019s a powerful reminder that the AI revolution isn\u2019t limited to labs or tech companies\u2014it\u2019s reaching everyday people.\n\n\n#ArtificialIntelligence\u00a0#OpenClaw\u00a0#AIInnovation\u00a0#AINews\u00a0#FutureOfAI",
+        "social_details": {
+            "numLikes": 0,
+            "numComments": 0,
+            "numShares": 0,
+            "reactionTypeCounts": []
+        },
+        "postedAt": "2026-03-16T05:22:47.000Z",
+        "documentComponent": {
+            "title": "China are waiting for install OpenClaw.",
+            "transcribedDocumentUrl": "https://media.licdn.com/dms/document/media/v2/D561FAQHO1R0Krq8Z8g/feedshare-document-sanitized-pdf/B56Zz1FeWOHkA8-/0/1773638380922?e=1774260000&v=beta&t=gulbH3hG4Nj8Kr36ZEzgtNyN5VGNbsyKgclM5f1yF_I",
+            "coverPages": [
+                {
+                    "width": 387,
+                    "height": 484,
+                    "imageUrls": [
+                        "https://media.licdn.com/dms/image/v2/D561FAQHO1R0Krq8Z8g/feedshare-document-cover-images_480/B56Zz1FeWOHkBA-/0/1773638381132?e=1774260000&v=beta&t=pvo4ZSgPwVzGyME_TpTx3sGKAkIj6OMxgwFae8s_at0",
+                        "https://media.licdn.com/dms/image/v2/D561FAQHO1R0Krq8Z8g/feedshare-document-cover-images_480/B56Zz1FeWOHkBA-/1/1773638381132?e=1774260000&v=beta&t=Kc8NoBF-4yCenMGSsUeMpSx8e72HX9wU6Eo2DFAexuk",
+                        "https://media.licdn.com/dms/image/v2/D561FAQHO1R0Krq8Z8g/feedshare-document-cover-images_480/B56Zz1FeWOHkBA-/2/1773638381132?e=1774260000&v=beta&t=rkllBoVwkneJGL0-SKEQo_FjUrGadHh6fSEPZUtuuFE"
+                    ]
+                },
+                {
+                    "width": 650,
+                    "height": 812,
+                    "imageUrls": [
+                        "https://media.licdn.com/dms/image/v2/D561FAQHO1R0Krq8Z8g/feedshare-document-cover-images_800/B56Zz1FeWOHkBM-/0/1773638381133?e=1774260000&v=beta&t=XK6eh2rwAzYQQCORYacd5mjJP6eamwWBbxPrrIDJTXA",
+                        "https://media.licdn.com/dms/image/v2/D561FAQHO1R0Krq8Z8g/feedshare-document-cover-images_800/B56Zz1FeWOHkBM-/1/1773638381133?e=1774260000&v=beta&t=8P7sLy6QyLaLt0AjkmiDopTwipNb_2n_GNXo9ZF4yvQ",
+                        "https://media.licdn.com/dms/image/v2/D561FAQHO1R0Krq8Z8g/feedshare-document-cover-images_800/B56Zz1FeWOHkBM-/2/1773638381133?e=1774260000&v=beta&t=2U0EVqVIGeXrD0EkoeBbgu_kqFvnDuYskT7QslTR6dQ"
+                    ]
+                },
+                {
+                    "width": 1025,
+                    "height": 1281,
+                    "imageUrls": [
+                        "https://media.licdn.com/dms/image/v2/D561FAQHO1R0Krq8Z8g/feedshare-document-cover-images_1280/B56Zz1FeWOHkAs-/0/1773638381283?e=1774260000&v=beta&t=4qONaqm-_U51SD7ObD1_Z595sZqprnKO_eNSBWqDDww",
+                        "https://media.licdn.com/dms/image/v2/D561FAQHO1R0Krq8Z8g/feedshare-document-cover-images_1280/B56Zz1FeWOHkAs-/1/1773638381283?e=1774260000&v=beta&t=V33jLg7T1rAch_f5ojSQFum6_aEoXhmW3JJ4oBWase4",
+                        "https://media.licdn.com/dms/image/v2/D561FAQHO1R0Krq8Z8g/feedshare-document-cover-images_1280/B56Zz1FeWOHkAs-/2/1773638381283?e=1774260000&v=beta&t=MTQK5Kvq-Ygk_igHpdn6Z4LdHrVDH3u4OVYS7JVqCb8"
+                    ]
+                },
+                {
+                    "width": 1537,
+                    "height": 1921,
+                    "imageUrls": [
+                        "https://media.licdn.com/dms/image/v2/D561FAQHO1R0Krq8Z8g/feedshare-document-cover-images_1920/B56Zz1FeWOHkBQ-/0/1773638381548?e=1774260000&v=beta&t=SGXodsNVEjOPWxSbgs-PdR7jrsOVFrO0ilZ65mVbKH0",
+                        "https://media.licdn.com/dms/image/v2/D561FAQHO1R0Krq8Z8g/feedshare-document-cover-images_1920/B56Zz1FeWOHkBQ-/1/1773638381548?e=1774260000&v=beta&t=lRh-z0rG1BeduCHjQSNy7tJE8XTJ7GKbo6ixQe2IMOM",
+                        "https://media.licdn.com/dms/image/v2/D561FAQHO1R0Krq8Z8g/feedshare-document-cover-images_1920/B56Zz1FeWOHkBQ-/2/1773638381548?e=1774260000&v=beta&t=iiiaaV1Hi-pjnwy1Na1vUL91pCFwm1bXF-hzMb7g8OE"
+                    ]
+                }
+            ]
+        },
+        "urn": "urn:li:activity:7439179336374652928",
+        "reactionsUrn": "urn:li:ugcPost:7439179335476953089",
+        "commentsUrn": "urn:li:fsd_socialDetail:(urn:li:ugcPost:7439179335476953089,urn:li:ugcPost:7439179335476953089,urn:li:highlightedReply:-)",
+        "repostsUrn": "urn:li:ugcPost:7439179335476953089",
+        "scrapedAt": "2026-03-16T09:02:48.270Z"
+    },
+    {
+        "share_url": "https://www.linkedin.com/posts/analytics-vidhya_genai-updates-activity-7439169025789620225-qAu3?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAGW8vZUBhgrl5QOfv_FCPqWaq7pBBTL0Chc",
+        "actor": {
+            "actor_image": "na",
+            "actor_description": "210,835 followers",
+            "actor_name": "Analytics Vidhya",
+            "actor_subDescription": "4h \u2022   ",
+            "actor_navigationContext": "https://www.linkedin.com/company/analytics-vidhya/posts"
+        },
+        "commentary": "\ud83d\udd25 26 Major AI Breakthroughs, Launches, and Security Discoveries Shaping the Future of AI Today\n\u00a0\n\ud83d\udccd Andrej Karpathy Launches Minimalist Repo for Autoresearch LLM Training on Single GPU\u00a0\u00a0\nhttps://lnkd.in/ejd4yxG9\n\u00a0\n\ud83d\udccd Elon Musk Highlights Evolution of Computers: From Job Titles to AI-Driven Systems\u00a0\u00a0\nhttps://lnkd.in/gzFtaDWg\n\u00a0\n\ud83d\udccd Grok Algorithm Enhancements Lead to Improved Recommendations on X Platform\u00a0\u00a0\nhttps://lnkd.in/g6rWZpRu\n\u00a0\n\ud83d\udccd RoboMME Launches Benchmark for Memory-Augmented Robotic Manipulation Tasks\u00a0\u00a0\nhttps://lnkd.in/gqgjSMNJ\n\u00a0\n\ud83d\udccd NVIDIA Releases DiffiT on Hugging Face with SOTA Image Generation (1.73 FID)\u00a0\u00a0\nhttps://lnkd.in/g7JqG6yB\n\u00a0\n\ud83d\udccd OpenClaw Introduces Daily Updates Improving AI Agent Communication and Backup Safety\u00a0\u00a0\nhttps://lnkd.in/gmMBiVms\n\u00a0\n\ud83d\udccd Autoresearch Improves Nanochat Training with 20 Validation Loss Gains\u00a0\u00a0\nhttps://lnkd.in/gUn9Pp5w\n\u00a0\n\ud83d\udccd Perplexity Computer Integrates Claude Code and GitHub CLI for Dev Workflows\u00a0\u00a0\nhttps://lnkd.in/gFwjXrvV\n\u00a0\n\ud83d\udccd Supermemory Launches AI Tool for Automatic Contextual Knowledge Updates\u00a0\u00a0\nhttps://lnkd.in/g6TaMdyB\n\u00a0\n\ud83d\udccd Microsoft Integrates Claude AI into Copilot for Long-Running Task Management\u00a0\u00a0\nhttps://lnkd.in/gSwA6CKC\n\u00a0\n\ud83d\udccd Google Introduces Gemini Embedding 2, a Fully Multimodal AI Model\u00a0\u00a0\nhttps://lnkd.in/g_NHqNmA\n\u00a0\n\ud83d\udccd Gemini AI Enhances Chrome with Gmail Integration and Meeting Scheduling\u00a0\u00a0\nhttps://lnkd.in/gMu2FXEU\n\u00a0\n\ud83d\udccd Claude Code Adds /btw Feature for Side Conversations During Tasks\u00a0\u00a0\nhttps://lnkd.in/g7eBUaqh\n\u00a0\n\ud83d\udccd Meta Acquires Moltbook for AI Agent Social Networks in Superintelligence Labs\u00a0\u00a0\nhttps://lnkd.in/guhdZScm\n\u00a0\n\ud83d\udccd Alibaba Launches RL3DEdit for Faster 3D Scene Editing with RL\u00a0\u00a0\nhttps://lnkd.in/gccEBwq4\n\u00a0\n\ud83d\udccd xAI Introduces Three New Grok 4.20 Models with Multi-Agent Capabilities\u00a0\u00a0\nhttps://lnkd.in/g-pwEuMV\n\u00a0\n\ud83d\udccd Anthropic Launches Anthropic Institute for Public Dialogue on Advanced AI\u00a0\u00a0\nhttps://lnkd.in/gp9yqQWN\n\u00a0\n\ud83d\udccd NVIDIA Releases Nemotron 3 Super with 2.2\u00d7 Speed Boost Over GPT-OSS-120B\u00a0\u00a0\nhttps://lnkd.in/gR2dQie7\n\u00a0\n\ud83d\udccd Replit Launches Agent 4 for AI-Powered Creative Collaboration\u00a0\u00a0\nhttps://lnkd.in/gxnzSaDF\n\u00a0\n\ud83d\udccd Karpathy Predicts Future of Programming with Advanced Agent-Based IDEs\u00a0\u00a0\nhttps://lnkd.in/g_Z87jcJ\n\u00a0\n\ud83d\udccd Perplexity Launches Personal Computer for More Autonomous AI Systems\u00a0\u00a0\nhttps://lnkd.in/gqjnSqCB\n\u00a0\n#GenAIupdates #DataScience #GenAI",
+        "social_details": {
+            "numLikes": 11,
+            "numComments": 0,
+            "numShares": 3,
+            "reactionTypeCounts": [
+                {
+                    "type": "LIKE",
+                    "count": 10
+                },
+                {
+                    "type": "INTEREST",
+                    "count": 1
+                }
+            ]
+        },
+        "postedAt": "2026-03-16T04:41:48.000Z",
+        "documentComponent": {
+            "title": "GenAI Updates",
+            "transcribedDocumentUrl": "https://media.licdn.com/dms/document/media/v2/D561FAQHm7XieHZ-CNg/feedshare-document-url-metadata-scrapper-pdf/B56Zz08moCKcA4-/0/1773636055253?e=1774260000&v=beta&t=fL881EE_ZCJEHPf5LQWfg7ZgMSCQlWkqQyR62SbapV4",
+            "coverPages": [
+                {
+                    "width": 387,
+                    "height": 484,
+                    "imageUrls": [
+                        "https://media.licdn.com/dms/image/v2/D561FAQHm7XieHZ-CNg/feedshare-document-cover-images_480/B56Zz08moCKcBA-/0/1773636055252?e=1774260000&v=beta&t=7rIInFYi5tsMNzmxC08LSetPCkhGbPUIp9cGv158OnY",
+                        "https://media.licdn.com/dms/image/v2/D561FAQHm7XieHZ-CNg/feedshare-document-cover-images_480/B56Zz08moCKcBA-/1/1773636055252?e=1774260000&v=beta&t=yP-tUlNRsnY3hYUiMSE5iVOocx3ra7XhPWhl6-K-C00",
+                        "https://media.licdn.com/dms/image/v2/D561FAQHm7XieHZ-CNg/feedshare-document-cover-images_480/B56Zz08moCKcBA-/2/1773636055252?e=1774260000&v=beta&t=63z5YGXQ-F75NGO7-7Nu-q0K5i7Q7UJilFYtrZx8Y0Y"
+                    ]
+                },
+                {
+                    "width": 650,
+                    "height": 812,
+                    "imageUrls": [
+                        "https://media.licdn.com/dms/image/v2/D561FAQHm7XieHZ-CNg/feedshare-document-cover-images_800/B56Zz08moCKcBM-/0/1773636055406?e=1774260000&v=beta&t=c5EfjxcA9jQoEvgB1aOwm2QUNXzw1sai5Qm-8qHzY7o",
+                        "https://media.licdn.com/dms/image/v2/D561FAQHm7XieHZ-CNg/feedshare-document-cover-images_800/B56Zz08moCKcBM-/1/1773636055406?e=1774260000&v=beta&t=amALgWomW4Hnn0usK5IeCm7XIU3TNVPCCdOdFNnT2AM",
+                        "https://media.licdn.com/dms/image/v2/D561FAQHm7XieHZ-CNg/feedshare-document-cover-images_800/B56Zz08moCKcBM-/2/1773636055406?e=1774260000&v=beta&t=rxWlQwfXcAj59688hdOusB6uriQmCxlUh1472dw4rqE"
+                    ]
+                },
+                {
+                    "width": 1025,
+                    "height": 1281,
+                    "imageUrls": [
+                        "https://media.licdn.com/dms/image/v2/D561FAQHm7XieHZ-CNg/feedshare-document-cover-images_1280/B56Zz08moCKcAs-/0/1773636055253?e=1774260000&v=beta&t=ft_TWtWbvJN-_1uhO177GcfzvFC-Mr91jl2dUUtRsxc",
+                        "https://media.licdn.com/dms/image/v2/D561FAQHm7XieHZ-CNg/feedshare-document-cover-images_1280/B56Zz08moCKcAs-/1/1773636055253?e=1774260000&v=beta&t=Iqf5Tx4KGY6a1Vn_lwjqtmEYH23ddUkeuzktIpmhBVc",
+                        "https://media.licdn.com/dms/image/v2/D561FAQHm7XieHZ-CNg/feedshare-document-cover-images_1280/B56Zz08moCKcAs-/2/1773636055253?e=1774260000&v=beta&t=Pfws0EzAAvBbKnlw9L71OzO2ktyGost_M4uVulxnRNY"
+                    ]
+                },
+                {
+                    "width": 1537,
+                    "height": 1921,
+                    "imageUrls": [
+                        "https://media.licdn.com/dms/image/v2/D561FAQHm7XieHZ-CNg/feedshare-document-cover-images_1920/B56Zz08moCKcBQ-/0/1773636055406?e=1774260000&v=beta&t=SYPjrLWhKO4uBWu0cb9wGVmcVOLA-cdo5W1NBkvs-JY",
+                        "https://media.licdn.com/dms/image/v2/D561FAQHm7XieHZ-CNg/feedshare-document-cover-images_1920/B56Zz08moCKcBQ-/1/1773636055406?e=1774260000&v=beta&t=lrnKVFuhVCbACJpTiICxNXe8Cs2EWM4zoTHYoBVyUTg",
+                        "https://media.licdn.com/dms/image/v2/D561FAQHm7XieHZ-CNg/feedshare-document-cover-images_1920/B56Zz08moCKcBQ-/2/1773636055406?e=1774260000&v=beta&t=pYRYeMh2pHPDj1rVVqJ9QCMP0aWYk9x-3VZKjeHCLS0"
+                    ]
+                }
+            ]
+        },
+        "urn": "urn:li:activity:7439169025789620225",
+        "reactionsUrn": "urn:li:ugcPost:7439169021985497089",
+        "commentsUrn": "urn:li:fsd_socialDetail:(urn:li:ugcPost:7439169021985497089,urn:li:ugcPost:7439169021985497089,urn:li:highlightedReply:-)",
+        "repostsUrn": "urn:li:ugcPost:7439169021985497089",
+        "scrapedAt": "2026-03-16T09:02:48.270Z"
+    },
+    {
+        "share_url": "https://www.linkedin.com/posts/bill-bin-xu-8627584a_nvidia-course-ai-for-all-from-basic-activity-7439168923020787712-Agvg?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAGW8vZUBhgrl5QOfv_FCPqWaq7pBBTL0Chc",
+        "actor": {
+            "actor_image": "https://media.licdn.com/dms/image/v2/C4E03AQGYihjY-1mZAw/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1585665596156?e=1775088000&v=beta&t=nyiBUxgQH_09miGtBVj6IV1NzaOmQqpKqHTrEMqMFGA",
+            "actor_description": "Full Stack Software Engineer, Data Management Professional, Project Management Professional",
+            "actor_name": "Bill (Bin) Xu",
+            "actor_subDescription": "4h \u2022   ",
+            "actor_navigationContext": "https://www.linkedin.com/in/bill-bin-xu-8627584a?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAAApvA8oBhEGRcRAn4xpv4Son6U8pHdkfH7w"
+        },
+        "commentary": "Excited to share that I\u2019ve just completed \u201cAI for All: From Basics to GenAI Practice\u201d from NVIDIA. While I\u2019m not always a fan of the highly enthusiastic style of Jensen Huang\u2019s speeches, I found the course itself quite valuable. It explains the evolution of AI and even the hardware foundations behind many of today\u2019s technologies.\n\nRecent rumors that Meta may lay off 20% of its workforce (around 15,000\u201316,000 employees) as AI costs continue to rise are a reminder of how rapidly the AI landscape is evolving. To be honest, it\u2019s a bit scary to me ... \ud83e\udee4 \n\nPersonally, I\u2019ve already been using AI to write over 90% of my code, yet it still feels like we\u2019re only scratching the surface of what\u2019s coming.  This year\u2019s trends like \u201cOpenClaw\u201d \u2014 has made many people crazily believe AI Agent could replace many our daily tasks. But in reality, truly useful personal AI Agent still depends heavily on real, reliable data behind each real person and business process. Otherwise it is just a toy to us.\n\nAt least, one thing is becoming increasingly clear: AI is no longer just a technology discussion. In an Enterprise, it is already becoming a conversation about data, strategy, and organizational transformation. The real challenge is making AI useful inside complex enterprise environments \u2014 where data lives across many systems, governance matters, and business context is critical. Organizations that move fastest with AI will likely be those that can connect: \n AI + trusted data (Data Governance & Master Data Management) + real business workflows.\n\nThen, while massive layoffs in high-tech companies sound scary, employees who focus on trusted data and real business workflows skills and knowledges that AI cannot easily replace, right? \ud83e\udd14",
+        "social_details": {
+            "numLikes": 2,
+            "numComments": 0,
+            "numShares": 0,
+            "reactionTypeCounts": [
+                {
+                    "type": "LIKE",
+                    "count": 2
+                }
+            ]
+        },
+        "postedAt": "2026-03-16T04:41:24.000Z",
+        "documentComponent": {
+            "title": "Nvidia Course:  AI for All -- From Basic to GenAI Practice",
+            "transcribedDocumentUrl": "https://media.licdn.com/dms/document/media/v2/D4E1FAQEM63ArqoeEEA/feedshare-document-chunked-pdf/B4EZz0yJldJEBk-/0/1773633314190?e=1774260000&v=beta&t=FncTzldCR2_KrEh3YctqL-dNTBenaFtWEm5qGpoZKNo",
+            "coverPages": [
+                {
+                    "width": 491,
+                    "height": 329,
+                    "imageUrls": [
+                        "https://media.licdn.com/dms/image/v2/D4E1FAQEM63ArqoeEEA/feedshare-document-cover-images_480/B4EZz0yJldJEBA-/0/1773633314396?e=1774260000&v=beta&t=yPrj_2xT9kUEFeVB7_jnbidRDj6WirXJlQ0_TyKTuSA"
+                    ]
+                },
+                {
+                    "width": 806,
+                    "height": 540,
+                    "imageUrls": [
+                        "https://media.licdn.com/dms/image/v2/D4E1FAQEM63ArqoeEEA/feedshare-document-cover-images_800/B4EZz0yJldJEBM-/0/1773633314397?e=1774260000&v=beta&t=oxHo9hXTrap74WMlr0w6Jj2VSH7Rlq2l-lkknAv8550"
+                    ]
+                },
+                {
+                    "width": 1286,
+                    "height": 861,
+                    "imageUrls": [
+                        "https://media.licdn.com/dms/image/v2/D4E1FAQEM63ArqoeEEA/feedshare-document-cover-images_1280/B4EZz0yJldJEAs-/0/1773633314602?e=1774260000&v=beta&t=mpE1ZU07Up8Hz_VNb7A7voikntd7Xp8ThnXRKfYv6hQ"
+                    ]
+                },
+                {
+                    "width": 1929,
+                    "height": 1292,
+                    "imageUrls": [
+                        "https://media.licdn.com/dms/image/v2/D4E1FAQEM63ArqoeEEA/feedshare-document-cover-images_1920/B4EZz0yJldJEBQ-/0/1773633314537?e=1774260000&v=beta&t=G3RTWObdBImtlhAh0dbwG3VnHZfMXmotlg6Tuxdc1j4"
+                    ]
+                }
+            ]
+        },
+        "urn": "urn:li:activity:7439168923020787712",
+        "reactionsUrn": "urn:li:ugcPost:7439168921552982016",
+        "commentsUrn": "urn:li:fsd_socialDetail:(urn:li:ugcPost:7439168921552982016,urn:li:ugcPost:7439168921552982016,urn:li:highlightedReply:-)",
+        "repostsUrn": "urn:li:ugcPost:7439168921552982016",
+        "scrapedAt": "2026-03-16T09:02:48.270Z"
+    },
+    {
+        "share_url": "https://www.linkedin.com/posts/facundo-m-ferro_openclaw-sessionsspawn-guide-activity-7439145662643896320-bbPG?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAGW8vZUBhgrl5QOfv_FCPqWaq7pBBTL0Chc",
+        "actor": {
+            "actor_image": "https://media.licdn.com/dms/image/v2/D4D03AQHgggprY4OcLA/profile-displayphoto-scale_100_100/B4DZnkXczmG8Ac-/0/1760472988331?e=1775088000&v=beta&t=FayOB2YggQpu_pCdgml_C51LuDEWIE3grwYMvdS1YJA",
+            "actor_description": "Tech Lead & Founder @ TuriaDesign | Building AI Assistants for WhatsApp | Node.js, PHP, Vue.js, TypeScript",
+            "actor_name": "Facundo F.",
+            "actor_subDescription": "5h \u2022   ",
+            "actor_navigationContext": "https://www.linkedin.com/in/facundo-m-ferro?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAAAjvWTkBHJNRRNmQOshsGRP6WK4uu0jboLE"
+        },
+        "commentary": "\ud835\udc02\ud835\udc1a\ud835\udc2c\ud835\udc22 \ud835\udc1d\ud835\udc1e\ud835\udc2c\ud835\udc22\ud835\udc2c\ud835\udc2d\ud835\udc28 \ud835\udc1d\ud835\udc1e \ud835\udc21\ud835\udc1a\ud835\udc1c\ud835\udc1e\ud835\udc2b \ud835\udc1f\ud835\udc2e\ud835\udc27\ud835\udc1c\ud835\udc22\ud835\udc28\ud835\udc27\ud835\udc1a\ud835\udc2b \ud835\udc2c\ud835\udc1e\ud835\udc2c\ud835\udc2c\ud835\udc22\ud835\udc28\ud835\udc27\ud835\udc2c_\ud835\udc2c\ud835\udc29\ud835\udc1a\ud835\udc30\ud835\udc27 \ud835\udc1e\ud835\udc27 \ud835\udc0e\ud835\udc29\ud835\udc1e\ud835\udc27\ud835\udc02\ud835\udc25\ud835\udc1a\ud835\udc30. \ud83d\ude13\n\nLa idea era simple:  Crear un agent-router barato que clasifique mensajes y delegue a sub-agentes especializados. En vez de quemar Sonnet 4.6 para todo + clawrouter.\nUn punto clave que quer\u00eda es que vaya devolviendo informaci\u00f3n a medida que avanzaba en formulaci\u00f3n de la respuesta: Pregunta  => R1 (inmediata) + R2 + R3 (opcional) + agent-finalizer (opcional)\n\n\ud835\udc04\ud835\udc27 \ud835\udc2d\ud835\udc1e\ud835\udc28\ud835\udc2b\ud835\udc22\u0301\ud835\udc1a, es configurar un allowAgents y listo.\n\ud835\udc04\ud835\udc27 \ud835\udc25\ud835\udc1a \ud835\udc29\ud835\udc2b\ud835\udc1a\u0301\ud835\udc1c\ud835\udc2d\ud835\udc22\ud835\udc1c\ud835\udc1a fueron +\ud835\udfd6 \ud835\udc21\ud835\udc28\ud835\udc2b\ud835\udc1a\ud835\udc2c \ud835\udc1d\ud835\udc1e \ud835\udc1d\ud835\udc1e\ud835\udc1b\ud835\udc2e\ud835\udc20\ud835\udc20\ud835\udc22\ud835\udc27\ud835\udc20 donde nada funcionaba y la documentaci\u00f3n no cubr\u00eda casi ninguno de los problemas que iban apareciendo.\n\ud835\udc0b\ud835\udc28\ud835\udc2c \ud835\udfd7 \ud835\udc29\ud835\udc2b\ud835\udc28\ud835\udc1b\ud835\udc25\ud835\udc1e\ud835\udc26\ud835\udc1a\ud835\udc2c \ud835\udc2a\ud835\udc2e\ud835\udc1e \ud835\udc1e\ud835\udc27\ud835\udc1c\ud835\udc28\ud835\udc27\ud835\udc2d\ud835\udc2b\ud835\udc1e\u0301 (todos documentados con causa y soluci\u00f3n concreta):\n\u2022 \ud835\udc0c\ud835\udc1e\ud835\udc2b\ud835\udc1c\ud835\udc2e\ud835\udc2b\ud835\udc32 \ud835\udfd0 \ud835\udc27\ud835\udc28 \ud835\udc2c\ud835\udc28\ud835\udc29\ud835\udc28\ud835\udc2b\ud835\udc2d\ud835\udc1a \ud835\udc1f\ud835\udc2e\ud835\udc27\ud835\udc1c\ud835\udc2d\ud835\udc22\ud835\udc28\ud835\udc27 \ud835\udc1c\ud835\udc1a\ud835\udc25\ud835\udc25\ud835\udc22\ud835\udc27\ud835\udc20\n\u2022 \ud835\udc0b\ud835\udc28\ud835\udc2c \ud835\udc29\ud835\udc1e\ud835\udc2b\ud835\udc26\ud835\udc22\ud835\udc2c\ud835\udc28\ud835\udc2c \ud835\udc1d\ud835\udc1e \ud835\udc0b\ud835\udc22\ud835\udc27\ud835\udc2e\ud835\udc31 \ud835\udc2d\ud835\udc1e \ud835\udc2b\ud835\udc28\ud835\udc26\ud835\udc29\ud835\udc1e\ud835\udc27 \ud835\udc2d\ud835\udc28\ud835\udc1d\ud835\udc1a \ud835\udc25\ud835\udc1a \ud835\udc1c\ud835\udc28\ud835\udc27\ud835\udc1f\ud835\udc22\ud835\udc20 \ud835\udc2c\ud835\udc22\ud835\udc25\ud835\udc1e\ud835\udc27\ud835\udc1c\ud835\udc22\ud835\udc28\ud835\udc2c\ud835\udc1a\ud835\udc26\ud835\udc1e\ud835\udc27\ud835\udc2d\ud835\udc1e\n\u2022 \ud835\udc06\ud835\udc1e\ud835\udc26\ud835\udc22\ud835\udc27\ud835\udc22 \ud835\udc05\ud835\udc25\ud835\udc1a\ud835\udc2c\ud835\udc21 \ud835\udc0b\ud835\udc22\ud835\udc2d\ud835\udc1e \ud835\udc1d\ud835\udc22\ud835\udc1c\ud835\udc1e \ud835\udc2a\ud835\udc2e\ud835\udc1e \ud835\udc25\ud835\udc25\ud835\udc1a\ud835\udc26\ud835\udc1a \ud835\udc1a\ud835\udc25 \ud835\udc2d\ud835\udc28\ud835\udc28\ud835\udc25 \ud835\udc29\ud835\udc1e\ud835\udc2b\ud835\udc28 \ud835\udc1d\ud835\udc1e\ud835\udc2c\ud835\udc29\ud835\udc2e\ud835\udc1e\u0301\ud835\udc2c \ud835\udc27\ud835\udc28 \ud835\udc1d\ud835\udc1e\ud835\udc2f\ud835\udc2e\ud835\udc1e\ud835\udc25\ud835\udc2f\ud835\udc1e \ud835\udc27\ud835\udc1a\ud835\udc1d\ud835\udc1a\n\u2022 \ud835\udc0b\ud835\udc1a\ud835\udc2c \ud835\udc26\ud835\udc1e\ud835\udc26\ud835\udc28\ud835\udc2b\ud835\udc22\ud835\udc1a\ud835\udc2c \ud835\udc1d\ud835\udc1e \ud835\udc26\ud835\udc1e\ud835\udc26\ud835\udfce \ud835\udc2c\ud835\udc1e \ud835\udc1c\ud835\udc28\ud835\udc27\ud835\udc2d\ud835\udc1a\ud835\udc26\ud835\udc22\ud835\udc27\ud835\udc1a\ud835\udc27 \ud835\udc1e\ud835\udc27\ud835\udc2d\ud835\udc2b\ud835\udc1e \ud835\udc2c\ud835\udc1e\ud835\udc2c\ud835\udc22\ud835\udc28\ud835\udc27\ud835\udc1e\ud835\udc2c\n\u2022 \ud835\udc0b\ud835\udc28\ud835\udc2c \ud835\udc2c\ud835\udc2e\ud835\udc1b-\ud835\udc1a\ud835\udc20\ud835\udc1e\ud835\udc27\ud835\udc2d\ud835\udc1e\ud835\udc2c \ud835\udc27\ud835\udc22 \ud835\udc1c\ud835\udc1a\ud835\udc2b\ud835\udc20\ud835\udc1a\ud835\udc27 \ud835\udc1e\ud835\udc25 \ud835\udc12\ud835\udc0e\ud835\udc14\ud835\udc0b.\ud835\udc26\ud835\udc1d (s\u00ed, es un bug conocido)\n\u2026y 4 problemas m\u00e1s que no menciono aqu\u00ed para no hacer el post eterno.\n\n\ud835\udc04\ud835\udc25 \ud835\udc2b\ud835\udc1e\ud835\udc2c\ud835\udc2e\ud835\udc25\ud835\udc2d\ud835\udc1a\ud835\udc1d\ud835\udc28 \ud835\udc1f\ud835\udc22\ud835\udc27\ud835\udc1a\ud835\udc25:\n\u2705 Respuestas \ud835\udfd1.\ud835\udfd3\ud835\udc31 \ud835\udc26\ud835\udc1a\u0301\ud835\udc2c \ud835\udc2b\ud835\udc1a\u0301\ud835\udc29\ud835\udc22\ud835\udc1d\ud835\udc1a\ud835\udc2c\n\u2705 \ud835\udc02\ud835\udc28\ud835\udc2c\ud835\udc2d\ud835\udc28 \ud835\udc1d\ud835\udc1e\ud835\udc25 \ud835\udc2b\ud835\udc28\ud835\udc2e\ud835\udc2d\ud835\udc1e\ud835\udc2b \ud835\udfd7\ud835\udfd5% \ud835\udc26\ud835\udc1e\ud835\udc27\ud835\udc28\ud835\udc2c\n\u2705 Sistema de \ud835\udfd3 \ud835\udc2d\ud835\udc22\ud835\udc1e\ud835\udc2b\ud835\udc2c donde el \ud835\udfd6\ud835\udfce% de las queries se resuelve con Mercury 2/Kimi K2.5 a -$0.25/M sin necesidad de escalar a Sonnet.\nNo es perfecto \u2014 el benchmark RAGAS muestra un trade-off real de -9% en calidad, sobre todo en la dimensi\u00f3n \u201cfuente\u201d. Pero para la mayor\u00eda de queries de negocio, el trade-off es m\u00e1s que aceptable.Y megorable mediante infrastructura.\n\ud835\udc00\ud835\udc2b\ud835\udc26\ud835\udc1e\u0301 \ud835\udc2e\ud835\udc27 \ud835\udc1d\ud835\udc28\ud835\udc1c\ud835\udc2e\ud835\udc26\ud835\udc1e\ud835\udc27\ud835\udc2d\ud835\udc28 \ud835\udc1d\ud835\udc1e \ud835\udfcf\ud835\udfd0 \ud835\udc29\ud835\udc1a\u0301\ud835\udc20\ud835\udc22\ud835\udc27\ud835\udc1a\ud835\udc2c \ud835\udc1c\ud835\udc28\ud835\udc27 \ud835\udc2d\ud835\udc28\ud835\udc1d\ud835\udc28 \ud835\udc25\ud835\udc28 \ud835\udc2a\ud835\udc2e\ud835\udc1e \ud835\udc1e\ud835\udc27\ud835\udc1c\ud835\udc28\ud835\udc27\ud835\udc2d\ud835\udc2b\ud835\udc1e\u0301. Lo dejo ac\u00e1 abajo.\n\ud835\udc12\ud835\udc22 \ud835\udc1e\ud835\udc2c\ud835\udc2d\ud835\udc1a\u0301\ud835\udc2c \ud835\udc1a\ud835\udc2b\ud835\udc26\ud835\udc1a\ud835\udc27\ud835\udc1d\ud835\udc28 \ud835\udc2c\ud835\udc22\ud835\udc2c\ud835\udc2d\ud835\udc1e\ud835\udc26\ud835\udc1a\ud835\udc2c \ud835\udc26\ud835\udc2e\ud835\udc25\ud835\udc2d\ud835\udc22-\ud835\udc1a\ud835\udc20\ud835\udc1e\ud835\udc27\ud835\udc2d\ud835\udc1e \ud835\udc1c\ud835\udc28\ud835\udc27 \ud835\udc0e\ud835\udc29\ud835\udc1e\ud835\udc27\ud835\udc02\ud835\udc25\ud835\udc1a\ud835\udc30 \ud835\udc28 \ud835\udc1c\ud835\udc2e\ud835\udc1a\ud835\udc25\ud835\udc2a\ud835\udc2e\ud835\udc22\ud835\udc1e\ud835\udc2b \ud835\udc1f\ud835\udc2b\ud835\udc1a\ud835\udc26\ud835\udc1e\ud835\udc30\ud835\udc28\ud835\udc2b\ud835\udc24 \ud835\udc1d\ud835\udc1e \ud835\udc28\ud835\udc2b\ud835\udc2a\ud835\udc2e\ud835\udc1e\ud835\udc2c\ud835\udc2d\ud835\udc1a\ud835\udc1c\ud835\udc22\ud835\udc28\u0301\ud835\udc27 \ud835\udc2c\ud835\udc22\ud835\udc26\ud835\udc22\ud835\udc25\ud835\udc1a\ud835\udc2b, \ud835\udc2d\ud835\udc1e \ud835\udc29\ud835\udc2e\ud835\udc1e\ud835\udc1d\ud835\udc1e \ud835\udc1a\ud835\udc21\ud835\udc28\ud835\udc2b\ud835\udc2b\ud835\udc1a\ud835\udc2b \ud835\udc2e\ud835\udc27\ud835\udc1a\ud835\udc2c \ud835\udc1c\ud835\udc2e\ud835\udc1a\ud835\udc27\ud835\udc2d\ud835\udc1a\ud835\udc2c \ud835\udc21\ud835\udc28\ud835\udc2b\ud835\udc1a\ud835\udc2c. \ud83d\udca1",
+        "social_details": {
+            "numLikes": 0,
+            "numComments": 0,
+            "numShares": 0,
+            "reactionTypeCounts": []
+        },
+        "postedAt": "2026-03-16T03:08:58.000Z",
+        "documentComponent": {
+            "title": "Openclaw sessions_spawn guide",
+            "transcribedDocumentUrl": "https://media.licdn.com/dms/document/media/v2/D4E1FAQFbvyg0dq_boQ/feedshare-document-url-metadata-scrapper-pdf/B4EZz0nZI8G8A4-/0/1773630494165?e=1774260000&v=beta&t=cA55m0DT5FccksjasWWrK0uG_FOETKq211-fLHgDgeI",
+            "coverPages": [
+                {
+                    "width": 347,
+                    "height": 491,
+                    "imageUrls": [
+                        "https://media.licdn.com/dms/image/v2/D4E1FAQFbvyg0dq_boQ/feedshare-document-cover-images_480/B4EZz0nZI8G8BA-/0/1773630493949?e=1774260000&v=beta&t=E3oGJLGAN2c1wUxlSjxjwHFb92ZPbCYbgi278l8LrGg",
+                        "https://media.licdn.com/dms/image/v2/D4E1FAQFbvyg0dq_boQ/feedshare-document-cover-images_480/B4EZz0nZI8G8BA-/1/1773630493949?e=1774260000&v=beta&t=B3QskpUrPBCQjGud3LZgHNVkKG85lmbXl5wRxLYLNSg",
+                        "https://media.licdn.com/dms/image/v2/D4E1FAQFbvyg0dq_boQ/feedshare-document-cover-images_480/B4EZz0nZI8G8BA-/2/1773630493949?e=1774260000&v=beta&t=chbUcmlxrPfWLVQEG6Gi30RlGJ-X_i-s_jKzyPuCjR0"
+                    ]
+                },
+                {
+                    "width": 570,
+                    "height": 806,
+                    "imageUrls": [
+                        "https://media.licdn.com/dms/image/v2/D4E1FAQFbvyg0dq_boQ/feedshare-document-cover-images_800/B4EZz0nZI8G8BM-/0/1773630493949?e=1774260000&v=beta&t=oDTA5EERPepE3E9bk2Gll5bKzO-uUncJ0y7Qg6l3nCw",
+                        "https://media.licdn.com/dms/image/v2/D4E1FAQFbvyg0dq_boQ/feedshare-document-cover-images_800/B4EZz0nZI8G8BM-/1/1773630493949?e=1774260000&v=beta&t=PfV4lIaDRxx_WYhwRCOfmlWxlYeUGjjiLuQK-4Loiuw",
+                        "https://media.licdn.com/dms/image/v2/D4E1FAQFbvyg0dq_boQ/feedshare-document-cover-images_800/B4EZz0nZI8G8BM-/2/1773630493949?e=1774260000&v=beta&t=XGqOjYznw-xmCKa_s-i_soTkuOirUKHs_3BRL35Xogs"
+                    ]
+                },
+                {
+                    "width": 909,
+                    "height": 1286,
+                    "imageUrls": [
+                        "https://media.licdn.com/dms/image/v2/D4E1FAQFbvyg0dq_boQ/feedshare-document-cover-images_1280/B4EZz0nZI8G8As-/0/1773630494097?e=1774260000&v=beta&t=IXIYpSLtGpta5viZo4zzMGAj99tkxDeNBgiep_7AmrY",
+                        "https://media.licdn.com/dms/image/v2/D4E1FAQFbvyg0dq_boQ/feedshare-document-cover-images_1280/B4EZz0nZI8G8As-/1/1773630494097?e=1774260000&v=beta&t=aSyfVxcR5IxTIRTSBrqS-qCTJzyAmrhD8CZ6su-e61w",
+                        "https://media.licdn.com/dms/image/v2/D4E1FAQFbvyg0dq_boQ/feedshare-document-cover-images_1280/B4EZz0nZI8G8As-/2/1773630494097?e=1774260000&v=beta&t=RHeAJaMTOFnnnPhF18b2WgxV4BJ5HaDlkS2vuC7QE6A"
+                    ]
+                },
+                {
+                    "width": 1364,
+                    "height": 1929,
+                    "imageUrls": [
+                        "https://media.licdn.com/dms/image/v2/D4E1FAQFbvyg0dq_boQ/feedshare-document-cover-images_1920/B4EZz0nZI8G8BQ-/0/1773630494165?e=1774260000&v=beta&t=jiLsbS8PXkwN7IkmMTnsAxWJnYmGnHHozCE0xjdCAnw",
+                        "https://media.licdn.com/dms/image/v2/D4E1FAQFbvyg0dq_boQ/feedshare-document-cover-images_1920/B4EZz0nZI8G8BQ-/1/1773630494165?e=1774260000&v=beta&t=0mA_igfwqtUGfg9GnFJ0bGFymfrsXnDcNrNKymnYL-8",
+                        "https://media.licdn.com/dms/image/v2/D4E1FAQFbvyg0dq_boQ/feedshare-document-cover-images_1920/B4EZz0nZI8G8BQ-/2/1773630494165?e=1774260000&v=beta&t=tjGnXsqf65QxP3086Uar9yciWj9DZY876u7oIxhTl24"
+                    ]
+                }
+            ]
+        },
+        "urn": "urn:li:activity:7439145662643896320",
+        "reactionsUrn": "urn:li:ugcPost:7439145661612142592",
+        "commentsUrn": "urn:li:fsd_socialDetail:(urn:li:ugcPost:7439145661612142592,urn:li:ugcPost:7439145661612142592,urn:li:highlightedReply:-)",
+        "repostsUrn": "urn:li:ugcPost:7439145661612142592",
+        "scrapedAt": "2026-03-16T09:02:48.270Z"
+    },
+    {
+        "share_url": "https://www.linkedin.com/posts/shaharyar-khan-a5132b32a_kimi-claw-playbook-activity-7439121494879846400-BYYP?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAGW8vZUBhgrl5QOfv_FCPqWaq7pBBTL0Chc",
+        "actor": {
+            "actor_image": "https://media.licdn.com/dms/image/v2/D4D03AQFQuyXf8RpHOQ/profile-displayphoto-scale_400_400/B4DZlhnVGSJUAg-/0/1758279326732?e=1775088000&v=beta&t=U8Dtcdsq3nmW634kmJqYP5jOiDNJsGSNmuKo70ohLkc",
+            "actor_description": "AI & CyberSecurity Enthusiast",
+            "actor_name": "Shaharyar Khan",
+            "actor_subDescription": "7h \u2022   ",
+            "actor_navigationContext": "https://www.linkedin.com/in/shaharyar-khan-a5132b32a?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAAFL8dh0BR82PRh1hx3cxzJWGQjJcLB_j12Y"
+        },
+        "commentary": "A simple guide to deploy OpenClaw",
+        "social_details": {
+            "numLikes": 0,
+            "numComments": 0,
+            "numShares": 0,
+            "reactionTypeCounts": []
+        },
+        "postedAt": "2026-03-16T01:32:56.000Z",
+        "urn": "urn:li:activity:7439121494879846400",
+        "reactionsUrn": "urn:li:ugcPost:7439121494296768512",
+        "commentsUrn": "urn:li:fsd_socialDetail:(urn:li:ugcPost:7439121494296768512,urn:li:ugcPost:7439121494296768512,urn:li:highlightedReply:-)",
+        "repostsUrn": "urn:li:ugcPost:7439121494296768512",
+        "scrapedAt": "2026-03-16T09:02:48.270Z"
+    },
+    {
+        "share_url": "https://www.linkedin.com/posts/temudataku_realita-openclaw-activity-7439120776261414912-n94r?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAGW8vZUBhgrl5QOfv_FCPqWaq7pBBTL0Chc",
+        "actor": {
+            "actor_image": "na",
+            "actor_description": "253 followers",
+            "actor_name": "TemuDataku",
+            "actor_subDescription": "7h \u2022   ",
+            "actor_navigationContext": "https://www.linkedin.com/company/temudataku/posts"
+        },
+        "commentary": "OpenClaw lagi rame banget.\nDan setelah di coba sendiri, ternyata jadi paham.\n\nIni bukan sekadar AI buat jawab pertanyaan.\nOpenClaw itu asisten AI yang bisa pakai komputer kita langsung: browsing, install tools, jalanin terminal, bahkan benerin error-nya sendiri.\n\nAgentic AI udah lama ada.\nYang bikin OpenClaw beda adalah kemudahan pakainya. Sekarang siapa pun bisa install dan langsung jalan.\n\nMasalahnya?\nAksesnya kelewat luas.\n\nDengan akses penuh ke file, browser, dan terminal, satu perintah yang keliru atau satu halusinasi bisa berujung ke data rusak, kehapus, atau sistem kacau.\n\nIni bukan soal takut teknologi.\nJustru sebaliknya.\n\nOpenClaw itu glimpse ke masa depan produktivitas.\nTapi kalau mau pakai, cara mainnya harus beda.\n\nJangan di laptop utama.\nPakai device terpisah.\nSandbox dulu.\n\nBe curious, but stay paranoid. \n\n#AI #AgenticAI #OpenClaw #Moltbot #Productivity #TechRisk #TemuDataku",
+        "social_details": {
+            "numLikes": 0,
+            "numComments": 0,
+            "numShares": 0,
+            "reactionTypeCounts": []
+        },
+        "postedAt": "2026-03-16T01:30:05.000Z",
+        "documentComponent": {
+            "title": "Realita OpenClaw",
+            "transcribedDocumentUrl": "https://media.licdn.com/dms/document/media/v2/D561FAQG87yf7dFr4Xw/feedshare-document-sanitized-pdf/B56ZzyLzJJKMA8-/0/1773589706113?e=1774260000&v=beta&t=jto9z5Fr_edCjx-ECF5Y69tTO0OHmB8__KRoT_HUgcY",
+            "coverPages": [
+                {
+                    "width": 347,
+                    "height": 491,
+                    "imageUrls": [
+                        "https://media.licdn.com/dms/image/v2/D561FAQG87yf7dFr4Xw/feedshare-document-cover-images_480/B56ZzyLzJJKMBA-/0/1773589706113?e=1774260000&v=beta&t=1dz-3AnYiabGuO3F1SBVJniDaLzQ2hWX_ELknKhhpZ0",
+                        "https://media.licdn.com/dms/image/v2/D561FAQG87yf7dFr4Xw/feedshare-document-cover-images_480/B56ZzyLzJJKMBA-/1/1773589706113?e=1774260000&v=beta&t=eG2NwQQYR-hIMB8Z_KGwRFk1drSm7yWitVQtb_mi7Lw",
+                        "https://media.licdn.com/dms/image/v2/D561FAQG87yf7dFr4Xw/feedshare-document-cover-images_480/B56ZzyLzJJKMBA-/2/1773589706113?e=1774260000&v=beta&t=ExL3EFLXS0BmjrtbEDu0NgbfSvlq3QUE_QsloMo-rEU"
+                    ]
+                },
+                {
+                    "width": 570,
+                    "height": 806,
+                    "imageUrls": [
+                        "https://media.licdn.com/dms/image/v2/D561FAQG87yf7dFr4Xw/feedshare-document-cover-images_800/B56ZzyLzJJKMBM-/0/1773589706113?e=1774260000&v=beta&t=OTAvwqHFjIUqkVjvTU9V1nq3Q6qFZxTEA876g_tb-MQ",
+                        "https://media.licdn.com/dms/image/v2/D561FAQG87yf7dFr4Xw/feedshare-document-cover-images_800/B56ZzyLzJJKMBM-/1/1773589706113?e=1774260000&v=beta&t=OG5by6b61bS807kEfKuGtyaCA-OcHmgcjt7FxkO9uEs",
+                        "https://media.licdn.com/dms/image/v2/D561FAQG87yf7dFr4Xw/feedshare-document-cover-images_800/B56ZzyLzJJKMBM-/2/1773589706113?e=1774260000&v=beta&t=1cLJnGTag2t8ACQN4KoifOnL2ZdORZ24zSoWHgnyBLs"
+                    ]
+                },
+                {
+                    "width": 909,
+                    "height": 1286,
+                    "imageUrls": [
+                        "https://media.licdn.com/dms/image/v2/D561FAQG87yf7dFr4Xw/feedshare-document-cover-images_1280/B56ZzyLzJJKMAs-/0/1773589706240?e=1774260000&v=beta&t=I1z2lv2R8hoI6BnA_roZEwwOFSvqyFNlpc4Jy3KWJrs",
+                        "https://media.licdn.com/dms/image/v2/D561FAQG87yf7dFr4Xw/feedshare-document-cover-images_1280/B56ZzyLzJJKMAs-/1/1773589706240?e=1774260000&v=beta&t=39Or1HIRjpD4Onn616-AuIQJU6KMpqWLiCoIruaAwA8",
+                        "https://media.licdn.com/dms/image/v2/D561FAQG87yf7dFr4Xw/feedshare-document-cover-images_1280/B56ZzyLzJJKMAs-/2/1773589706240?e=1774260000&v=beta&t=rl0FD01ExDve38eaXOQDjz9H9yA6V37nERLFRdCtKiM"
+                    ]
+                },
+                {
+                    "width": 1363,
+                    "height": 1929,
+                    "imageUrls": [
+                        "https://media.licdn.com/dms/image/v2/D561FAQG87yf7dFr4Xw/feedshare-document-cover-images_1920/B56ZzyLzJJKMBQ-/0/1773589706240?e=1774260000&v=beta&t=MywDfsiYH2spKH-NlMGVA22ZFVUcCJUvGLI1yY4x0-Y",
+                        "https://media.licdn.com/dms/image/v2/D561FAQG87yf7dFr4Xw/feedshare-document-cover-images_1920/B56ZzyLzJJKMBQ-/1/1773589706240?e=1774260000&v=beta&t=SfPHiAi1g9X2O8Vy9CF2-oaejXeSb4iZ-QHH8nTOukI",
+                        "https://media.licdn.com/dms/image/v2/D561FAQG87yf7dFr4Xw/feedshare-document-cover-images_1920/B56ZzyLzJJKMBQ-/2/1773589706240?e=1774260000&v=beta&t=Ly78QOWPEpQBFIzl7GsyMfgyKkVFrZLktAXTjE_JZmM"
+                    ]
+                }
+            ]
+        },
+        "urn": "urn:li:activity:7439120776261414912",
+        "reactionsUrn": "urn:li:ugcPost:7438974711549628416",
+        "commentsUrn": "urn:li:fsd_socialDetail:(urn:li:ugcPost:7438974711549628416,urn:li:ugcPost:7438974711549628416,urn:li:highlightedReply:-)",
+        "repostsUrn": "urn:li:ugcPost:7438974711549628416",
+        "scrapedAt": "2026-03-16T09:02:48.270Z"
+    },
+    {
+        "share_url": "https://www.linkedin.com/posts/krishnacheedella_openclaw-rl-train-any-agent-simply-by-talking-activity-7439109254764109824-VwV5?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAGW8vZUBhgrl5QOfv_FCPqWaq7pBBTL0Chc",
+        "actor": {
+            "actor_image": "https://media.licdn.com/dms/image/v2/D4D35AQGQhBS2CwtQaA/profile-framedphoto-shrink_200_200/B4DZxeoIsKKYAY-/0/1771114105952?e=1774260000&v=beta&t=dOBJZC_LDG88FuKO4MoAQ0bndEyz2db_s3CstyPx0u8",
+            "actor_description": "\u2728 Founder & CEO, ZadeNor AI | \ud83e\udd16 Enabling Thoughtful, Purpose-Driven Agentic AI \ud83c\udf31 That Truly Helps Organizations Grow \ud83d\ude80\ud83e\udd1d",
+            "actor_name": "Krishna C.",
+            "actor_subDescription": "8h \u2022   ",
+            "actor_navigationContext": "https://www.linkedin.com/in/krishnacheedella?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAAC6PqlYBrdkvg_cTFkwV2fD1qU_yiDqDlWs"
+        },
+        "commentary": "#bookmark",
+        "social_details": {
+            "numLikes": 2,
+            "numComments": 0,
+            "numShares": 0,
+            "reactionTypeCounts": [
+                {
+                    "type": "LIKE",
+                    "count": 2
+                }
+            ]
+        },
+        "postedAt": "2026-03-16T00:44:18.000Z",
+        "urn": "urn:li:activity:7439109254764109824",
+        "reactionsUrn": "urn:li:ugcPost:7439109254361473024",
+        "commentsUrn": "urn:li:fsd_socialDetail:(urn:li:ugcPost:7439109254361473024,urn:li:ugcPost:7439109254361473024,urn:li:highlightedReply:-)",
+        "repostsUrn": "urn:li:ugcPost:7439109254361473024",
+        "scrapedAt": "2026-03-16T09:02:48.270Z"
+    },
+    {
+        "share_url": "https://www.linkedin.com/feed/update/urn:li:activity:7439078310027886592?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAGW8vZUBhgrl5QOfv_FCPqWaq7pBBTL0Chc",
+        "actor": {
+            "actor_image": "https://media.licdn.com/dms/image/v2/C4E03AQFBwSXJpQ7_Hw/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1645081334116?e=1775088000&v=beta&t=Ip7cuPdsjbj1Md-9JRVwuzfsiFnjRfk1m-T5iDRGZeg",
+            "actor_description": "Data Scientist at Alibaba Group",
+            "actor_name": "Vijay Krishan",
+            "actor_subDescription": "10h \u2022   ",
+            "actor_navigationContext": "https://www.linkedin.com/in/vijay-krishan-952382232?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAADoTXs4Btj6xEQdz-F81C7EefipaytVrrT4"
+        },
+        "commentary": "https://lnkd.in/gzJVca-9",
+        "social_details": {
+            "numLikes": 1,
+            "numComments": 0,
+            "numShares": 0,
+            "reactionTypeCounts": [
+                {
+                    "type": "LIKE",
+                    "count": 1
+                }
+            ]
+        },
+        "postedAt": "2026-03-15T22:41:20.000Z",
+        "urn": "urn:li:activity:7439078310027886592",
+        "reactionsUrn": "urn:li:groupPost:6773411-7439078309436731393",
+        "commentsUrn": "urn:li:fsd_socialDetail:(urn:li:groupPost:6773411-7439078309436731393,urn:li:activity:7439078310027886592,urn:li:highlightedReply:-)",
+        "repostsUrn": "urn:li:groupPost:6773411-7439078309436731393",
+        "scrapedAt": "2026-03-16T09:02:48.270Z"
+    },
+    {
+        "share_url": "https://www.linkedin.com/posts/kutsmike_openclaw-activity-7439069761189068800-7gfk?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAGW8vZUBhgrl5QOfv_FCPqWaq7pBBTL0Chc",
+        "actor": {
+            "actor_image": "https://media.licdn.com/dms/image/v2/D4D03AQH_Zeha7WHRjQ/profile-displayphoto-scale_100_100/B4DZtnlVECKAAg-/0/1766969402644?e=1775088000&v=beta&t=5_Hrd0ZWSrYYPI91Jg12smXNXeuRlWJIiP2IFsGhXyM",
+            "actor_description": "AI Product Manager | CMO | Build MVPs in days (not months) | EdTech \u2022 Healthcare \u2022 Design/Architecture \u2022 Tech Staffing/Outstaffing | Lovable \u2022 Make \u2022 n8n \u2022 Zapier \u2022 RAG | Course Creator: \u201cAI for PMs & Marketers\u201d",
+            "actor_name": "Mike Kuts",
+            "actor_subDescription": "10h \u2022   ",
+            "actor_navigationContext": "https://www.linkedin.com/in/kutsmike?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAADYYaBwBRQhHdoplR69ggh1CxXmbAySMf_g"
+        },
+        "commentary": "\u042f\u043a\u0449\u043e ChatGPT \u043f\u043e\u043a\u0430\u0437\u0430\u0432, \u0449\u043e \u0428\u0406 \u043c\u043e\u0436\u0435 \u0433\u043e\u0432\u043e\u0440\u0438\u0442\u0438,\n\n\u0442\u043e OpenClaw \u043f\u043e\u043a\u0430\u0437\u0443\u0454, \u0449\u043e \u0428\u0406 \u043c\u043e\u0436\u0435 \u0434\u0456\u044f\u0442\u0438.\n\n\u0423 \u0441\u0456\u0447\u043d\u0456 2026 \u0440\u043e\u043a\u0443 \u043f\u0440\u043e\u0454\u043a\u0442 \u0437 \u0432\u0456\u0434\u043a\u0440\u0438\u0442\u0438\u043c \u043a\u043e\u0434\u043e\u043c \u043f\u0456\u0434 \u043d\u0430\u0437\u0432\u043e\u044e OpenClaw \u043f\u0440\u043e\u0439\u0448\u043e\u0432 \u0448\u043b\u044f\u0445 \u0432\u0456\u0434 \u0441\u0442\u043e\u0440\u043e\u043d\u043d\u044c\u043e\u0433\u043e \u043f\u0440\u043e\u0454\u043a\u0442\u0443 \u043e\u043a\u0440\u0435\u043c\u043e\u0433\u043e \u0440\u043e\u0437\u0440\u043e\u0431\u043d\u0438\u043a\u0430 \u0434\u043e 68 000 \u0437\u0456\u0440\u043e\u043a \u043d\u0430 GitHub \u0442\u0430 \u0448\u0438\u0440\u043e\u043a\u043e\u0433\u043e \u043e\u0445\u043e\u043f\u043b\u0435\u043d\u043d\u044f \u0437\u0430 \u043b\u0456\u0447\u0435\u043d\u0456 \u0442\u0438\u0436\u043d\u0456. \n\n\u0421\u0442\u0432\u043e\u0440\u0435\u043d\u0438\u0439 \u0430\u0432\u0441\u0442\u0440\u0456\u0439\u0441\u044c\u043a\u0438\u043c \u0440\u043e\u0437\u0440\u043e\u0431\u043d\u0438\u043a\u043e\u043c \u041f\u0435\u0442\u0435\u0440\u043e\u043c \u0428\u0442\u0430\u0439\u043d\u0431\u0435\u0440\u0433\u0435\u0440\u043e\u043c, OpenClaw \u2014 \u0446\u0435 \u043b\u043e\u043a\u0430\u043b\u044c\u043d\u0438\u0439 \u0430\u0433\u0435\u043d\u0442 \u0448\u0442\u0443\u0447\u043d\u043e\u0433\u043e \u0456\u043d\u0442\u0435\u043b\u0435\u043a\u0442\u0443, \u044f\u043a\u0438\u0439 \u043f\u0456\u0434\u043a\u043b\u044e\u0447\u0430\u0454\u0442\u044c\u0441\u044f \u0434\u043e \u0432\u0430\u0448\u0438\u0445 \u043c\u0435\u0441\u0435\u043d\u0434\u0436\u0435\u0440\u0456\u0432 \u0442\u0430 \u0432\u0438\u043a\u043e\u043d\u0443\u0454 \u0431\u0430\u0433\u0430\u0442\u043e\u0435\u0442\u0430\u043f\u043d\u0456 \u0437\u0430\u0432\u0434\u0430\u043d\u043d\u044f \u0432\u0456\u0434 \u0432\u0430\u0448\u043e\u0433\u043e \u0456\u043c\u0435\u043d\u0456.\n\n\u0406 \u0432\u0441\u0435 \u0436 OpenClaw (\u043f\u043e\u043a\u0438 \u0449\u043e) \u043d\u0435 \u0454 mass market \u2014 \u0434\u043b\u044f \u0439\u043e\u0433\u043e \u043d\u0430\u043b\u0430\u0448\u0442\u0443\u0432\u0430\u043d\u043d\u044f \u0442\u0430 \u043e\u0431\u0441\u043b\u0443\u0433\u043e\u0432\u0443\u0432\u0430\u043d\u043d\u044f \u043f\u043e\u0442\u0440\u0456\u0431\u043d\u0456 \u0437\u043d\u0430\u043d\u043d\u044f \u0442\u0435\u0440\u043c\u0456\u043d\u0430\u043b\u0443. OpenClaw \u043f\u0440\u043e\u0434\u043e\u0432\u0436\u0443\u0454 \u043d\u0430\u0431\u0438\u0440\u0430\u0442\u0438 \u043e\u0431\u0435\u0440\u0442\u0456\u0432 \u0441\u0435\u0440\u0435\u0434 \u0442\u0435\u0445\u043d\u0456\u0447\u043d\u0438\u0445 \u043a\u043e\u0440\u0438\u0441\u0442\u0443\u0432\u0430\u0447\u0456\u0432 \u0456 \u043d\u0430 \u043f\u043e\u0447\u0430\u0442\u043a\u0443 \u0431\u0435\u0440\u0435\u0437\u043d\u044f 2026 \u0441\u0442\u0430\u0432 \u043f\u0440\u043e\u0454\u043a\u0442\u043e\u043c \u0437 \u043d\u0430\u0439\u0431\u0456\u043b\u044c\u0448\u043e\u044e \u043a\u0456\u043b\u044c\u043a\u0456\u0441\u0442\u044e \u0437\u0456\u0440\u043e\u043a \u043d\u0430 Github, \u043f\u0435\u0440\u0435\u0432\u0435\u0440\u0448\u0438\u0432\u0448\u0438 \u044f\u043a React, \u0442\u0430\u043a \u0456 Linux. \n\n\u041e\u0434\u043d\u0430\u043a, \u043f\u0440\u043e\u0434\u0443\u043a\u0442 \u0449\u0435 \u043d\u0435 \u00ab\u0434\u043e\u0441\u0442\u0443\u043f\u043d\u0438\u0439\u00bb \u0434\u043e \u043c\u0430\u0441\u043e\u0432\u043e\u0433\u043e \u043a\u043e\u0440\u0438\u0441\u0442\u0443\u0432\u0430\u0447\u0430 \u2014 \u043f\u0440\u0438\u043d\u0430\u0439\u043c\u043d\u0456, \u0441\u0443\u0434\u044f\u0447\u0438 \u0437 \u043d\u043e\u0432\u0438\u0445 \u0432\u0456\u0434\u0432\u0456\u0434\u0443\u0432\u0430\u043d\u044c \u0432\u0435\u0431-\u0434\u043e\u043c\u0435\u043d\u0443 \u043d\u0430\u043b\u0430\u0448\u0442\u0443\u0432\u0430\u043d\u043d\u044f OpenClaw. \u200b\u200b\n\n\u041f\u0440\u043e\u0434\u0443\u043a\u0442 \u0431\u0443\u0432 \u043f\u0440\u0438\u0434\u0431\u0430\u043d\u0438\u0439 OpenAI \u0443 \u043b\u044e\u0442\u043e\u043c\u0443 2026 \u0440\u043e\u043a\u0443, \u0449\u043e, \u043c\u043e\u0436\u043b\u0438\u0432\u043e, \u0432\u043a\u0430\u0437\u0443\u0454 \u043d\u0430 \u043c\u043e\u0436\u043b\u0438\u0432\u0456\u0441\u0442\u044c \u043f\u043e\u044f\u0432\u0438 \u0449\u0435 \u0431\u0456\u043b\u044c\u0448 \u0434\u043e\u0441\u0442\u0443\u043f\u043d\u043e\u0457 \u0432\u0435\u0440\u0441\u0456\u0457 OpenClaw \u043d\u0435\u0437\u0430\u0431\u0430\u0440\u043e\u043c.\n\n\u041d\u0430 \u043c\u043e\u0431\u0456\u043b\u044c\u043d\u0438\u0445 \u043f\u0440\u0438\u0441\u0442\u0440\u043e\u044f\u0445 \u0441\u043f\u043e\u0436\u0438\u0432\u0430\u0447\u0456 \u0437\u0430\u0437\u0432\u0438\u0447\u0430\u0439 \u0432\u0437\u0430\u0454\u043c\u043e\u0434\u0456\u044e\u0442\u044c \u0437 \u0430\u0433\u0435\u043d\u0442\u0430\u043c\u0438 \u0447\u0435\u0440\u0435\u0437 \u0442\u0435\u043a\u0441\u0442\u043e\u0432\u0456 \u043f\u043e\u0432\u0456\u0434\u043e\u043c\u043b\u0435\u043d\u043d\u044f, \u0430 \u043d\u0435 \u0447\u0435\u0440\u0435\u0437 \u043c\u043e\u0431\u0456\u043b\u044c\u043d\u0456 \u0434\u043e\u0434\u0430\u0442\u043a\u0438. \u041f\u0456\u0434 \u0447\u0430\u0441 \u043d\u0430\u043b\u0430\u0448\u0442\u0443\u0432\u0430\u043d\u043d\u044f \u043a\u043e\u0440\u0438\u0441\u0442\u0443\u0432\u0430\u0447\u0456 \u043f\u0456\u0434\u043a\u043b\u044e\u0447\u0430\u044e\u0442\u044c OpenClaw \u0434\u043e \u0442\u0430\u043a\u0438\u0445 \u043f\u043b\u0430\u0442\u0444\u043e\u0440\u043c, \u044f\u043a WhatsApp, Telegram \u0442\u0430 Signal; \n\n\u041a\u043e\u0440\u0438\u0441\u0442\u0443\u0432\u0430\u0447\u0456 \u043d\u0430\u0434\u0441\u0438\u043b\u0430\u044e\u0442\u044c \u0439\u043e\u043c\u0443 \u043f\u043e\u0432\u0456\u0434\u043e\u043c\u043b\u0435\u043d\u043d\u044f \u0442\u0430\u043a, \u043d\u0456\u0431\u0438 \u0432\u043e\u043d\u0438 \u043d\u0430\u0434\u0441\u0438\u043b\u0430\u044e\u0442\u044c \u043f\u043e\u0432\u0456\u0434\u043e\u043c\u043b\u0435\u043d\u043d\u044f \u0434\u0440\u0443\u0433\u0443, \u0456 \u0432\u0456\u043d \u0432\u0438\u043a\u043e\u043d\u0443\u0454 \u0437\u0430\u0432\u0434\u0430\u043d\u043d\u044f \u0443 \u0444\u043e\u043d\u043e\u0432\u043e\u043c\u0443 \u0440\u0435\u0436\u0438\u043c\u0456. \n\n\u0421\u0430\u043c\u0435 \u0442\u043e\u043c\u0443 \u0442\u0430\u043a\u0456 \u043f\u0440\u043e\u0434\u0443\u043a\u0442\u0438 \u043f\u043e\u0447\u043d\u0443\u0442\u044c \u043a\u043e\u043d\u043a\u0443\u0440\u0443\u0432\u0430\u0442\u0438 \u043d\u0435 \u043b\u0438\u0448\u0435 \u043c\u0456\u0436 \u0441\u043e\u0431\u043e\u044e, \u0430 \u0439 \u0437 \u0430\u0433\u0435\u043d\u0442\u043d\u0438\u043c\u0438 \u043c\u043e\u0436\u043b\u0438\u0432\u043e\u0441\u0442\u044f\u043c\u0438 ChatGPT, Claude \u0442\u0430 Gemini.\n\n\u0413\u043e\u043b\u043e\u0432\u043d\u0435 \u043f\u0438\u0442\u0430\u043d\u043d\u044f \u0437\u0430\u0440\u0430\u0437 - \u0447\u0438 \u0441\u0442\u0430\u043d\u0435 \u043e\u043a\u0440\u0435\u043c\u0438\u0439 AI-\u0430\u0433\u0435\u043d\u0442 \u043d\u043e\u0432\u0438\u043c \u0456\u043d\u0442\u0435\u0440\u0444\u0435\u0439\u0441\u043e\u043c \u0434\u043e \u0434\u0456\u0439, \u0447\u0438 \u043f\u0435\u0440\u0435\u043c\u043e\u0436\u0443\u0442\u044c \u0443\u043d\u0456\u0432\u0435\u0440\u0441\u0430\u043b\u044c\u043d\u0456 \u043f\u043e\u043c\u0456\u0447\u043d\u0438\u043a\u0438 \u0437 \u0432\u0431\u0443\u0434\u043e\u0432\u0430\u043d\u0438\u043c\u0438 \u0456\u043d\u0441\u0442\u0440\u0443\u043c\u0435\u043d\u0442\u0430\u043c\u0438 \u0442\u0430 \u043a\u043e\u043d\u0435\u043a\u0442\u043e\u0440\u0430\u043c\u0438? \ud83e\udd14\n\n\u041d\u0430\u0439\u0431\u043b\u0438\u0436\u0447\u0456 \u0448\u0456\u0441\u0442\u044c \u043c\u0456\u0441\u044f\u0446\u0456\u0432 \u0434\u0430\u0434\u0443\u0442\u044c \u043d\u0430\u0431\u0430\u0433\u0430\u0442\u043e \u0447\u0456\u0442\u043a\u0456\u0448\u0443 \u0432\u0456\u0434\u043f\u043e\u0432\u0456\u0434\u044c.\n\nSource: Olivia Moore, March 9, 2026",
+        "social_details": {
+            "numLikes": 3,
+            "numComments": 0,
+            "numShares": 0,
+            "reactionTypeCounts": [
+                {
+                    "type": "LIKE",
+                    "count": 3
+                }
+            ]
+        },
+        "postedAt": "2026-03-15T22:07:22.000Z",
+        "documentComponent": {
+            "title": "OpenClaw",
+            "transcribedDocumentUrl": "https://media.licdn.com/dms/document/media/v2/D4D1FAQHIpFsiP7vKNg/feedshare-document-sanitized-pdf/B4DZzziU0wGsA8-/0/1773612391159?e=1774260000&v=beta&t=6wKxbd1NJugSutXgFydt7xAINz1C9c5xY8e9qr32mNQ",
+            "coverPages": [
+                {
+                    "width": 387,
+                    "height": 484,
+                    "imageUrls": [
+                        "https://media.licdn.com/dms/image/v2/D4D1FAQHIpFsiP7vKNg/feedshare-document-cover-images_480/B4DZzziU0wGsBA-/0/1773612391159?e=1774260000&v=beta&t=sBfO6jsYSvApMUBQq1ctpcyLwJUcaSiezLU7TSGWLYY",
+                        "https://media.licdn.com/dms/image/v2/D4D1FAQHIpFsiP7vKNg/feedshare-document-cover-images_480/B4DZzziU0wGsBA-/1/1773612391159?e=1774260000&v=beta&t=ivPl4ri-qQ-4CEa7AXx_j3HKun4yiN3GylHDld-Q3vY",
+                        "https://media.licdn.com/dms/image/v2/D4D1FAQHIpFsiP7vKNg/feedshare-document-cover-images_480/B4DZzziU0wGsBA-/2/1773612391159?e=1774260000&v=beta&t=3QfQgvyKZaIsvwf-5M0qTcMjKDr86YvGaOEIK_VlxEo"
+                    ]
+                },
+                {
+                    "width": 650,
+                    "height": 812,
+                    "imageUrls": [
+                        "https://media.licdn.com/dms/image/v2/D4D1FAQHIpFsiP7vKNg/feedshare-document-cover-images_800/B4DZzziU0wGsBM-/0/1773612391159?e=1774260000&v=beta&t=oBFo0MtUZbYW8EWu9ZzshPboyXaJm09pC6giROo6cjs",
+                        "https://media.licdn.com/dms/image/v2/D4D1FAQHIpFsiP7vKNg/feedshare-document-cover-images_800/B4DZzziU0wGsBM-/1/1773612391159?e=1774260000&v=beta&t=0U8k3Z9nyuj2tR7pChIXSc6UAaMC9_-5mcqw9yAOZ-g",
+                        "https://media.licdn.com/dms/image/v2/D4D1FAQHIpFsiP7vKNg/feedshare-document-cover-images_800/B4DZzziU0wGsBM-/2/1773612391159?e=1774260000&v=beta&t=P6PHc-wQU9fuqJry9Ei1iugmoiiOTnbKugWxIOtFDBs"
+                    ]
+                },
+                {
+                    "width": 1025,
+                    "height": 1281,
+                    "imageUrls": [
+                        "https://media.licdn.com/dms/image/v2/D4D1FAQHIpFsiP7vKNg/feedshare-document-cover-images_1280/B4DZzziU0wGsAs-/0/1773612391390?e=1774260000&v=beta&t=10mwg4HKSp0oIqcXUKHSHXbzuEtLKR2NyXSe5V05Qrw",
+                        "https://media.licdn.com/dms/image/v2/D4D1FAQHIpFsiP7vKNg/feedshare-document-cover-images_1280/B4DZzziU0wGsAs-/1/1773612391390?e=1774260000&v=beta&t=73evRFxO2DbDCQvzLvLjMWnnYajP6Ol9-5q-jZ8W0H4",
+                        "https://media.licdn.com/dms/image/v2/D4D1FAQHIpFsiP7vKNg/feedshare-document-cover-images_1280/B4DZzziU0wGsAs-/2/1773612391390?e=1774260000&v=beta&t=xNin0C2xnqmUcrPJzm50rSl69ezZFovHe8E08mBZZ3c"
+                    ]
+                },
+                {
+                    "width": 1537,
+                    "height": 1922,
+                    "imageUrls": [
+                        "https://media.licdn.com/dms/image/v2/D4D1FAQHIpFsiP7vKNg/feedshare-document-cover-images_1920/B4DZzziU0wGsBQ-/0/1773612391846?e=1774260000&v=beta&t=cpUmiBV22U3WoSUVb7D8YF8WAA7UKRzbdAqCOcY0lvM",
+                        "https://media.licdn.com/dms/image/v2/D4D1FAQHIpFsiP7vKNg/feedshare-document-cover-images_1920/B4DZzziU0wGsBQ-/1/1773612391846?e=1774260000&v=beta&t=c17Hk3VWOTbn_b-MamtbMS8661EBLTVbLsOYtWVko_0",
+                        "https://media.licdn.com/dms/image/v2/D4D1FAQHIpFsiP7vKNg/feedshare-document-cover-images_1920/B4DZzziU0wGsBQ-/2/1773612391846?e=1774260000&v=beta&t=NlXg93hwW4Y1Mys5R4q3m5zkzF2df-Qk448aHpVJqRc"
+                    ]
+                }
+            ]
+        },
+        "urn": "urn:li:activity:7439069761189068800",
+        "reactionsUrn": "urn:li:ugcPost:7439069760123756544",
+        "commentsUrn": "urn:li:fsd_socialDetail:(urn:li:ugcPost:7439069760123756544,urn:li:ugcPost:7439069760123756544,urn:li:highlightedReply:-)",
+        "repostsUrn": "urn:li:ugcPost:7439069760123756544",
+        "scrapedAt": "2026-03-16T09:02:48.270Z"
+    },
+    {
+        "share_url": "https://www.linkedin.com/posts/francisco-seita_openclaw-activity-7439067919931629568-rnWq?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAGW8vZUBhgrl5QOfv_FCPqWaq7pBBTL0Chc",
+        "actor": {
+            "actor_image": "https://media.licdn.com/dms/image/v2/D4E35AQFq5V23NQlyXA/profile-framedphoto-shrink_100_100/B4EZx3zCI1H0Ao-/0/1771536393068?e=1774260000&v=beta&t=sFrvkTA78woyKuziKQmwcLZ3Dfich0V2Zoi2QKNNAfI",
+            "actor_description": "Autor da \u201cbe a nerd with swag\u201d | A democratizar o uso da IA",
+            "actor_name": "Francisco Seita",
+            "actor_subDescription": "11h \u2022   ",
+            "actor_navigationContext": "https://www.linkedin.com/in/francisco-seita?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAACucAiEBv9zdvt4Uu9P-vtZ3c-OgnRn8OSI"
+        },
+        "commentary": "Toda a gente est\u00e1 a falar de IA.\nPoucos est\u00e3o a perceber o que muda de facto.\n\nN\u00e3o \u00e9 o chat. N\u00e3o \u00e9 o copiloto que te sugere texto.\n\n\u00c9 isto: tens uma tarefa chata que evitas h\u00e1 semanas.\nO agente faz ela enquanto dormes.\n\nEu tinha e-mails por responder.\nN\u00e3o \u00e9 exagero \u2014 e-mails.\nHoje tenho um agente que l\u00ea, filtra, responde e negoceia.\nEu s\u00f3 dou o OK final.\n\nO salto n\u00e3o \u00e9 t\u00e9cnico. \u00c9 mental.\n\nParar de pensar \"vou pedir \u00e0 IA para me ajudar\"\ne come\u00e7ar a pensar \"o que \u00e9 que posso delegar de vez?\"\n\n\ud83d\udc49 Se ainda n\u00e3o experimentaste o OpenClaw, t\u00e1s atrasado.\n\nEstou a escrever semanalmente sobre este tema, se n\u00e3o queres perder nada subscreve:\u00a0nerdwithswag.app",
+        "social_details": {
+            "numLikes": 2,
+            "numComments": 0,
+            "numShares": 0,
+            "reactionTypeCounts": [
+                {
+                    "type": "PRAISE",
+                    "count": 1
+                },
+                {
+                    "type": "LIKE",
+                    "count": 1
+                }
+            ]
+        },
+        "postedAt": "2026-03-15T22:00:03.000Z",
+        "documentComponent": {
+            "title": "OpenClaw",
+            "transcribedDocumentUrl": "https://media.licdn.com/dms/document/media/v2/D4E1FAQHzl7eRxvyodA/feedshare-document-sanitized-pdf/B4EZzzOT0MHEBA-/0/1773607141982?e=1774260000&v=beta&t=tvFuhgUdTvvcEBnzwvdgnvid8vUxgrtgJuMn4R4_Up8",
+            "coverPages": [
+                {
+                    "width": 347,
+                    "height": 491,
+                    "imageUrls": [
+                        "https://media.licdn.com/dms/image/v2/D4E1FAQHzl7eRxvyodA/feedshare-document-cover-images_480/B4EZzzOT0MHEBE-/0/1773607142048?e=1774260000&v=beta&t=f1-q3sciVVQ-dGzlFHro4us9bHdH7SJO10hIsp7JU_s",
+                        "https://media.licdn.com/dms/image/v2/D4E1FAQHzl7eRxvyodA/feedshare-document-cover-images_480/B4EZzzOT0MHEBE-/1/1773607142048?e=1774260000&v=beta&t=SFLikbudVXgbtv-Qvxt9QhOCbabCEBvOJ33rGl6mIAI",
+                        "https://media.licdn.com/dms/image/v2/D4E1FAQHzl7eRxvyodA/feedshare-document-cover-images_480/B4EZzzOT0MHEBE-/2/1773607142048?e=1774260000&v=beta&t=6IzMq0X16UIo9_KdrTWWJPM2jcb93ft9FCObSLirWgA"
+                    ]
+                },
+                {
+                    "width": 570,
+                    "height": 806,
+                    "imageUrls": [
+                        "https://media.licdn.com/dms/image/v2/D4E1FAQHzl7eRxvyodA/feedshare-document-cover-images_800/B4EZzzOT0MHEBQ-/0/1773607142047?e=1774260000&v=beta&t=7JxmLkvYCJKrmC2GDOjbDHNd6oYwPj-eqAHQ7MDTBQw",
+                        "https://media.licdn.com/dms/image/v2/D4E1FAQHzl7eRxvyodA/feedshare-document-cover-images_800/B4EZzzOT0MHEBQ-/1/1773607142047?e=1774260000&v=beta&t=Ig2qNfogx_7C7XmmKu8IF30YqnNvhPMOJcbvFsIJF8s",
+                        "https://media.licdn.com/dms/image/v2/D4E1FAQHzl7eRxvyodA/feedshare-document-cover-images_800/B4EZzzOT0MHEBQ-/2/1773607142047?e=1774260000&v=beta&t=b3rRWU4bjVxYjIEtLmuND6PhK3t8V0WyCA3juGFfVWs"
+                    ]
+                },
+                {
+                    "width": 909,
+                    "height": 1286,
+                    "imageUrls": [
+                        "https://media.licdn.com/dms/image/v2/D4E1FAQHzl7eRxvyodA/feedshare-document-cover-images_1280/B4EZzzOT0MHEAw-/0/1773607142117?e=1774260000&v=beta&t=O7j9yP1h8n6eBASkeradtSpl-Nr7K8dSVgXUHGdTGb4",
+                        "https://media.licdn.com/dms/image/v2/D4E1FAQHzl7eRxvyodA/feedshare-document-cover-images_1280/B4EZzzOT0MHEAw-/1/1773607142117?e=1774260000&v=beta&t=PdYSj6aYOyCzwZwfdaIz2-qjqM2nIg9nQ-oNUWSE-Yw",
+                        "https://media.licdn.com/dms/image/v2/D4E1FAQHzl7eRxvyodA/feedshare-document-cover-images_1280/B4EZzzOT0MHEAw-/2/1773607142117?e=1774260000&v=beta&t=ZnJPzwvJZAtaKo9FHchhd-rgZoKuWcQeAb6x0Dq2MdU"
+                    ]
+                },
+                {
+                    "width": 1363,
+                    "height": 1929,
+                    "imageUrls": [
+                        "https://media.licdn.com/dms/image/v2/D4E1FAQHzl7eRxvyodA/feedshare-document-cover-images_1920/B4EZzzOT0MHEBU-/0/1773607142175?e=1774260000&v=beta&t=ftfduvvKBOx40fVuYj-ZfjyUscaMs6K4nA1w2_pj5_I",
+                        "https://media.licdn.com/dms/image/v2/D4E1FAQHzl7eRxvyodA/feedshare-document-cover-images_1920/B4EZzzOT0MHEBU-/1/1773607142175?e=1774260000&v=beta&t=cbdQHF0zQ6uKTUVZ3vgZ3I7EhQ-n4k3AJgOXjikxFXY",
+                        "https://media.licdn.com/dms/image/v2/D4E1FAQHzl7eRxvyodA/feedshare-document-cover-images_1920/B4EZzzOT0MHEBU-/2/1773607142175?e=1774260000&v=beta&t=5GNT8IeuRxrygF75-DaV17qKJL-tyb4lkXzBf4FAx8M"
+                    ]
+                }
+            ]
+        },
+        "urn": "urn:li:activity:7439067919931629568",
+        "reactionsUrn": "urn:li:ugcPost:7439048118312112129",
+        "commentsUrn": "urn:li:fsd_socialDetail:(urn:li:ugcPost:7439048118312112129,urn:li:ugcPost:7439048118312112129,urn:li:highlightedReply:-)",
+        "repostsUrn": "urn:li:ugcPost:7439048118312112129",
+        "scrapedAt": "2026-03-16T09:02:48.270Z"
+    },
+    {
+        "share_url": "https://www.linkedin.com/posts/activity-7439053492972945408-rIVl?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAGW8vZUBhgrl5QOfv_FCPqWaq7pBBTL0Chc",
+        "actor": {
+            "actor_image": "https://media.licdn.com/dms/image/v2/D4E35AQHw7GTgRpWViQ/profile-framedphoto-shrink_400_400/B4EZyhkgj_IEAc-/0/1772237228529?e=1774260000&v=beta&t=-F1Q5fLwlXDmVtIj7n0-t034Hcgkzg7ZInogvgi2LEQ",
+            "actor_description": "2x establishing Support Engineer for companies scaling. Experience with SQL\ud83d\udcca Azure\u2601\ufe0f C#\ud83c\udfb5 VB\ud83d\udd28 PHP\ud83d\udcbb Python\ud83d\udc0d API integration\ud83e\udde9",
+            "actor_name": "Matthew Zoljan",
+            "actor_subDescription": "12h \u2022   ",
+            "actor_navigationContext": "https://www.linkedin.com/in/matthewzoljan?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAABRWUagBCykBZ3K7BEXc6JUtpvBcl7F7J7Y"
+        },
+        "commentary": "Tell me who's being dramatic here?\n\nOnce I was drafting a message refusing to speak to them on the phone, I got a call from a \"spam\" number.\n\nThis is 1 of thousands of interactions I have had with them.\n\nI'm considering with making a ghost phone and installing a Bot on the line as well. If they refuse to submit me without talking to me on the phone.\n\nEVERYTIME, I have spoken to one of these Recruiters on the phone, it is a NIGHTMARE. They are all over the place, and you're having to repeat everything you said a million times.\n\nIf you think I am harsh. WAKE UP!\n\nOn a side note, if anyone wants me to help them automating these emails. Reach out. I can set your Raspberry Pi for you and install OpenClaw.",
+        "social_details": {
+            "numLikes": 1,
+            "numComments": 7,
+            "numShares": 0,
+            "reactionTypeCounts": [
+                {
+                    "type": "LIKE",
+                    "count": 1
+                }
+            ]
+        },
+        "postedAt": "2026-03-15T21:02:43.000Z",
+        "documentComponent": {
+            "title": "Recruiter",
+            "transcribedDocumentUrl": "https://media.licdn.com/dms/document/media/v2/D4D1FAQGRdrio4en_ew/feedshare-document-chunked-pdf/B4DZzzS4HLKIBk-/0/1773608339826?e=1774260000&v=beta&t=45Q0-NxDsldx9AIj2FsuMw4tTRuluA168TEm9iIaN0c",
+            "coverPages": [
+                {
+                    "width": 347,
+                    "height": 491,
+                    "imageUrls": [
+                        "https://media.licdn.com/dms/image/v2/D4D1FAQGRdrio4en_ew/feedshare-document-cover-images_480/B4DZzzS4HLKIBA-/0/1773608339600?e=1774260000&v=beta&t=MrWP24_aSLN_WlYt14AUFefm0h6vBGekt5EGQld-9KY",
+                        "https://media.licdn.com/dms/image/v2/D4D1FAQGRdrio4en_ew/feedshare-document-cover-images_480/B4DZzzS4HLKIBA-/1/1773608339600?e=1774260000&v=beta&t=SKqwafSLB7tOW2Kk5IA_yQ_o9Yzte0fVE60U229ZXnY",
+                        "https://media.licdn.com/dms/image/v2/D4D1FAQGRdrio4en_ew/feedshare-document-cover-images_480/B4DZzzS4HLKIBA-/2/1773608339600?e=1774260000&v=beta&t=KhVTY8aN2TB7Mov3cV2XqZIUXA5JBoccLFWdLfo-5Y8"
+                    ]
+                },
+                {
+                    "width": 570,
+                    "height": 806,
+                    "imageUrls": [
+                        "https://media.licdn.com/dms/image/v2/D4D1FAQGRdrio4en_ew/feedshare-document-cover-images_800/B4DZzzS4HLKIBM-/0/1773608339658?e=1774260000&v=beta&t=u05mxN8wAFhyVm2g1pBCijSxbW4A-pXLYhCnqUVHUZY",
+                        "https://media.licdn.com/dms/image/v2/D4D1FAQGRdrio4en_ew/feedshare-document-cover-images_800/B4DZzzS4HLKIBM-/1/1773608339658?e=1774260000&v=beta&t=FZrVZYJbTTmBtvh2fTFLda8RYQ-qD6iugT91e1P6_nU",
+                        "https://media.licdn.com/dms/image/v2/D4D1FAQGRdrio4en_ew/feedshare-document-cover-images_800/B4DZzzS4HLKIBM-/2/1773608339658?e=1774260000&v=beta&t=SUBpkb07zrwaXcWUWSKmyJiCgF7PSWAkPVirleDstW0"
+                    ]
+                },
+                {
+                    "width": 909,
+                    "height": 1286,
+                    "imageUrls": [
+                        "https://media.licdn.com/dms/image/v2/D4D1FAQGRdrio4en_ew/feedshare-document-cover-images_1280/B4DZzzS4HLKIAs-/0/1773608339658?e=1774260000&v=beta&t=Gz2lDyWErRDT5J1-SkWNWzfSw02Urz6ipfresDdjnCc",
+                        "https://media.licdn.com/dms/image/v2/D4D1FAQGRdrio4en_ew/feedshare-document-cover-images_1280/B4DZzzS4HLKIAs-/1/1773608339658?e=1774260000&v=beta&t=-B5JXOhWbUzIGjRMotYFBzwSS-SGzrubRtKkIATWE7A",
+                        "https://media.licdn.com/dms/image/v2/D4D1FAQGRdrio4en_ew/feedshare-document-cover-images_1280/B4DZzzS4HLKIAs-/2/1773608339658?e=1774260000&v=beta&t=RTUV6gOISQmeUz6iRxA-yaNqsF-9YRC6pIoisXg-unw"
+                    ]
+                },
+                {
+                    "width": 1364,
+                    "height": 1929,
+                    "imageUrls": [
+                        "https://media.licdn.com/dms/image/v2/D4D1FAQGRdrio4en_ew/feedshare-document-cover-images_1920/B4DZzzS4HLKIBQ-/0/1773608339778?e=1774260000&v=beta&t=cAxFbAzfOXk4unubhDzrXY8bJXWRRXvbXm5iNa_Nv9A",
+                        "https://media.licdn.com/dms/image/v2/D4D1FAQGRdrio4en_ew/feedshare-document-cover-images_1920/B4DZzzS4HLKIBQ-/1/1773608339778?e=1774260000&v=beta&t=nnCHUxWaCja5-4ZPPAxdDe_kQAptg7Amp0Y6i8Jlg-g",
+                        "https://media.licdn.com/dms/image/v2/D4D1FAQGRdrio4en_ew/feedshare-document-cover-images_1920/B4DZzzS4HLKIBQ-/2/1773608339778?e=1774260000&v=beta&t=Tlc7bRK1CCiHJzpy0gCSYfgUjzINJuzAgYhcROe6y-M"
+                    ]
+                }
+            ]
+        },
+        "urn": "urn:li:activity:7439053492972945408",
+        "reactionsUrn": "urn:li:ugcPost:7439053491601321984",
+        "commentsUrn": "urn:li:fsd_socialDetail:(urn:li:ugcPost:7439053491601321984,urn:li:ugcPost:7439053491601321984,urn:li:highlightedReply:-)",
+        "repostsUrn": "urn:li:ugcPost:7439053491601321984",
+        "scrapedAt": "2026-03-16T09:02:48.270Z"
+    },
+    {
+        "share_url": "https://www.linkedin.com/posts/kunaljagtap7_ai-for-the-people-we-love-activity-7439047352545398784-HyI7?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAGXEC-EBacUo9GtkU0Sewf_YLufrmhazPnc",
+        "actor": {
+            "actor_image": "https://media.licdn.com/dms/image/v2/D5603AQH9Zj0I4gBkmA/profile-displayphoto-scale_100_100/B56ZspSCOmG8Ac-/0/1765924153031?e=1775088000&v=beta&t=8taLjwSs8B9-sN6ArocCcMwNqBI_LyB97TbJkyCfCuc",
+            "actor_description": "Analytics Manager | Driving Product Strategy",
+            "actor_name": "Kunal Jagtap",
+            "actor_subDescription": "12h \u2022   ",
+            "actor_navigationContext": "https://www.linkedin.com/in/kunaljagtap7?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAABf6u2QBLtNUoX_S0dIWmV9iz-SLEVleTBM"
+        },
+        "commentary": "This started with a simple question.\nPeople close to me live with Type 1 diabetes.\nTheir CGM produces a lot of data every day.\nCharts. Metrics. Trends.\n\nYou could upload that file into an LLM and ask for insights.\nBut that treats interpretation like a task.\nI wanted to explore interpretation as a system using OpenClaw.\n\nSo I started experimenting....\n\u2022 Every day a CGM export file gets uploaded to a private Telegram bot.\n\u2022 From there, an AI workflow processes the dataset and returns a plain-English summary of what actually stood out that day.\n\nThings like:\n\u2022 overnight glucose stability\n\u2022 possible meal-related spikes\n\u2022 unusual variability\n\u2022 patterns that might deserve attention\n\nThe goal is not to replace clinical tools like Dexcom Clarity.\nThose already do a great job visualizing the data.\nThe goal is to explore whether AI can reduce the cognitive load of interpreting personal health data.\n\nThe interesting part of this experiment is not the analysis itself.\nIt is the architecture around it.\nOnce personal health data is involved, system design matters.\n\nCurrent setup:\n\u2022 OpenClaw as the orchestration layer\n\u2022 Telegram as the secure interface for file uploads and insights\n\u2022 Claude Opus for deeper reasoning\n\u2022 local LLM fallback for resilience\n\u2022 isolated runtime environment with strict security boundaries\n\nThe system also implements:\n\u2022 model routing for cost control\n\u2022 API usage limits\n\u2022 guardrails around data access\n\u2022 controlled execution environments\n\nRight now this is still an experiment, not a product.\n\nBut this is where AI becomes interesting to me.\nNot just generating content.\nBut quietly helping people make sense of complex information in their everyday lives.\n\nNext step I\u2019m exploring:\nMoving from manual CSV uploads to pulling data directly through the Dexcom API and eventually turning this into a fully automated daily insight workflow.\n\nStill learning.\nStill experimenting.\n\n#AI #AIEngineering #HealthcareAI #DataEngineering #OpenClaw #LLM #Automation",
+        "social_details": {
+            "numLikes": 6,
+            "numComments": 4,
+            "numShares": 0,
+            "reactionTypeCounts": [
+                {
+                    "type": "LIKE",
+                    "count": 4
+                },
+                {
+                    "type": "EMPATHY",
+                    "count": 2
+                }
+            ]
+        },
+        "postedAt": "2026-03-15T20:38:19.000Z",
+        "documentComponent": {
+            "title": "AI For the People We Love",
+            "transcribedDocumentUrl": "https://media.licdn.com/dms/document/media/v2/D561FAQFgpV9xhY-TSg/feedshare-document-url-metadata-scrapper-pdf/B56ZzzLFvlH0A4-/0/1773606298130?e=1774260000&v=beta&t=QUDvkPw_pdPwqXzactx5LZV7aufziJgkvg_Kq4VuKRU",
+            "coverPages": [
+                {
+                    "width": 496,
+                    "height": 277,
+                    "imageUrls": [
+                        "https://media.licdn.com/dms/image/v2/D561FAQFgpV9xhY-TSg/feedshare-document-cover-images_480/B56ZzzLFvlH0BA-/0/1773606297902?e=1774260000&v=beta&t=t4lxwLPxiVrg7RhvjiOSKQg6WLQHemQ_YqCnTFVQRzE",
+                        "https://media.licdn.com/dms/image/v2/D561FAQFgpV9xhY-TSg/feedshare-document-cover-images_480/B56ZzzLFvlH0BA-/1/1773606297902?e=1774260000&v=beta&t=WVOlHNny0d0RIcIq-Vs4QdufjWKk4gs7Q3JDZZZAYH4",
+                        "https://media.licdn.com/dms/image/v2/D561FAQFgpV9xhY-TSg/feedshare-document-cover-images_480/B56ZzzLFvlH0BA-/2/1773606297902?e=1774260000&v=beta&t=JbQgc7qyP_RZsvnH-wUtBDBet3b38mg3hyyVmWcN1q4"
+                    ]
+                },
+                {
+                    "width": 802,
+                    "height": 448,
+                    "imageUrls": [
+                        "https://media.licdn.com/dms/image/v2/D561FAQFgpV9xhY-TSg/feedshare-document-cover-images_800/B56ZzzLFvlH0BM-/0/1773606297902?e=1774260000&v=beta&t=guzsRVghD4ECbK2FptRsNMpczjluJ2kn7MG3cDJjoE0",
+                        "https://media.licdn.com/dms/image/v2/D561FAQFgpV9xhY-TSg/feedshare-document-cover-images_800/B56ZzzLFvlH0BM-/1/1773606297902?e=1774260000&v=beta&t=2EouAUUrYgmBLNUqdeZ051pJv9CZZXbJlCb7k4s0txI",
+                        "https://media.licdn.com/dms/image/v2/D561FAQFgpV9xhY-TSg/feedshare-document-cover-images_800/B56ZzzLFvlH0BM-/2/1773606297902?e=1774260000&v=beta&t=SYHQl7rTtuQTfQ9RaxrmkYO5rvWFvr_cRy9IEBE74bs"
+                    ]
+                },
+                {
+                    "width": 1280,
+                    "height": 714,
+                    "imageUrls": [
+                        "https://media.licdn.com/dms/image/v2/D561FAQFgpV9xhY-TSg/feedshare-document-cover-images_1280/B56ZzzLFvlH0As-/0/1773606298072?e=1774260000&v=beta&t=EGU_K46qnOyzo8uOq7TGOCyOqWRjB1leWih8lZ89Zgc",
+                        "https://media.licdn.com/dms/image/v2/D561FAQFgpV9xhY-TSg/feedshare-document-cover-images_1280/B56ZzzLFvlH0As-/1/1773606298072?e=1774260000&v=beta&t=EgssQT97s8Rbt76HcETIVhtilFmwmfyIpls72-5IDmo",
+                        "https://media.licdn.com/dms/image/v2/D561FAQFgpV9xhY-TSg/feedshare-document-cover-images_1280/B56ZzzLFvlH0As-/2/1773606298072?e=1774260000&v=beta&t=1wYXhFk9BWqfIvkN2gaAZ4nwN3m2K0Jn9tEwAAVjS_g"
+                    ]
+                },
+                {
+                    "width": 1930,
+                    "height": 1077,
+                    "imageUrls": [
+                        "https://media.licdn.com/dms/image/v2/D561FAQFgpV9xhY-TSg/feedshare-document-cover-images_1920/B56ZzzLFvlH0BQ-/0/1773606298534?e=1774260000&v=beta&t=e7jGioLiM2S__oxU0fPCG5rYn8eHYtMngfAFiIwdyLc",
+                        "https://media.licdn.com/dms/image/v2/D561FAQFgpV9xhY-TSg/feedshare-document-cover-images_1920/B56ZzzLFvlH0BQ-/1/1773606298534?e=1774260000&v=beta&t=ZDY9h0XIv-RFQN77rUDjJb5j4reCBsENGeWM8V0jWmw",
+                        "https://media.licdn.com/dms/image/v2/D561FAQFgpV9xhY-TSg/feedshare-document-cover-images_1920/B56ZzzLFvlH0BQ-/2/1773606298534?e=1774260000&v=beta&t=KMvopmF7NXiQ63MF8uhfGs6VGxP5vLf8Q-9gfz-P0d0"
+                    ]
+                }
+            ]
+        },
+        "urn": "urn:li:activity:7439047352545398784",
+        "reactionsUrn": "urn:li:ugcPost:7439047349638746112",
+        "commentsUrn": "urn:li:fsd_socialDetail:(urn:li:ugcPost:7439047349638746112,urn:li:ugcPost:7439047349638746112,urn:li:highlightedReply:-)",
+        "repostsUrn": "urn:li:ugcPost:7439047349638746112",
+        "scrapedAt": "2026-03-16T09:02:53.365Z"
+    }
+]

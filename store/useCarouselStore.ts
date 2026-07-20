@@ -33,10 +33,10 @@ interface CarouselState {
 }
 
 const DEFAULT_GLOBAL_SETTINGS: GlobalSettings = {
-  brandColor: '#DC2626',
-  accentColor: '#FED7AA',
-  fontFamily: 'Inter',
-  backgroundColor: '#FFFFFF',
+  brandColor: '#FF3B00',
+  accentColor: '#FF3B00',
+  fontFamily: 'Poppins',
+  backgroundColor: '#0A0A0A',
   aspectRatio: 'portrait',
 };
 
@@ -70,12 +70,12 @@ const createDefaultSlide = (type: SlideType, order: number, themeId: string, con
 export const useCarouselStore = create<CarouselState>((set) => ({
   project: {
     id: 'default-project',
-    name: 'Untitled Carousel',
-    themeId: 'sales-stack',
+    name: 'Kingdom Creative — Part 3',
+    themeId: 'kingdom-creative',
     slides: [
-      createDefaultSlide('INTRO', 0, 'sales-stack', { headline: 'How to Build a Carousel Builder' }),
-      createDefaultSlide('CONTENT', 1, 'sales-stack', { title: 'Step 1: Set up the Store' }),
-      createDefaultSlide('CTA', 2, 'sales-stack', { ctaText: 'Follow for more dev tips!' }),
+      createDefaultSlide('INTRO', 0, 'kingdom-creative'),
+      createDefaultSlide('CONTENT', 1, 'kingdom-creative'),
+      createDefaultSlide('CTA', 2, 'kingdom-creative'),
     ],
     globalSettings: DEFAULT_GLOBAL_SETTINGS,
   },

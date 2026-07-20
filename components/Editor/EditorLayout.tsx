@@ -8,7 +8,9 @@ import Canvas from './Canvas';
 import PropertiesPanel from './PropertiesPanel';
 import { useCarouselStore } from '../../store/useCarouselStore';
 import { getTheme } from '../../themes';
-import { Download, Layout, FileJson, Upload } from 'lucide-react';
+import { Download, Layout, FileJson, Upload, Save } from 'lucide-react';
+
+const API_URL = 'http://localhost:8000/api';
 
 const EditorLayout = () => {
   const { project, activeSlideId, updateProjectName, importProject, exportProject } = useCarouselStore();
@@ -132,6 +134,33 @@ const EditorLayout = () => {
         useCarouselStore.getState().setActiveSlide(originalSlideId);
       }
       setIsExporting(false);
+    }
+  };
+
+  const [isSaving, setIsSaving] = useState(false);
+  const handleSaveToDb = async () => {
+    try {
+      setIsSaving(true);
+      const res = await fetch(`${API_URL}/posts`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          type: 'carousel',
+          title: project.name,
+          content_json: JSON.stringify(project),
+          status: 'draft'
+        })
+      });
+      if (res.ok) {
+        alert("Carousel saved to your drafts!");
+      } else {
+        throw new Error("Failed to save");
+      }
+    } catch (err) {
+      console.error("Save failure", err);
+      alert("Failed to save to database. Ensure backend is running.");
+    } finally {
+      setIsSaving(false);
     }
   };
 

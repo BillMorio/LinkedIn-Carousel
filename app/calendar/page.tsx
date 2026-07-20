@@ -1,10 +1,28 @@
 "use client";
 import React from 'react';
-import { Calendar as CalendarIcon, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Calendar as CalendarIcon, ChevronLeft, ChevronRight, Zap } from 'lucide-react';
+
+const API_URL = 'http://localhost:8000/api';
 
 export default function CalendarPage() {
   const days = ['MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN'];
   const mobileDays = ['M', 'T', 'W', 'T', 'F', 'S', 'S'];
+  const [posts, setPosts] = React.useState([]);
+
+  React.useEffect(() => {
+    fetch(`${API_URL}/posts`)
+      .then(res => res.json())
+      .then(data => setPosts(data))
+      .catch(err => console.error("Failed to fetch posts", err));
+  }, []);
+
+  const getPostsForDay = (day: number) => {
+    return posts.filter((p: any) => {
+      if (!p.scheduled_date) return false;
+      const d = new Date(p.scheduled_date);
+      return d.getDate() === day && d.getMonth() === 2; // Hardcoded to March for now as in current UI
+    });
+  };
 
   return (
     <div className="p-4 md:p-10 space-y-8 bg-[#0A0A0A] min-h-screen text-white">
@@ -35,26 +53,32 @@ export default function CalendarPage() {
         </div>
         
         <div className="grid grid-cols-7 gap-px bg-zinc-800">
-          {Array.from({ length: 35 }).map((_, i) => (
-            <div key={i} className="bg-zinc-900/30 min-h-[80px] md:min-h-[140px] p-2 md:p-4 hover:bg-zinc-800/20 transition-colors">
-              <span className={cn(
-                "text-[8px] md:text-[10px] font-black",
-                (i % 31) + 1 === 12 ? "text-[#BFFF00] bg-[#BFFF00]/10 px-1.5 py-0.5 rounded" : "text-zinc-600"
-              )}>
-                {(i % 31) + 1}
-              </span>
-              
-              {/* Mock Event for mobile demo */}
-              {(i % 31) + 1 === 12 && (
+          {Array.from({ length: 35 }).map((_, i) => {
+            const dayNum = (i % 31) + 1;
+            const dayPosts = getPostsForDay(dayNum);
+            
+            return (
+              <div key={i} className="bg-zinc-900/30 min-h-[80px] md:min-h-[140px] p-2 md:p-4 hover:bg-zinc-800/20 transition-colors">
+                <span className={cn(
+                  "text-[8px] md:text-[10px] font-black",
+                  dayNum === 12 ? "text-[#BFFF00] bg-[#BFFF00]/10 px-1.5 py-0.5 rounded" : "text-zinc-600"
+                )}>
+                  {dayNum}
+                </span>
+                
                 <div className="mt-2 space-y-1">
-                  <div className="h-1 md:h-2 bg-[#BFFF00] rounded-full sm:hidden" />
-                  <div className="hidden sm:block p-1.5 bg-[#BFFF00]/10 border border-[#BFFF00]/20 rounded-lg">
-                    <p className="text-[8px] font-black text-[#BFFF00] uppercase truncate">Neural Post</p>
-                  </div>
+                  {dayPosts.map((post: any) => (
+                    <div key={post.id}>
+                      <div className="h-1 md:h-2 bg-[#BFFF00] rounded-full sm:hidden" />
+                      <div className="hidden sm:block p-1.5 bg-[#BFFF00]/10 border border-[#BFFF00]/20 rounded-lg">
+                        <p className="text-[8px] font-black text-[#BFFF00] uppercase truncate">{post.title}</p>
+                      </div>
+                    </div>
+                  ))}
                 </div>
-              )}
-            </div>
-          ))}
+              </div>
+            );
+          })}
         </div>
       </div>
     </div>

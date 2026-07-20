@@ -39,3 +39,15 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# database
+*.db
+*.sqlite
+
+# python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# scraper analysis
+*_analysis.json

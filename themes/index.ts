@@ -3,8 +3,157 @@ import * as ExecutionSteps from './execution-steps';
 import * as ToolWorkflow from './tool-workflow';
 import * as SalesStack from './sales-stack';
 import * as Playground from './playground';
+import * as KingdomCreative from './kingdom-creative';
 
 export const ThemeRegistry: Record<string, Theme> = {
+  'kingdom-creative': {
+    id: 'kingdom-creative',
+    name: 'Kingdom Creative',
+    thumbnail: '/generated/cover-diamond-hand.png',
+    description: 'Dark, cinematic "the.creativegeorge" aesthetic — molten-orange glow imagery on near-black, condensed display type, and handwritten flourishes.',
+    preview: '/generated/cover-diamond-hand.png',
+    variants: {
+      INTRO: [
+        {
+          id: 'cover',
+          name: 'Cover',
+          icon: 'LayoutPanelLeft',
+          purpose: 'High-impact series opener with a giant condensed headline and full-bleed hero image.',
+          bestUsedFor: 'Carousel covers and hooks with a bold statement and one striking visual.',
+          component: KingdomCreative.CoverIntro,
+          editorConfig: {
+            fields: [
+              { key: 'brandName', type: 'text', label: 'Handle (white)' },
+              { key: 'brandAccent', type: 'text', label: 'Handle (accent)' },
+              { key: 'titleSection', type: 'section-controls', label: 'Headline Section' },
+              { key: 'mainTitle', type: 'text', label: 'Headline', required: true, hasStyleControls: true },
+              { key: 'highlight', type: 'text', label: 'Highlighted Words (orange)' },
+              { key: 'scriptAccent', type: 'text', label: 'Script Accent (e.g. Part 3)' },
+              { key: 'heroImage', type: 'image', label: 'Hero Image', hasStyleControls: true },
+            ],
+            defaultContent: {
+              brandName: 'the.creative',
+              brandAccent: 'george',
+              mainTitle: 'HOW I COME UP WITH CONCEPTS AS A ',
+              highlight: 'KINGDOM CREATIVE',
+              scriptAccent: 'Part 3',
+              heroImage: '/generated/cover-diamond-hand.png',
+            },
+          },
+        },
+      ],
+      CONTENT: [
+        {
+          id: 'glow-object',
+          name: 'Glow Object',
+          icon: 'GitCommit',
+          purpose: 'Numbered teaching point or body copy with a molten object bleeding off the bottom-right.',
+          bestUsedFor: 'Core content slides ("3. Mindset"), body paragraphs, and emphasis statements.',
+          component: KingdomCreative.GlowObjectContent,
+          editorConfig: {
+            fields: [
+              { key: 'number', type: 'text', label: 'Number (optional)' },
+              { key: 'title', type: 'text', label: 'Title (optional)', hasStyleControls: true },
+              { key: 'body', type: 'textarea', label: 'Body' },
+              { key: 'emphasis', type: 'textarea', label: 'Bold Emphasis Line (optional)' },
+              { key: 'body2', type: 'textarea', label: 'Body (continued, optional)' },
+              { key: 'heroImage', type: 'image', label: 'Hero Image', hasStyleControls: true },
+              { key: 'titleSection', type: 'section-controls', label: 'Text Block' },
+            ],
+            defaultContent: {
+              brandName: 'the.creative',
+              brandAccent: 'george',
+              number: '3',
+              title: 'Mindset',
+              body: 'As creatives, one of the most powerful tools we have at our disposal is our mind.',
+              body2: 'What goes through your mind will largely affect the outcome of any project you embark on.',
+              heroImage: '/generated/brain-column.png',
+            },
+          },
+        },
+        {
+          id: 'question',
+          name: 'Question',
+          icon: 'ArrowLeftRight',
+          purpose: 'Pose a question with a script flourish and an asterisk bullet list over a scene image.',
+          bestUsedFor: 'Reflective prompts, self-talk lists, and engagement questions.',
+          component: KingdomCreative.QuestionContent,
+          editorConfig: {
+            fields: [
+              { key: 'body', type: 'textarea', label: 'Lead-in Question' },
+              { key: 'scriptLine', type: 'text', label: 'Script Line (handwritten)' },
+              { key: 'steps', type: 'steps', label: 'Bullet Points (use Title field)' },
+              { key: 'heroImage', type: 'image', label: 'Scene Image', hasStyleControls: true },
+              { key: 'titleSection', type: 'section-controls', label: 'Text Block' },
+            ],
+            defaultContent: {
+              brandName: 'the.creative',
+              brandAccent: 'george',
+              body: 'What type of mindset do you approach every project you work on:',
+              scriptLine: 'Do These Thoughts Ring Aloud?',
+              steps: [
+                { title: 'Am I Good Enough?', description: '' },
+                { title: 'Can I Really Do It?', description: '' },
+              ],
+              heroImage: '/generated/figure-trail.png',
+            },
+          },
+        },
+        {
+          id: 'reference',
+          name: 'Reference',
+          icon: 'Layers',
+          purpose: 'Point readers to a previous post with a rotated polaroid of the linked content.',
+          bestUsedFor: 'Cross-referencing earlier parts of a series.',
+          component: KingdomCreative.ReferenceContent,
+          editorConfig: {
+            fields: [
+              { key: 'title', type: 'text', label: 'Heading', required: true, hasStyleControls: true },
+              { key: 'heroImage', type: 'image', label: 'Polaroid Image', hasStyleControls: true },
+            ],
+            defaultContent: {
+              brandName: 'the.creative',
+              brandAccent: 'george',
+              title: 'Kindly Check Out My Previous Post For Part 2',
+              heroImage: '/generated/prev-post-card.png',
+            },
+          },
+        },
+      ],
+      CTA: [
+        {
+          id: 'outro',
+          name: 'Outro',
+          icon: 'User',
+          purpose: 'Series wrap-up with a bold CTA over a wide cinematic bottom band.',
+          bestUsedFor: 'Closing slides that drive comments, follows, or shares.',
+          component: KingdomCreative.OutroCTA,
+          editorConfig: {
+            fields: [
+              { key: 'body', type: 'textarea', label: 'Wrap-up Line' },
+              { key: 'ctaHighlight', type: 'text', label: 'CTA Bold Words' },
+              { key: 'ctaText', type: 'text', label: 'CTA Remainder', hasStyleControls: true },
+              { key: 'heroImage', type: 'image', label: 'Scene Image', hasStyleControls: true },
+              { key: 'titleSection', type: 'section-controls', label: 'Text Block' },
+            ],
+            defaultContent: {
+              brandName: 'the.creative',
+              brandAccent: 'george',
+              body: 'And that is the end of this series. It has been fun all the way.',
+              ctaHighlight: 'Comment Below',
+              ctaText: 'on what really stood out for you in this series.',
+              heroImage: '/generated/outro-leap.png',
+            },
+          },
+        },
+      ],
+    },
+    defaultColors: {
+      primary: '#FF3B00',
+      accent: '#FF3B00',
+      background: '#0A0A0A',
+    },
+  },
   'execution-steps': {
     ...ExecutionSteps.ExecutionStepsTheme,
     variants: {

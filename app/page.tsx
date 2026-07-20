@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect } from 'react';
 import { Sparkles, ImageIcon, Lightbulb, Zap, TrendingUp, Clock, CheckCircle2, ArrowRight } from 'lucide-react';
+import Link from 'next/link';
 
 const API_URL = 'http://localhost:8000/api';
 
@@ -9,8 +10,12 @@ export default function Dashboard() {
     ideas: 0,
     drafts: 0,
     scheduled: 0,
-    published: 0
+    published: 0,
+    ideasAll: []
   });
+
+  const [recentIdeas, setRecentIdeas] = useState([]);
+  const [activePersona, setActivePersona] = useState('Pro Builder');
 
   useEffect(() => {
     fetchStats();
@@ -30,7 +35,13 @@ export default function Dashboard() {
         drafts: posts.filter((p: any) => p.status === 'draft').length,
         scheduled: posts.filter((p: any) => p.status === 'scheduled').length,
         published: posts.filter((p: any) => p.status === 'posted').length,
+        ideasAll: ideas
       });
+      setRecentIdeas(ideas.slice(0, 3));
+
+      const personaRes = await fetch(`${API_URL}/settings/persona_name`);
+      const personaData = await personaRes.json();
+      if (personaData.value) setActivePersona(personaData.value);
     } catch (error) {
       console.error("Failed to fetch dashboard stats", error);
     }
@@ -62,13 +73,17 @@ export default function Dashboard() {
           { label: 'Scheduled', value: stats.scheduled, icon: Clock, color: 'text-purple-400', bg: 'bg-purple-400/10' },
           { label: 'Total Posted', value: stats.published, icon: CheckCircle2, color: 'text-[#BFFF00]', bg: 'bg-[#BFFF00]/10' },
         ].map((stat, i) => (
-          <div key={i} className="bg-zinc-900/40 border border-zinc-800 p-4 md:p-8 rounded-2xl md:rounded-3xl hover:border-zinc-700 transition-all group">
+          <Link 
+            key={i} 
+            href={stat.label === 'Active Drafts' ? '/drafts' : (stat.label === 'Unused Ideas' ? '/ideas' : (stat.label === 'Scheduled' ? '/calendar' : '#'))}
+            className="bg-zinc-900/40 border border-zinc-800 p-4 md:p-8 rounded-2xl md:rounded-3xl hover:border-[#BFFF00]/30 transition-all group block"
+          >
             <div className={`w-10 h-10 md:w-12 md:h-12 ${stat.bg} ${stat.color} rounded-xl md:rounded-2xl flex items-center justify-center mb-4 md:mb-6 border border-white/5`}>
               <stat.icon size={20} className="md:w-6 md:h-6" />
             </div>
             <p className="text-[8px] md:text-[10px] font-black text-zinc-500 uppercase tracking-widest mb-1">{stat.label}</p>
             <p className="text-2xl md:text-4xl font-black tracking-tighter">{stat.value}</p>
-          </div>
+          </Link>
         ))}
       </div>
 
@@ -82,19 +97,26 @@ export default function Dashboard() {
             <button className="text-[10px] font-black text-zinc-500 uppercase tracking-widest hover:text-white transition-colors">View All →</button>
           </div>
           <div className="space-y-3 md:space-y-4">
-            {[1, 2, 3].map((_, i) => (
-              <div key={i} className="bg-zinc-900/20 border border-zinc-800 p-4 md:p-6 rounded-xl md:rounded-2xl flex justify-between items-center group cursor-pointer hover:bg-zinc-900/40 transition-all gap-4">
+            {recentIdeas.length > 0 ? recentIdeas.map((idea: any, i) => (
+              <div key={idea.id} className="bg-zinc-900/20 border border-zinc-800 p-4 md:p-6 rounded-xl md:rounded-2xl flex justify-between items-center group cursor-pointer hover:bg-zinc-900/40 transition-all gap-4">
                 <div className="space-y-1 flex-1 min-w-0">
                   <p className="font-bold text-xs md:text-sm tracking-tight text-white group-hover:text-[#BFFF00] transition-colors truncate">
-                    {i === 0 ? "3 systems for high-leverage Founders" : i === 1 ? "The Psychology of viral hooks" : "Why active listening is the ultimate sales leverage"}
+                    {idea.topic}
                   </p>
-                  <p className="text-[8px] md:text-[10px] text-zinc-500 font-bold uppercase tracking-widest">Source: Scraped • Scored: 9.2</p>
+                  <p className="text-[8px] md:text-[10px] text-zinc-500 font-bold uppercase tracking-widest">Source: {idea.source} • {idea.niche_tag || 'GENERAL'}</p>
                 </div>
-                <button className="bg-zinc-950 border border-zinc-800 text-zinc-500 p-2 md:p-2.5 rounded-lg md:rounded-xl hover:text-[#BFFF00] hover:border-[#BFFF00]/30 transition-all shrink-0">
+                <Link 
+                  href={`/create/post?topic=${encodeURIComponent(idea.topic)}&content=${encodeURIComponent(idea.raw_content)}`}
+                  className="bg-zinc-950 border border-zinc-800 text-zinc-500 p-2 md:p-2.5 rounded-lg md:rounded-xl hover:text-[#BFFF00] hover:border-[#BFFF00]/30 transition-all shrink-0"
+                >
                   <ArrowRight size={14} />
-                </button>
+                </Link>
               </div>
-            ))}
+            )) : (
+              <div className="bg-zinc-900/10 border-2 border-dashed border-zinc-800 p-8 rounded-2xl text-center">
+                <p className="text-zinc-500 font-bold text-xs uppercase tracking-widest">No ideas yet. Start by scraping!</p>
+              </div>
+            )}
           </div>
         </div>
 
@@ -105,8 +127,10 @@ export default function Dashboard() {
               <div className="space-y-2 md:space-y-3">
                 <p className="text-[8px] md:text-[10px] font-black text-zinc-500 uppercase tracking-widest">Active Persona</p>
                 <div className="bg-zinc-900 p-3 md:p-4 rounded-xl md:rounded-2xl border border-zinc-800 flex items-center gap-3">
-                  <div className="w-8 h-8 bg-blue-500 rounded-lg flex items-center justify-center font-black text-xs text-white">PB</div>
-                  <p className="font-bold text-xs md:text-sm">Pro Builder</p>
+                  <div className="w-8 h-8 bg-blue-500 rounded-lg flex items-center justify-center font-black text-xs text-white">
+                    {activePersona.split(' ').map(n => n[0]).join('')}
+                  </div>
+                  <p className="font-bold text-xs md:text-sm">{activePersona}</p>
                 </div>
               </div>
               <div className="space-y-2 md:space-y-3">

@@ -13,7 +13,9 @@ import {
   Settings,
   Zap,
   Menu,
-  X
+  X,
+  Users,
+  Scissors
 } from 'lucide-react';
 import { clsx, type ClassValue } from 'clsx';
 import { twMerge } from 'tailwind-merge';
@@ -24,16 +26,24 @@ function cn(...inputs: ClassValue[]) {
 
 const navItems = [
   { name: 'Dashboard', icon: LayoutDashboard, href: '/' },
+  
+  { type: 'divider', label: 'Intelligence' },
   { name: 'Idea Bank', icon: Lightbulb, href: '/ideas' },
-  { type: 'divider', label: 'Create' },
+  { name: 'Clips', icon: Scissors, href: '/clips' },
+  { name: 'Keyword Search', icon: Search, href: '/search' },
+  { name: 'Watchlist Sync', icon: Users, href: '/scrape' },
+  
+  { type: 'divider', label: 'The Forge' },
   { name: 'Post Editor', icon: FileText, href: '/create/post' },
   { name: 'Carousel Maker', icon: Layers, href: '/create/carousel' },
-  { type: 'divider', label: 'Manage' },
-  { name: 'Calendar', icon: Calendar, href: '/calendar' },
-  { name: 'Scraper', icon: Search, href: '/scrape' },
+  { name: 'Drafts Vault', icon: Zap, href: '/drafts' },
+  
+  { type: 'divider', label: 'Neural Assets' },
   { name: 'Frameworks', icon: BookOpen, href: '/frameworks' },
-  { type: 'divider' },
-  { name: 'Settings', icon: Settings, href: '/settings' },
+  { name: 'Persona & Voice', icon: Settings, href: '/settings' },
+  
+  { type: 'divider', label: 'Planning' },
+  { name: 'Content Calendar', icon: Calendar, href: '/calendar' },
 ];
 
 export const Sidebar = () => {

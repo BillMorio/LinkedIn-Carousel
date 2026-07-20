@@ -11,8 +11,30 @@ class Idea(Base):
     topic = Column(String)
     raw_content = Column(Text)
     niche_tag = Column(String, nullable=True)
+    watchlist_id = Column(Integer, ForeignKey("watchlist.id"), nullable=True, index=True)  # stable link to the scraped profile
     content_hash = Column(String, unique=True, index=True)
+    post_type = Column(String, default="text")  # 'text' | 'image' | 'carousel' | 'video'
+    engagement_count = Column(Integer, default=0) # Likes
+    comments_count = Column(Integer, default=0)
+    reposts_count = Column(Integer, default=0)
+    view_count = Column(Integer, default=0)
+    original_url = Column(String, nullable=True)
+    author_name = Column(String, nullable=True)
+    author_headline = Column(Text, nullable=True)
+    author_avatar_url = Column(String, nullable=True)
+    author_profile_url = Column(String, nullable=True)
+    media_url = Column(String, nullable=True)
+    media_metadata = Column(Text, nullable=True) # JSON string
+    analysis_funnel_stage = Column(String, nullable=True) # TOFU, MOFU, BOFU
+    analysis_giveaway = Column(String, nullable=True)
+    analysis_full_json = Column(Text, nullable=True)
+    icp_json = Column(Text, nullable=True) # post-level ICP (who this post targets)
+    notes = Column(Text, nullable=True) # user's note on a clipped idea
+    tags = Column(String, nullable=True) # comma-separated user tags
     used = Column(Boolean, default=False)
+    is_saved = Column(Boolean, default=False)
+    posted_at = Column(DateTime, nullable=True)
+    posted_at_raw = Column(String, nullable=True)
     created_at = Column(DateTime, default=datetime.utcnow)
 
 class Post(Base):
@@ -46,6 +68,11 @@ class Watchlist(Base):
     id = Column(Integer, primary_key=True, index=True)
     display_name = Column(String)
     linkedin_url = Column(String)
+    avatar_url = Column(String, nullable=True)
+    headline = Column(String, nullable=True)
+    about = Column(Text, nullable=True) # scraped LinkedIn About/bio
+    icp_json = Column(Text, nullable=True) # profile-level ICP (who the creator helps)
+    icp_updated_at = Column(DateTime, nullable=True)
     last_scraped_at = Column(DateTime, nullable=True)
     last_result_count = Column(Integer, default=0)
     created_at = Column(DateTime, default=datetime.utcnow)
@@ -59,6 +86,15 @@ class ScrapeJob(Base):
     input = Column(String)
     apify_run_id = Column(String)
     status = Column(String, default="running")  # 'running' | 'done' | 'failed'
+    result_count = Column(Integer, default=0)
+    created_at = Column(DateTime, default=datetime.utcnow)
+
+class DiscoveryKeyword(Base):
+    __tablename__ = "discovery_keywords"
+
+    id = Column(Integer, primary_key=True, index=True)
+    keyword = Column(String, unique=True, index=True)
+    last_scraped_at = Column(DateTime, default=datetime.utcnow)
     result_count = Column(Integer, default=0)
     created_at = Column(DateTime, default=datetime.utcnow)
 
